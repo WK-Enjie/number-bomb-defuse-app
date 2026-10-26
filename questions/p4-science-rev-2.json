@@ -1,0 +1,241 @@
+{
+  "topic": "Primary 4 Science — Mixed Revision (Worksheet B)",
+  "level": "Primary 4",
+  "questions": [
+    {
+      "question": "An adult female guppy produces twenty live young in an aquarium. Which characteristic of living things is shown?",
+      "options": [
+        "Living things can reproduce.",
+        "Living things can move by themselves.",
+        "Living things respond to stimuli.",
+        "Living things die when they grow old."
+      ],
+      "correctIndex": 0,
+      "explanation": "Producing young is an example of reproduction, which ensures the continuity of a species."
+    },
+    {
+      "question": "Which of the following is a non-living thing that can move, but is NOT alive?",
+      "options": [
+        "A snail crawling up a stem",
+        "A remote-controlled toy helicopter",
+        "An eagle soaring in the sky",
+        "A tadpole swimming in a pond"
+      ],
+      "correctIndex": 1,
+      "explanation": "A toy helicopter can move, but it cannot grow, reproduce, or respond on its own — it is non-living."
+    },
+    {
+      "question": "Which of the following is the key characteristic of ALL mammals?",
+      "options": [
+        "They live only on land.",
+        "They have hair or fur and produce milk for their young.",
+        "They lay eggs with hard shells.",
+        "They breathe through gills when young and lungs when adult."
+      ],
+      "correctIndex": 1,
+      "explanation": "All mammals share two key features: they have hair or fur, and they produce milk to feed their young."
+    },
+    {
+      "question": "Which group of animals has dry skin covered with scales and breathes through lungs?",
+      "options": ["Amphibians", "Reptiles", "Fish", "Insects"],
+      "correctIndex": 1,
+      "explanation": "Reptiles have dry, scaly skin and breathe through lungs throughout their lives."
+    },
+    {
+      "question": "An adult toad can breathe through its lungs on land and through its __________ when in water.",
+      "options": ["gills", "fins", "moist skin", "dry scales"],
+      "correctIndex": 2,
+      "explanation": "Amphibians like toads can absorb oxygen through their moist skin when submerged in water."
+    },
+    {
+      "question": "An animal has feathers, a beak, and lays eggs with hard shells. Which animal group does it belong to?",
+      "options": ["Birds", "Mammals", "Insects", "Reptiles"],
+      "correctIndex": 0,
+      "explanation": "Feathers, a beak, and hard-shelled eggs are defining characteristics of birds."
+    },
+    {
+      "question": "Which part of a plant traps sunlight to carry out photosynthesis and make food?",
+      "options": ["Stem", "Roots", "Leaves", "Flowers"],
+      "correctIndex": 2,
+      "explanation": "Leaves contain chlorophyll, which traps sunlight energy to carry out photosynthesis and produce food."
+    },
+    {
+      "question": "If strong winds blow against a tree, which plant part prevents it from easily being uprooted from the ground?",
+      "options": ["Stems", "Roots", "Leaves", "Fruits"],
+      "correctIndex": 1,
+      "explanation": "Roots anchor the plant firmly into the soil, helping it resist being uprooted by strong winds."
+    },
+    {
+      "question": "Which of the following animals has a 3-stage life cycle?",
+      "options": ["Butterfly", "Mosquito", "Cockroach", "Mealworm beetle"],
+      "correctIndex": 2,
+      "explanation": "Cockroaches undergo incomplete metamorphosis with a 3-stage life cycle: Egg -> Nymph -> Adult."
+    },
+    {
+      "question": "How is a cockroach nymph similar to an adult cockroach?",
+      "options": [
+        "Both have fully developed wings.",
+        "Both have six legs and three body parts.",
+        "Both can lay eggs.",
+        "Both have the same body size."
+      ],
+      "correctIndex": 1,
+      "explanation": "A nymph already resembles the adult cockroach in having six legs and three body parts, but is smaller and lacks fully developed wings."
+    },
+    {
+      "question": "Which of the following statements about the pupa stage of a butterfly is correct?",
+      "options": [
+        "It feeds on leaves day and night.",
+        "It lays eggs on the underside of leaves.",
+        "It does not feed and undergoes transformation inside a cocoon/chrysalis.",
+        "It has fully developed wings and can fly."
+      ],
+      "correctIndex": 2,
+      "explanation": "During the pupa stage, the insect does not feed and undergoes metamorphosis, transforming into its adult form."
+    },
+    {
+      "question": "During seed germination, which part of the young plant emerges from the seed first?",
+      "options": [
+        "The shoot",
+        "The root",
+        "The first green leaf",
+        "The flower bud"
+      ],
+      "correctIndex": 1,
+      "explanation": "The root emerges first during germination to anchor the seedling and begin absorbing water."
+    },
+    {
+      "question": "Which human body system supports the body, gives it shape, and protects delicate internal organs?",
+      "options": [
+        "Muscular system",
+        "Skeletal system",
+        "Circulatory system",
+        "Respiratory system"
+      ],
+      "correctIndex": 1,
+      "explanation": "The skeletal system provides support, gives the body its shape, and protects internal organs."
+    },
+    {
+      "question": "The muscular system works closely with the __________ to allow the human body to bend and move.",
+      "options": [
+        "digestive system",
+        "skeletal system",
+        "respiratory system",
+        "circulatory system"
+      ],
+      "correctIndex": 1,
+      "explanation": "Muscles are attached to bones, so the muscular and skeletal systems work together to produce movement."
+    },
+    {
+      "question": "Which of the following shows the correct path of air entering the human respiratory system?",
+      "options": [
+        "Lungs -> Windpipe -> Nose",
+        "Nose -> Windpipe -> Lungs",
+        "Nose -> Heart -> Lungs",
+        "Windpipe -> Stomach -> Lungs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Air travels from the nose, down the windpipe, and into the lungs where gas exchange occurs."
+    },
+    {
+      "question": "A solid object has a __________.",
+      "options": [
+        "definite shape and definite volume",
+        "definite shape but no definite volume",
+        "definite volume but no definite shape",
+        "no definite shape and no definite volume"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solids have both a fixed shape and a fixed volume, unlike liquids and gases."
+    },
+    {
+      "question": "Which state of matter has no definite shape, no definite volume, and can be compressed easily?",
+      "options": ["Solid", "Liquid", "Gas", "Both solid and liquid"],
+      "correctIndex": 2,
+      "explanation": "Gases have no definite shape or volume, and their particles can be pushed closer together, making them compressible."
+    },
+    {
+      "question": "A stone of volume 40 cm^3 is gently dropped into a measuring cylinder containing 60 ml of water. What will the new water level reading be?",
+      "options": ["60 ml", "80 ml", "100 ml", "120 ml"],
+      "correctIndex": 2,
+      "explanation": "The stone displaces an amount of water equal to its own volume: 60 ml + 40 cm^3 = 100 ml (since 1 cm^3 = 1 ml)."
+    },
+    {
+      "question": "Heat always flows from a __________.",
+      "options": [
+        "cooler object to a hotter object",
+        "larger object to a smaller object",
+        "hotter region/object to a cooler region/object",
+        "solid object to a liquid object"
+      ],
+      "correctIndex": 2,
+      "explanation": "Heat energy always flows naturally from a region/object of higher temperature to one of lower temperature."
+    },
+    {
+      "question": "A metal ball just passes through a metal ring at room temperature. The metal ball is then heated over a flame for five minutes. When placed on the ring again, the ball cannot pass through. Why?",
+      "options": [
+        "The ring contracted when heated.",
+        "The ball expanded when it gained heat.",
+        "The ball became heavier when heated.",
+        "The ring expanded when it lost heat."
+      ],
+      "correctIndex": 1,
+      "explanation": "When heated, the metal ball gains heat energy and expands, increasing in size so it can no longer fit through the ring."
+    },
+    {
+      "question": "Mrs Lee finds it difficult to unscrew a tight metal lid from a glass jar. To loosen the lid easily, she should __________.",
+      "options": [
+        "place the glass jar in a bowl of ice water",
+        "dip only the metal lid into a bowl of hot water for two minutes",
+        "put both the jar and the lid into the freezer",
+        "wrap the metal lid in a cold, damp cloth"
+      ],
+      "correctIndex": 1,
+      "explanation": "Heating the metal lid causes it to expand more than the glass jar, loosening its grip and making it easier to unscrew."
+    },
+    {
+      "question": "Devi tries to look at a lighted torch through a straight pipe and can see the light clearly. When she bends the pipe in the middle, she can no longer see the light. What property of light does this demonstrate?",
+      "options": [
+        "Light can bend around corners.",
+        "Light travels in straight lines.",
+        "Light can pass through all materials.",
+        "Light travels in curved paths."
+      ],
+      "correctIndex": 1,
+      "explanation": "Since light could not be seen through the bent pipe, this shows that light travels in straight lines and cannot bend around corners."
+    },
+    {
+      "question": "A wooden cylinder is placed between a fixed torch and a screen. To make the shadow on the screen larger, you should move the __________.",
+      "options": [
+        "wooden cylinder closer to the torch",
+        "wooden cylinder closer to the screen",
+        "torch further away from the wooden cylinder",
+        "screen closer to the wooden cylinder"
+      ],
+      "correctIndex": 0,
+      "explanation": "Moving the object closer to the light source causes it to block a wider spread of light, creating a larger shadow on the screen."
+    },
+    {
+      "question": "Which of the following objects can be attracted by a bar magnet?",
+      "options": [
+        "A copper coin",
+        "An aluminium can",
+        "A steel paper clip",
+        "A gold ring"
+      ],
+      "correctIndex": 2,
+      "explanation": "Steel contains iron, which is a magnetic material. Copper, aluminium, and gold are not attracted by magnets."
+    },
+    {
+      "question": "An electromagnet is made by coiling insulated copper wire around an iron nail and connecting it to two batteries. Which change will make the electromagnet stronger?",
+      "options": [
+        "Removing one battery from the circuit",
+        "Decreasing the number of coils of wire around the nail",
+        "Increasing the number of coils of wire around the nail",
+        "Replacing the iron nail with a wooden rod"
+      ],
+      "correctIndex": 2,
+      "explanation": "Increasing the number of coils of wire around the iron core increases the strength of the electromagnet."
+    }
+  ]
+}

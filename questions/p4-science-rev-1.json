@@ -1,0 +1,236 @@
+{
+  "topic": "Primary 4 Science — Mixed Revision (Worksheet A)",
+  "level": "Primary 4",
+  "questions": [
+    {
+      "question": "A woodlouse curls into a tight ball when touched by a twig. Which characteristic of living things does this observation show?",
+      "options": [
+        "Living things grow.",
+        "Living things can reproduce.",
+        "Living things respond to changes in their surroundings.",
+        "Living things need air, food, and water to survive."
+      ],
+      "correctIndex": 2,
+      "explanation": "This is an example of a living thing responding to a stimulus (touch) in its surroundings by protecting itself."
+    },
+    {
+      "question": "Which of the following is an example of matter?",
+      "options": ["Sunlight", "Shadow", "Air", "Heat"],
+      "correctIndex": 2,
+      "explanation": "Air is matter because it has mass and occupies space; sunlight, shadows, and heat are not matter."
+    },
+    {
+      "question": "A platypus lays eggs, but it is classified as a mammal because it __________.",
+      "options": [
+        "has a duck-like bill",
+        "can swim in water",
+        "has fur on its body and suckles its young with milk",
+        "has webbed feet"
+      ],
+      "correctIndex": 2,
+      "explanation": "Even though the platypus lays eggs, it is still classified as a mammal because it has fur and produces milk for its young."
+    },
+    {
+      "question": "Which of the following is a natural source of light?",
+      "options": ["The Moon", "A glass mirror", "A diamond", "The Sun"],
+      "correctIndex": 3,
+      "explanation": "The Sun produces its own light (a natural luminous source), while the Moon only reflects sunlight."
+    },
+    {
+      "question": "What is the main function of the roots of a plant?",
+      "options": [
+        "To absorb water and mineral salts from the soil and anchor the plant",
+        "To trap sunlight and make food for the plant",
+        "To produce seeds for reproduction",
+        "To hold the flowers upright"
+      ],
+      "correctIndex": 0,
+      "explanation": "Roots absorb water and dissolved mineral salts from the soil, and anchor the plant firmly in the ground."
+    },
+    {
+      "question": "When an ice cube is placed on a metal tabletop at room temperature, the ice cube melts because it __________.",
+      "options": [
+        "loses heat to the tabletop",
+        "gains heat from the warmer tabletop and surrounding air",
+        "loses coldness to the air",
+        "neither gains nor loses heat"
+      ],
+      "correctIndex": 1,
+      "explanation": "The ice cube melts because it gains heat from the warmer tabletop and surrounding air; 'coldness' does not flow — only heat does."
+    },
+    {
+      "question": "Which of the following animals has a 4-stage life cycle?",
+      "options": ["Frog", "Grasshopper", "Chicken", "Mosquito"],
+      "correctIndex": 3,
+      "explanation": "Mosquitoes undergo complete metamorphosis with a 4-stage life cycle: Egg -> Larva -> Pupa -> Adult."
+    },
+    {
+      "question": "Which organ in the skeletal system protects the human brain?",
+      "options": ["Rib cage", "Backbone", "Skull", "Pelvis"],
+      "correctIndex": 2,
+      "explanation": "The skull is the bony structure that protects the brain."
+    },
+    {
+      "question": "When the North pole of Magnet A is brought near Pole X of Magnet B, they push away (repel) each other. What pole is Pole X?",
+      "options": ["North pole", "South pole", "Either North or South pole", "Non-magnetic pole"],
+      "correctIndex": 0,
+      "explanation": "Like poles repel each other. Since Magnet A's North pole repels Pole X, Pole X must also be a North pole."
+    },
+    {
+      "question": "Four glass containers were set up: Container W (Food, water, no air — airtight lid); Container X (Food, no water, wire mesh lid — has air); Container Y (No food, no water, wire mesh lid — has air); Container Z (Food, water, wire mesh lid — has air). An identical grasshopper was placed into each container. In which container will the grasshopper survive the longest?",
+      "options": ["Container W", "Container X", "Container Y", "Container Z"],
+      "correctIndex": 3,
+      "explanation": "Container Z has food, water, and air — all three basic needs — so the grasshopper will survive the longest there."
+    },
+    {
+      "question": "When 100 ml of water is poured from a round flask into a tall rectangular container, what happens to its shape and volume?",
+      "options": [
+        "Shape changes, volume remains 100 ml",
+        "Shape remains the same, volume remains 100 ml",
+        "Shape changes, volume increases",
+        "Shape remains the same, volume decreases"
+      ],
+      "correctIndex": 0,
+      "explanation": "Liquids take the shape of their container, but their volume stays constant regardless of the container's shape."
+    },
+    {
+      "question": "A goldfish is classified as a fish because it has __________.",
+      "options": [
+        "moist skin and lives on land",
+        "fins, scales, and breathes through gills",
+        "feathers and a beak",
+        "wings and six legs"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fish have fins and scales, and they breathe using gills to extract oxygen from water."
+    },
+    {
+      "question": "A shadow is formed when light __________.",
+      "options": [
+        "passes through a clear glass window",
+        "is completely absorbed by the air",
+        "is blocked by an opaque or translucent object",
+        "bends around a smooth object"
+      ],
+      "correctIndex": 2,
+      "explanation": "A shadow forms when an opaque or translucent object blocks light from passing through, creating a dark area behind it."
+    },
+    {
+      "question": "A white balsam flower was placed in a beaker containing blue dye. After three hours, the petals of the flower turned blue. Which plant part was responsible for transporting the dye up to the flower?",
+      "options": ["Roots", "Leaves", "Stem", "Seed"],
+      "correctIndex": 2,
+      "explanation": "The stem contains tube-like structures (xylem) that transport water (and the dissolved dye) upward to the flower."
+    },
+    {
+      "question": "What happens to a solid metal ball when it gains heat?",
+      "options": [
+        "Its mass increases.",
+        "Its volume decreases and it contracts.",
+        "Its volume increases and it expands.",
+        "Its mass decreases."
+      ],
+      "correctIndex": 2,
+      "explanation": "When a solid gains heat, its particles vibrate more and move further apart, causing the solid to expand (increase in volume)."
+    },
+    {
+      "question": "At which stage of the mosquito's life cycle is it called a wriggler?",
+      "options": ["Egg", "Larva", "Pupa", "Adult"],
+      "correctIndex": 1,
+      "explanation": "The larva stage of a mosquito is commonly called a 'wriggler' because of how it moves in water."
+    },
+    {
+      "question": "What is the main function of the human circulatory system?",
+      "options": [
+        "To break down food into simple substances",
+        "To take in oxygen and remove carbon dioxide",
+        "To transport blood containing oxygen, water, and nutrients to all body parts",
+        "To protect internal organs from physical injury"
+      ],
+      "correctIndex": 2,
+      "explanation": "The circulatory system transports blood carrying oxygen, water, and nutrients to all parts of the body."
+    },
+    {
+      "question": "A potted green plant placed near a closed window gradually grows towards the direction of the sunlight. This shows that the plant __________.",
+      "options": [
+        "can reproduce",
+        "can move from one place to another",
+        "responds to changes in its surroundings",
+        "does not need water to grow"
+      ],
+      "correctIndex": 2,
+      "explanation": "Growing towards light (phototropism) shows that plants respond to changes such as light in their surroundings."
+    },
+    {
+      "question": "A syringe is filled with 30 cm^3 of air. When the nozzle is sealed tightly and the plunger is pushed inward, the volume of air decreases to 20 cm^3. This experiment shows that air __________.",
+      "options": [
+        "has a definite shape",
+        "has a definite volume",
+        "can be compressed",
+        "has no mass"
+      ],
+      "correctIndex": 2,
+      "explanation": "The decrease in volume when pressure is applied shows that air (a gas) can be compressed into a smaller space."
+    },
+    {
+      "question": "Which of the following features is shared by ALL adult insects?",
+      "options": [
+        "Two body parts and eight legs",
+        "Three body parts and six legs",
+        "Three body parts and two pairs of wings",
+        "Four body parts and a hard shell"
+      ],
+      "correctIndex": 1,
+      "explanation": "All adult insects share three body parts (head, thorax, abdomen) and six legs, though not all have wings."
+    },
+    {
+      "question": "Which of the following materials allows almost all light to pass through it?",
+      "options": ["Frosted glass", "Clear glass sheet", "Cardboard sheet", "Aluminium foil"],
+      "correctIndex": 1,
+      "explanation": "Clear glass is transparent and allows almost all light to pass through it."
+    },
+    {
+      "question": "What happens if all the leaves are completely plucked off a healthy green plant?",
+      "options": [
+        "The plant will grow taller immediately.",
+        "The roots will stop absorbing water instantly.",
+        "The plant cannot make food and will eventually die.",
+        "The stem will produce flowers right away."
+      ],
+      "correctIndex": 2,
+      "explanation": "Without leaves, the plant cannot carry out photosynthesis to make food, and will eventually die from lack of nutrients."
+    },
+    {
+      "question": "When a hot metal spoon is placed into a bowl of cold soup, what happens to the temperatures of the spoon and the soup after ten minutes?",
+      "options": [
+        "The spoon becomes hotter, and the soup becomes colder.",
+        "The temperature of the spoon decreases, while the temperature of the soup increases.",
+        "Both the spoon and the soup become colder than the room.",
+        "Both temperatures remain completely unchanged."
+      ],
+      "correctIndex": 1,
+      "explanation": "Heat flows from the hotter spoon to the colder soup until both reach a similar temperature — the spoon cools down while the soup warms up."
+    },
+    {
+      "question": "What is the correct sequence of the life cycle of a flowering plant?",
+      "options": [
+        "Adult plant -> Seed -> Fruit -> Seedling",
+        "Seed -> Seedling -> Adult plant (bearing flowers and fruits)",
+        "Seedling -> Seed -> Adult plant -> Flower",
+        "Fruit -> Seedling -> Seed -> Adult plant"
+      ],
+      "correctIndex": 1,
+      "explanation": "The correct life cycle sequence of a flowering plant is: Seed -> Seedling -> Adult plant (which bears flowers and fruits)."
+    },
+    {
+      "question": "Where does a young seedling get its food from before its green leaves appear?",
+      "options": [
+        "From the surrounding soil",
+        "From the sunlight",
+        "From its seed leaves (cotyledons)",
+        "From water absorbed through its root hairs"
+      ],
+      "correctIndex": 2,
+      "explanation": "Before true leaves appear, the seedling relies on stored food in its seed leaves (cotyledons) for nourishment."
+    }
+  ]
+}
