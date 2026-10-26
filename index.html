@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Bomb — Science Edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>💣 Find the Bomb — Science Edition 🧪</h1>
+  <p class="subtitle">Answer correctly. Flip tiles. Find the bomb to win!</p>
+</header>
+
+<!-- ============ SETUP SCREEN ============ -->
+<section id="setup-screen" class="screen active">
+  <div class="setup-card">
+
+    <h2>Game Setup</h2>
+
+    <div class="form-group">
+      <label for="num-players">Number of Players (2–6)</label>
+      <select id="num-players">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+
+    <div id="player-names-container" class="player-names-container">
+      <!-- dynamically generated player name inputs -->
+    </div>
+
+    <div class="form-group">
+      <label for="grid-size">Number of Tiles: <span id="grid-size-value">20</span></label>
+      <input type="range" id="grid-size" min="16" max="25" step="1" value="20">
+    </div>
+
+    <div class="form-group">
+      <label for="timer-select">Time Limit per Turn</label>
+      <select id="timer-select">
+        <option value="60">60 seconds</option>
+        <option value="120" selected>120 seconds</option>
+        <option value="0">No limit</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <h3>🎲 Game Twists (Optional)</h3>
+    <p class="twist-intro">Spice up the game with these optional features!</p>
+
+    <div class="form-group">
+      <label for="heat-meter-select">🌡️ Scorching Meter</label>
+      <select id="heat-meter-select">
+        <option value="on" selected>On — Show proximity hints on revealed tiles</option>
+        <option value="off">Off — Classic mode (no hints)</option>
+      </select>
+      <p class="twist-helper">Each safe tile reveals how "hot" or "cold" it was to the bomb — like Battleship!</p>
+    </div>
+
+    <div class="form-group">
+      <label for="decoy-select">🎭 Decoy Bombs</label>
+      <select id="decoy-select">
+        <option value="0" selected>None</option>
+        <option value="1">1 Decoy</option>
+        <option value="2">2 Decoys</option>
+      </select>
+      <p class="twist-helper">Decoys look identical to the real bomb. Finding one gives a false alarm (+1 bonus point) and the game continues!</p>
+    </div>
+
+    <div class="form-group">
+      <label for="spinner-select">🎡 Defuse Spinner</label>
+      <select id="spinner-select">
+        <option value="100" selected>Off — Instant win (100% chance)</option>
+        <option value="75">On — 75% win chance</option>
+        <option value="50">On — 50% win chance (high drama!)</option>
+      </select>
+      <p class="twist-helper">If set below 100%, finding the real bomb triggers a spin. Failing relocates the bomb and play continues!</p>
+    </div>
+
+    <hr>
+
+    <h3>Question Bank</h3>
+    <div class="form-group">
+      <label>
+        <input type="radio" name="source-type" value="url" checked> Load from GitHub URL
+      </label>
+      <label>
+        <input type="radio" name="source-type" value="upload"> Upload a JSON file
+      </label>
+    </div>
+
+    <div id="url-input-group" class="form-group">
+      <input type="text" id="json-url" placeholder="https://raw.githubusercontent.com/username/repo/main/questions/alkanes-alkenes.json">
+      <button id="load-preset-btn" type="button" class="secondary-btn">Use Sample: Alkanes &amp; Alkenes</button>
+    </div>
+
+    <div id="upload-input-group" class="form-group hidden">
+      <input type="file" id="json-upload" accept=".json">
+    </div>
+
+    <button id="load-questions-btn" class="primary-btn" type="button">Load Questions</button>
+    <p id="load-status" class="status-text"></p>
+
+    <button id="start-game-btn" class="primary-btn start-btn" type="button" disabled>Start Game 🚀</button>
+  </div>
+</section>
+
+<!-- ============ GAME SCREEN ============ -->
+<section id="game-screen" class="screen">
+
+  <div class="game-topbar">
+    <div id="current-turn-display" class="turn-display">Player 1's Turn</div>
+    <div id="global-timer-display" class="timer-display hidden">⏱ <span id="timer-value">60</span>s</div>
+    <button id="restart-btn" class="secondary-btn small-btn" type="button">🔄 New Game</button>
+  </div>
+
+  <div id="heat-legend" class="heat-legend hidden">
+    <span class="heat-legend-title">🌡️ Proximity Key:</span>
+    <span class="heat-legend-item">🥶 Ice Cold</span>
+    <span class="heat-legend-item">😎 Cool</span>
+    <span class="heat-legend-item">🙂 Warm</span>
+    <span class="heat-legend-item">🔥 Hot</span>
+    <span class="heat-legend-item">🔥🔥🔥 Blazing</span>
+  </div>
+
+  <div id="tile-grid" class="tile-grid"></div>
+
+  <div id="scoreboard" class="scoreboard"></div>
+</section>
+
+<!-- ============ TOAST BANNER (decoy alerts etc.) ============ -->
+<div id="toast-banner" class="toast-banner hidden"></div>
+
+<!-- ============ QUESTION MODAL ============ -->
+<div id="question-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span id="modal-timer" class="modal-timer hidden">⏱ <span id="modal-timer-value">60</span>s</span>
+    </div>
+    <p id="question-text" class="question-text"></p>
+    <div id="options-container" class="options-container"></div>
+    <button id="submit-answer-btn" class="primary-btn" type="button" disabled>Submit Answer</button>
+
+    <div id="feedback-area" class="feedback-area hidden">
+      <p id="feedback-text"></p>
+      <p id="explanation-text" class="explanation-text"></p>
+      <button id="continue-btn" class="primary-btn" type="button">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DEFUSE SPINNER MODAL ============ -->
+<div id="spinner-modal" class="modal-overlay hidden">
+  <div class="modal-box spinner-box">
+    <h2>🎡 Defuse Spinner!</h2>
+    <p id="spinner-intro-text">You found the bomb! Spin the wheel to see if you can defuse it...</p>
+
+    <div class="spinner-wheel-container">
+      <div id="spinner-wheel" class="spinner-wheel">
+        <div class="spinner-segment win-segment">DEFUSED<br>✅</div>
+        <div class="spinner-segment lose-segment">BOOM<br>💥</div>
+      </div>
+      <div class="spinner-pointer">▼</div>
+    </div>
+
+    <button id="spin-btn" class="primary-btn" type="button">SPIN THE WHEEL!</button>
+
+    <div id="spinner-result-area" class="hidden">
+      <p id="spinner-result-text" class="spinner-result-text"></p>
+      <button id="spinner-continue-btn" class="primary-btn" type="button">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ END SCREEN ============ -->
+<div id="end-screen" class="modal-overlay hidden">
+  <div class="modal-box end-box">
+    <h2 id="winner-text">🎉 Player X found the bomb! 🎉</h2>
+    <div id="confetti-container" class="confetti-container"></div>
+    <button id="play-again-btn" class="primary-btn" type="button">Play Again</button>
+    <button id="new-settings-btn" class="secondary-btn" type="button">Change Settings</button>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
