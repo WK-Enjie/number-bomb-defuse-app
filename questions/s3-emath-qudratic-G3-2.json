@@ -1,0 +1,150 @@
+{
+  "topic": "Quadratic Expressions & Equations — Mixed Practice (Worksheet B)",
+  "level": "Secondary 3 E-Math (G2)",
+  "questions": [
+    {
+      "question": "Factorise completely: x^2 + 9x + 20",
+      "options": ["(x + 4)(x + 5)", "(x + 2)(x + 10)", "(x - 4)(x - 5)", "(x + 4)(x - 5)"],
+      "correctIndex": 0,
+      "explanation": "Two numbers multiplying to 20 and adding to 9: 4 and 5. So (x+4)(x+5)."
+    },
+    {
+      "question": "Solve by factorisation: x^2 - 9x + 14 = 0",
+      "options": ["x = 2 or x = 7", "x = -2 or x = -7", "x = 2 or x = -7", "x = 1 or x = 14"],
+      "correctIndex": 0,
+      "explanation": "(x-2)(x-7)=0 since -2 and -7 multiply to 14 and add to -9. x=2 or x=7."
+    },
+    {
+      "question": "Express x^2 + 8x + 5 in the form (x + p)^2 + q.",
+      "options": ["(x + 4)^2 - 11", "(x + 4)^2 + 5", "(x + 8)^2 - 59", "(x - 4)^2 - 11"],
+      "correctIndex": 0,
+      "explanation": "Half of 8 is 4. (x+4)^2=x^2+8x+16. q=5-16=-11."
+    },
+    {
+      "question": "Solve x^2 + 6x - 7 = 0 by completing the square.",
+      "options": ["x = 1 or x = -7", "x = -1 or x = 7", "x = 1 or x = 7", "x = -1 or x = -7"],
+      "correctIndex": 0,
+      "explanation": "(x+3)^2-9-7=0 → (x+3)^2=16 → x+3=±4 → x=1 or x=-7."
+    },
+    {
+      "question": "Factorise completely: x^2 - 12x + 35",
+      "options": ["(x - 5)(x - 7)", "(x + 5)(x + 7)", "(x - 5)(x + 7)", "(x - 1)(x - 35)"],
+      "correctIndex": 0,
+      "explanation": "Two numbers multiplying to 35 and adding to -12: -5 and -7. (x-5)(x-7)."
+    },
+    {
+      "question": "Solve by factorisation: x^2 + 5x = 24",
+      "options": ["x = -8 or x = 3", "x = 8 or x = -3", "x = -8 or x = -3", "x = 8 or x = 3"],
+      "correctIndex": 0,
+      "explanation": "x^2+5x-24=0 → (x+8)(x-3)=0 → x=-8 or x=3."
+    },
+    {
+      "question": "Express x^2 - 4x - 7 in the form (x + p)^2 + q.",
+      "options": ["(x - 2)^2 - 11", "(x - 2)^2 - 7", "(x - 4)^2 - 23", "(x + 2)^2 - 11"],
+      "correctIndex": 0,
+      "explanation": "Half of -4 is -2. (x-2)^2=x^2-4x+4. q=-7-4=-11."
+    },
+    {
+      "question": "Solve x^2 - 8x + 3 = 0 by completing the square.",
+      "options": ["x = 4 ± √13", "x = -4 ± √13", "x = 4 ± √19", "x = 8 ± √13"],
+      "correctIndex": 0,
+      "explanation": "(x-4)^2-16+3=0 → (x-4)^2=13 → x=4±√13."
+    },
+    {
+      "question": "Factorise completely: x^2 + 2x - 15",
+      "options": ["(x + 5)(x - 3)", "(x - 5)(x + 3)", "(x + 15)(x - 1)", "(x + 3)(x - 5)"],
+      "correctIndex": 0,
+      "explanation": "Two numbers multiplying to -15 and adding to 2: 5 and -3. (x+5)(x-3)."
+    },
+    {
+      "question": "Solve by factorisation: 3x^2 - 7x - 6 = 0",
+      "options": ["x = -frac{2}{3} or x = 3", "x = frac{2}{3} or x = -3", "x = frac{2}{3} or x = 3", "x = -frac{2}{3} or x = -3"],
+      "correctIndex": 0,
+      "explanation": "(3x+2)(x-3)=0 → 3x+2=0 gives x=-frac{2}{3}; x-3=0 gives x=3."
+    },
+    {
+      "question": "Express x^2 + 7x + 3 in the form (x + p)^2 + q.",
+      "options": ["(x + frac{7}{2})^2 - frac{37}{4}", "(x + frac{7}{2})^2 + 3", "(x + 7)^2 - 46", "(x - frac{7}{2})^2 - frac{37}{4}"],
+      "correctIndex": 0,
+      "explanation": "Half of 7 is frac{7}{2}. (x+frac{7}{2})^2=x^2+7x+frac{49}{4}. q=3-frac{49}{4}=-frac{37}{4}."
+    },
+    {
+      "question": "Solve x^2 + 10x - 2 = 0 by completing the square.",
+      "options": ["x = -5 ± 3√3", "x = 5 ± 3√3", "x = -5 ± √13", "x = -10 ± 3√3"],
+      "correctIndex": 0,
+      "explanation": "(x+5)^2-25-2=0 → (x+5)^2=27 → x+5=±√27=±3√3 → x=-5±3√3."
+    },
+    {
+      "question": "Factorise completely: 3x^2 + 11x + 6",
+      "options": ["(3x + 2)(x + 3)", "(3x + 3)(x + 2)", "(3x - 2)(x - 3)", "(x + 2)(3x + 3)"],
+      "correctIndex": 0,
+      "explanation": "(3x+2)(x+3) expands to 3x^2+9x+2x+6=3x^2+11x+6."
+    },
+    {
+      "question": "Solve by factorisation: 2x^2 + 9x = 5",
+      "options": ["x = frac{1}{2} or x = -5", "x = -frac{1}{2} or x = 5", "x = frac{1}{2} or x = 5", "x = -frac{1}{2} or x = -5"],
+      "correctIndex": 0,
+      "explanation": "2x^2+9x-5=0 → (2x-1)(x+5)=0 → x=frac{1}{2} or x=-5."
+    },
+    {
+      "question": "Express x^2 - 5x - 2 in the form (x + p)^2 + q.",
+      "options": ["(x - frac{5}{2})^2 - frac{33}{4}", "(x - frac{5}{2})^2 - 2", "(x - 5)^2 - 27", "(x + frac{5}{2})^2 - frac{33}{4}"],
+      "correctIndex": 0,
+      "explanation": "Half of -5 is -frac{5}{2}. (x-frac{5}{2})^2=x^2-5x+frac{25}{4}. q=-2-frac{25}{4}=-frac{33}{4}."
+    },
+    {
+      "question": "Solve x^2 - 7x + 5 = 0 by completing the square.",
+      "options": ["x = frac{7 ± √29}{2}", "x = frac{-7 ± √29}{2}", "x = frac{7 ± √49}{2}", "x = 7 ± √29"],
+      "correctIndex": 0,
+      "explanation": "(x-frac{7}{2})^2-frac{49}{4}+5=0 → (x-frac{7}{2})^2=frac{29}{4} → x=frac{7±√29}{2}."
+    },
+    {
+      "question": "Factorise completely: 2x^2 - 7x + 6",
+      "options": ["(2x - 3)(x - 2)", "(2x - 2)(x - 3)", "(2x + 3)(x + 2)", "(2x - 6)(x - 1)"],
+      "correctIndex": 0,
+      "explanation": "(2x-3)(x-2) expands to 2x^2-4x-3x+6=2x^2-7x+6."
+    },
+    {
+      "question": "Solve by factorisation: (x - 3)(x + 2) = 6",
+      "options": ["x = 4 or x = -3", "x = -4 or x = 3", "x = 4 or x = 3", "x = -4 or x = -3"],
+      "correctIndex": 0,
+      "explanation": "Expand: x^2-x-6=6 → x^2-x-12=0 → (x-4)(x+3)=0 → x=4 or x=-3."
+    },
+    {
+      "question": "Express x^2 + frac{3}{2}x - 1 in the form (x + p)^2 + q.",
+      "options": ["(x + frac{3}{4})^2 - frac{25}{16}", "(x + frac{3}{4})^2 - 1", "(x + frac{3}{2})^2 - frac{13}{4}", "(x - frac{3}{4})^2 - frac{25}{16}"],
+      "correctIndex": 0,
+      "explanation": "Half of frac{3}{2} is frac{3}{4}. (x+frac{3}{4})^2=x^2+frac{3}{2}x+frac{9}{16}. q=-1-frac{9}{16}=-frac{25}{16}."
+    },
+    {
+      "question": "Solve x^2 + 5x - 3 = 0 by completing the square.",
+      "options": ["x = frac{-5 ± √37}{2}", "x = frac{5 ± √37}{2}", "x = frac{-5 ± √13}{2}", "x = -5 ± √37"],
+      "correctIndex": 0,
+      "explanation": "(x+frac{5}{2})^2-frac{25}{4}-3=0 → (x+frac{5}{2})^2=frac{37}{4} → x=frac{-5±√37}{2}."
+    },
+    {
+      "question": "Factorise completely: 9x^2 - 16",
+      "options": ["(3x - 4)(3x + 4)", "(9x - 4)(x + 4)", "(3x - 16)(3x + 1)", "(9x - 16)(x + 1)"],
+      "correctIndex": 0,
+      "explanation": "Difference of squares: 9x^2-16=(3x)^2-4^2=(3x-4)(3x+4)."
+    },
+    {
+      "question": "Solve by factorisation: 3x^2 = 12x",
+      "options": ["x = 0 or x = 4", "x = 0 or x = -4", "x = 4 only", "x = 0 or x = 12"],
+      "correctIndex": 0,
+      "explanation": "3x^2-12x=0 → 3x(x-4)=0 → x=0 or x=4."
+    },
+    {
+      "question": "Express x^2 - frac{5}{2}x + frac{3}{8} in the form (x + p)^2 + q.",
+      "options": ["(x - frac{5}{4})^2 - frac{19}{16}", "(x - frac{5}{4})^2 + frac{3}{8}", "(x - frac{5}{2})^2 - frac{41}{16}", "(x + frac{5}{4})^2 - frac{19}{16}"],
+      "correctIndex": 0,
+      "explanation": "Half of -frac{5}{2} is -frac{5}{4}. (x-frac{5}{4})^2=x^2-frac{5}{2}x+frac{25}{16}. q=frac{3}{8}-frac{25}{16}=frac{6}{16}-frac{25}{16}=-frac{19}{16}."
+    },
+    {
+      "question": "Solve x^2 - frac{1}{2}x - frac{3}{2} = 0 by completing the square.",
+      "options": ["x = frac{3}{2} or x = -1", "x = -frac{3}{2} or x = 1", "x = frac{3}{2} or x = 1", "x = -frac{3}{2} or x = -1"],
+      "correctIndex": 0,
+      "explanation": "(x-frac{1}{4})^2-frac{1}{16}-frac{3}{2}=0 → (x-frac{1}{4})^2=frac{25}{16} → x-frac{1}{4}=±frac{5}{4} → x=frac{3}{2} or x=-1."
+    }
+  ]
+}
