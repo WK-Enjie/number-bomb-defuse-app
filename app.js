@@ -1,7 +1,6 @@
 /* ============================================================
    FIND THE BOMB — SCIENCE EDITION
-   app.js — Complete Game Logic
-   Pure HTML/CSS/JS — no frameworks, no build tools
+   app.js — Complete Game Logic (matched to actual index.html)
    ============================================================ */
 
 /* ============================================================
@@ -12,48 +11,54 @@ const GRID_COLUMNS = 5;
 const GITHUB_BASE_URL = 'questions/';
 const SAMPLE_QUESTION_FILENAME = 'alkanes-alkenes.json';
 
+// Spinner wheel segment angle ranges (degrees), with padding built in.
+// Assumes win-segment occupies 0°-180° and lose-segment occupies 180°-360°
+// of the wheel's UNROTATED state, with the pointer fixed at the top (0°/360°).
+// If your CSS actually splits the wheel left/right instead of top/bottom,
+// or the win segment is on the other side, just swap these two ranges.
+const SPINNER_WIN_RANGE = [10, 170];
+const SPINNER_LOSE_RANGE = [190, 350];
+
 /* ============================================================
    SECTION 2: GAME STATE
    ============================================================ */
 
 const gameState = {
-  players: [],              // [{ name, score }]
+  players: [],
   currentPlayerIndex: 0,
   tileCount: 20,
-  timerDuration: 60,        // seconds; 0 = no limit
-  questionBank: null,       // { topic, level, questions: [...] }
-  tileQuestionMap: [],      // questions assigned per tile index
+  timerDuration: 120,
+  questionBank: null,
+  tileQuestionMap: [],
   bombTileIndex: null,
-  decoyTileIndexes: [],     // array of tile indexes that are decoys
-  revealedTiles: [],        // booleans per tile index
-  permanentlySafeTiles: [], // tiles that were "boomed" via spinner and can't hold bomb again
+  decoyTileIndexes: [],
+  revealedTiles: [],
+  permanentlySafeTiles: [],
   currentTileIndex: null,
   timerInterval: null,
   timeRemaining: 0,
 
-  // Twist settings (teacher-controlled every game, not persisted)
   heatMeterEnabled: true,
   decoyCount: 0,
-  spinnerWinChance: 100     // 100 = spinner disabled (instant win)
+  spinnerWinChance: 100,
+
+  _pendingResult: null,
+  _spinnerTileIndex: null,
+  _spinnerResult: null
 };
 
 /* ============================================================
-   SECTION 3: DOM ELEMENT REFERENCES
+   SECTION 3: DOM ELEMENT REFERENCES — matched to real HTML IDs
    ============================================================ */
 
 const el = {
-  // Screens
-  setupScreen: document.getElementById('setup-screen'),
-  gameScreen: document.getElementById('game-screen'),
-  endScreen: document.getElementById('end-screen'),
-
   // Setup — players
-  playerCountSelect: document.getElementById('player-count'),
-  playerNameInputsContainer: document.getElementById('player-name-inputs'),
+  numPlayersSelect: document.getElementById('num-players'),
+  playerNamesContainer: document.getElementById('player-names-container'),
 
   // Setup — grid
-  tileCountSlider: document.getElementById('tile-count-slider'),
-  tileCountDisplay: document.getElementById('tile-count-display'),
+  gridSizeSlider: document.getElementById('grid-size'),
+  gridSizeValue: document.getElementById('grid-size-value'),
 
   // Setup — timer
   timerSelect: document.getElementById('timer-select'),
@@ -63,34 +68,42 @@ const el = {
   decoySelect: document.getElementById('decoy-select'),
   spinnerSelect: document.getElementById('spinner-select'),
 
-  // Setup — question loading
+  // Setup — question source
   sourceTypeRadios: document.querySelectorAll('input[name="source-type"]'),
-  githubLoadSection: document.getElementById('github-load-section'),
-  uploadLoadSection: document.getElementById('upload-load-section'),
+  urlInputGroup: document.getElementById('url-input-group'),
+  uploadInputGroup: document.getElementById('upload-input-group'),
   jsonFilenameInput: document.getElementById('json-filename'),
+  loadPresetBtn: document.getElementById('load-preset-btn'),
+  jsonUploadInput: document.getElementById('json-upload'),
   loadQuestionsBtn: document.getElementById('load-questions-btn'),
-  useSampleBtn: document.getElementById('use-sample-btn'),
-  uploadFileInput: document.getElementById('upload-file-input'),
   loadStatus: document.getElementById('load-status'),
-
-  // Setup — start
   startGameBtn: document.getElementById('start-game-btn'),
 
+  // Screens
+  setupScreen: document.getElementById('setup-screen'),
+  gameScreen: document.getElementById('game-screen'),
+
   // Game screen
-  turnDisplay: document.getElementById('turn-display'),
-  timerDisplay: document.getElementById('timer-display'),
+  currentTurnDisplay: document.getElementById('current-turn-display'),
+  globalTimerDisplay: document.getElementById('global-timer-display'),
+  timerValue: document.getElementById('timer-value'),
+  restartBtn: document.getElementById('restart-btn'),
   heatLegend: document.getElementById('heat-legend'),
-  tileGridContainer: document.getElementById('tile-grid'),
-  scoreboardContainer: document.getElementById('scoreboard'),
+  tileGrid: document.getElementById('tile-grid'),
+  scoreboard: document.getElementById('scoreboard'),
+
+  // Toast
   toastBanner: document.getElementById('toast-banner'),
 
   // Question modal
   questionModal: document.getElementById('question-modal'),
+  modalTimer: document.getElementById('modal-timer'),
+  modalTimerValue: document.getElementById('modal-timer-value'),
   questionText: document.getElementById('question-text'),
   optionsContainer: document.getElementById('options-container'),
   submitAnswerBtn: document.getElementById('submit-answer-btn'),
-  questionTimerBar: document.getElementById('question-timer-bar'),
-  explanationContainer: document.getElementById('explanation-container'),
+  feedbackArea: document.getElementById('feedback-area'),
+  feedbackText: document.getElementById('feedback-text'),
   explanationText: document.getElementById('explanation-text'),
   continueBtn: document.getElementById('continue-btn'),
 
@@ -98,12 +111,13 @@ const el = {
   spinnerModal: document.getElementById('spinner-modal'),
   spinnerWheel: document.getElementById('spinner-wheel'),
   spinBtn: document.getElementById('spin-btn'),
+  spinnerResultArea: document.getElementById('spinner-result-area'),
   spinnerResultText: document.getElementById('spinner-result-text'),
   spinnerContinueBtn: document.getElementById('spinner-continue-btn'),
 
   // End screen
+  endScreen: document.getElementById('end-screen'),
   winnerText: document.getElementById('winner-text'),
-  finalScoresContainer: document.getElementById('final-scores'),
   confettiContainer: document.getElementById('confetti-container'),
   playAgainBtn: document.getElementById('play-again-btn'),
   newSettingsBtn: document.getElementById('new-settings-btn')
@@ -117,27 +131,22 @@ function formatScienceText(raw) {
   if (!raw) return '';
   let text = raw;
 
-  // 1. Reaction arrows (must run before anything else touches special chars)
   text = text.replace(/<=>/g, '⇌');
   text = text.replace(/->/g, '→');
 
-  // 2. Mixed numbers: mixed{whole}{num}{den}
   text = text.replace(/mixed\{([^{}]+)\}\{([^{}]+)\}\{([^{}]+)\}/g,
     (m, whole, num, den) => {
       return `<span class="mixed-number">${whole}<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span></span>`;
     });
 
-  // 3. Fractions: frac{numerator}{denominator} — supports algebra
   text = text.replace(/frac\{([^{}]+)\}\{([^{}]+)\}/g,
     (m, num, den) => {
       return `<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span>`;
     });
 
-  // 4. Braced subscripts/superscripts (multi-character): must come before single-char versions
   text = text.replace(/\^\{([^{}]+)\}/g, (m, p1) => `<sup>${p1}</sup>`);
   text = text.replace(/_\{([^{}]+)\}/g, (m, p1) => `<sub>${p1}</sub>`);
 
-  // 5. Single-character subscripts/superscripts
   text = text.replace(/\^([a-zA-Z0-9+\-])/g, (m, p1) => `<sup>${p1}</sup>`);
   text = text.replace(/_([a-zA-Z0-9+\-])/g, (m, p1) => `<sub>${p1}</sub>`);
 
@@ -145,7 +154,7 @@ function formatScienceText(raw) {
 }
 
 /* ============================================================
-   SECTION 5: UTILITY FUNCTIONS
+   SECTION 5: UTILITIES
    ============================================================ */
 
 function shuffleArray(array) {
@@ -167,32 +176,38 @@ function getRowCol(tileIndex) {
   return { row, col };
 }
 
+// Screens (setup/game) use the .active class per your CSS/HTML structure
 function showScreen(screenName) {
-  el.setupScreen.classList.add('hidden');
-  el.gameScreen.classList.add('hidden');
-  el.endScreen.classList.add('hidden');
+  el.setupScreen.classList.remove('active');
+  el.gameScreen.classList.remove('active');
+  if (screenName === 'setup') el.setupScreen.classList.add('active');
+  if (screenName === 'game') el.gameScreen.classList.add('active');
+}
 
-  if (screenName === 'setup') el.setupScreen.classList.remove('hidden');
-  if (screenName === 'game') el.gameScreen.classList.remove('hidden');
-  if (screenName === 'end') el.endScreen.classList.remove('hidden');
+// Modals/overlays use the .hidden class
+function openOverlay(overlayEl) {
+  overlayEl.classList.remove('hidden');
+}
+function closeOverlay(overlayEl) {
+  overlayEl.classList.add('hidden');
 }
 
 function showToast(message, duration = 3000) {
   el.toastBanner.textContent = message;
-  el.toastBanner.classList.add('visible');
+  el.toastBanner.classList.remove('hidden');
   clearTimeout(el.toastBanner._hideTimeout);
   el.toastBanner._hideTimeout = setTimeout(() => {
-    el.toastBanner.classList.remove('visible');
+    el.toastBanner.classList.add('hidden');
   }, duration);
 }
 
 /* ============================================================
-   SECTION 6: SETUP SCREEN — PLAYER NAME INPUTS
+   SECTION 6: SETUP — PLAYER NAME INPUTS
    ============================================================ */
 
 function renderPlayerNameInputs() {
-  const count = parseInt(el.playerCountSelect.value, 10);
-  el.playerNameInputsContainer.innerHTML = '';
+  const count = parseInt(el.numPlayersSelect.value, 10);
+  el.playerNamesContainer.innerHTML = '';
 
   for (let i = 0; i < count; i++) {
     const wrapper = document.createElement('div');
@@ -211,49 +226,49 @@ function renderPlayerNameInputs() {
 
     wrapper.appendChild(label);
     wrapper.appendChild(input);
-    el.playerNameInputsContainer.appendChild(wrapper);
+    el.playerNamesContainer.appendChild(wrapper);
   }
 }
 
-el.playerCountSelect.addEventListener('change', renderPlayerNameInputs);
+el.numPlayersSelect.addEventListener('change', renderPlayerNameInputs);
 
 /* ============================================================
-   SECTION 7: SETUP SCREEN — GRID SLIDER
+   SECTION 7: SETUP — GRID SLIDER
    ============================================================ */
 
-el.tileCountSlider.addEventListener('input', () => {
-  el.tileCountDisplay.textContent = el.tileCountSlider.value;
+el.gridSizeSlider.addEventListener('input', () => {
+  el.gridSizeValue.textContent = el.gridSizeSlider.value;
 });
 
 /* ============================================================
-   SECTION 8: SETUP SCREEN — QUESTION SOURCE TOGGLE
+   SECTION 8: SETUP — QUESTION SOURCE TOGGLE
    ============================================================ */
 
 el.sourceTypeRadios.forEach(radio => {
   radio.addEventListener('change', () => {
-    if (radio.value === 'github' && radio.checked) {
-      el.githubLoadSection.classList.remove('hidden');
-      el.uploadLoadSection.classList.add('hidden');
+    if (radio.value === 'url' && radio.checked) {
+      el.urlInputGroup.classList.remove('hidden');
+      el.uploadInputGroup.classList.add('hidden');
     } else if (radio.value === 'upload' && radio.checked) {
-      el.githubLoadSection.classList.add('hidden');
-      el.uploadLoadSection.classList.remove('hidden');
+      el.urlInputGroup.classList.add('hidden');
+      el.uploadInputGroup.classList.remove('hidden');
     }
   });
 });
 
 /* ============================================================
-   SECTION 9: SETUP SCREEN — QUESTION LOADING
+   SECTION 9: SETUP — QUESTION LOADING
    ============================================================ */
 
 function setLoadStatus(message, isError) {
   el.loadStatus.textContent = message;
-  el.loadStatus.className = isError ? 'load-status error' : 'load-status success';
+  el.loadStatus.className = isError ? 'status-text error' : 'status-text success';
 }
 
 function handleLoadedQuestionData(data) {
-  // Validation
   if (!data || !Array.isArray(data.questions) || data.questions.length === 0) {
     setLoadStatus('❌ Invalid file: no questions found.', true);
+    el.startGameBtn.disabled = true;
     return false;
   }
 
@@ -261,10 +276,12 @@ function handleLoadedQuestionData(data) {
     const q = data.questions[i];
     if (!q.question || typeof q.question !== 'string') {
       setLoadStatus(`❌ Question ${i + 1} is missing question text.`, true);
+      el.startGameBtn.disabled = true;
       return false;
     }
     if (!Array.isArray(q.options) || q.options.length < 2) {
       setLoadStatus(`❌ Question ${i + 1} needs at least 2 options.`, true);
+      el.startGameBtn.disabled = true;
       return false;
     }
     if (
@@ -273,12 +290,14 @@ function handleLoadedQuestionData(data) {
       q.correctIndex >= q.options.length
     ) {
       setLoadStatus(`❌ Question ${i + 1} has an invalid correctIndex.`, true);
+      el.startGameBtn.disabled = true;
       return false;
     }
   }
 
   gameState.questionBank = data;
   setLoadStatus(`✅ Loaded "${data.topic || 'Untitled'}" — ${data.questions.length} questions.`, false);
+  el.startGameBtn.disabled = false; // <-- was missing: button starts disabled in HTML
   return true;
 }
 
@@ -306,12 +325,12 @@ el.loadQuestionsBtn.addEventListener('click', () => {
   loadQuestionsFromGithub(el.jsonFilenameInput.value);
 });
 
-el.useSampleBtn.addEventListener('click', () => {
+el.loadPresetBtn.addEventListener('click', () => {
   el.jsonFilenameInput.value = SAMPLE_QUESTION_FILENAME;
   loadQuestionsFromGithub(SAMPLE_QUESTION_FILENAME);
 });
 
-el.uploadFileInput.addEventListener('change', (e) => {
+el.jsonUploadInput.addEventListener('change', (e) => {
   const file = e.target.files[0];
   if (!file) return;
 
@@ -322,6 +341,7 @@ el.uploadFileInput.addEventListener('change', (e) => {
       handleLoadedQuestionData(data);
     } catch (err) {
       setLoadStatus('❌ Could not parse file as JSON.', true);
+      el.startGameBtn.disabled = true;
       console.error(err);
     }
   };
@@ -329,7 +349,7 @@ el.uploadFileInput.addEventListener('change', (e) => {
 });
 
 /* ============================================================
-   SECTION 10: SETUP SCREEN — READ TWIST SETTINGS
+   SECTION 10: READ TWIST SETTINGS
    ============================================================ */
 
 function readTwistSettingsFromUI() {
@@ -352,31 +372,25 @@ function buildTileQuestionMap(tileCount, questions) {
 }
 
 function initializeGameState() {
-  // Players
-  const count = parseInt(el.playerCountSelect.value, 10);
+  const count = parseInt(el.numPlayersSelect.value, 10);
   gameState.players = [];
   for (let i = 0; i < count; i++) {
     const input = document.getElementById(`player-name-${i}`);
-    const name = (input.value.trim() || `Player ${i + 1}`);
+    const name = (input && input.value.trim()) || `Player ${i + 1}`;
     gameState.players.push({ name, score: 0 });
   }
   gameState.currentPlayerIndex = 0;
 
-  // Grid + timer
-  gameState.tileCount = parseInt(el.tileCountSlider.value, 10);
+  gameState.tileCount = parseInt(el.gridSizeSlider.value, 10);
   gameState.timerDuration = parseInt(el.timerSelect.value, 10);
 
-  // Twists
   readTwistSettingsFromUI();
 
-  // Tiles
   gameState.revealedTiles = new Array(gameState.tileCount).fill(false);
   gameState.permanentlySafeTiles = new Array(gameState.tileCount).fill(false);
 
-  // Bomb placement
   gameState.bombTileIndex = getRandomInt(0, gameState.tileCount - 1);
 
-  // Decoy placement (on non-bomb tiles)
   gameState.decoyTileIndexes = [];
   const availableForDecoy = [];
   for (let i = 0; i < gameState.tileCount; i++) {
@@ -387,7 +401,6 @@ function initializeGameState() {
     gameState.decoyTileIndexes.push(shuffledAvailable[i]);
   }
 
-  // Question mapping
   gameState.tileQuestionMap = buildTileQuestionMap(
     gameState.tileCount,
     gameState.questionBank.questions
@@ -399,8 +412,8 @@ function initializeGameState() {
    ============================================================ */
 
 function renderTileGrid() {
-  el.tileGridContainer.innerHTML = '';
-  el.tileGridContainer.style.gridTemplateColumns = `repeat(${GRID_COLUMNS}, 1fr)`;
+  el.tileGrid.innerHTML = '';
+  el.tileGrid.style.gridTemplateColumns = `repeat(${GRID_COLUMNS}, 1fr)`;
 
   for (let i = 0; i < gameState.tileCount; i++) {
     const tile = document.createElement('button');
@@ -408,25 +421,21 @@ function renderTileGrid() {
     tile.dataset.index = i;
     tile.textContent = i + 1;
     tile.addEventListener('click', () => handleTileClick(i));
-    el.tileGridContainer.appendChild(tile);
+    el.tileGrid.appendChild(tile);
   }
 
   updateHeatLegendVisibility();
 }
 
 function getTileElement(index) {
-  return el.tileGridContainer.querySelector(`[data-index="${index}"]`);
+  return el.tileGrid.querySelector(`[data-index="${index}"]`);
 }
 
 function setTilesInteractable(interactable) {
-  const tiles = el.tileGridContainer.querySelectorAll('.tile');
+  const tiles = el.tileGrid.querySelectorAll('.tile');
   tiles.forEach(tile => {
     const idx = parseInt(tile.dataset.index, 10);
-    if (interactable && !gameState.revealedTiles[idx]) {
-      tile.disabled = false;
-    } else {
-      tile.disabled = true;
-    }
+    tile.disabled = !(interactable && !gameState.revealedTiles[idx]);
   });
 }
 
@@ -439,7 +448,7 @@ function updateHeatLegendVisibility() {
 }
 
 /* ============================================================
-   SECTION 13: HEAT METER CALCULATION
+   SECTION 13: HEAT METER
    ============================================================ */
 
 function calculateHeatLevel(tileIndex) {
@@ -465,19 +474,19 @@ function calculateHeatLevel(tileIndex) {
    ============================================================ */
 
 function renderScoreboard() {
-  el.scoreboardContainer.innerHTML = '';
+  el.scoreboard.innerHTML = '';
   gameState.players.forEach((player, idx) => {
     const item = document.createElement('div');
     item.className = 'scoreboard-item';
     if (idx === gameState.currentPlayerIndex) item.classList.add('active-player');
     item.textContent = `${player.name}: ${player.score}`;
-    el.scoreboardContainer.appendChild(item);
+    el.scoreboard.appendChild(item);
   });
 }
 
 function updateTurnDisplay() {
   const player = gameState.players[gameState.currentPlayerIndex];
-  el.turnDisplay.textContent = `${player.name}'s Turn`;
+  el.currentTurnDisplay.textContent = `${player.name}'s Turn`;
 }
 
 /* ============================================================
@@ -496,14 +505,10 @@ function openQuestionModal(questionData) {
   selectedOptionIndex = null;
   el.questionText.innerHTML = formatScienceText(questionData.question);
   el.optionsContainer.innerHTML = '';
-  el.explanationContainer.classList.add('hidden');
+  el.feedbackArea.classList.add('hidden');
+  el.explanationText.textContent = '';
   el.submitAnswerBtn.disabled = true;
   el.submitAnswerBtn.classList.remove('hidden');
-  el.continueBtn.classList.add('hidden');
-
-  const shuffledOptions = questionData.options.map((opt, idx) => ({ opt, idx }));
-  // Keep original correctIndex mapping intact by NOT shuffling options
-  // (shuffling would require remapping correctIndex — kept simple/stable)
 
   questionData.options.forEach((optionText, idx) => {
     const btn = document.createElement('button');
@@ -514,7 +519,7 @@ function openQuestionModal(questionData) {
     el.optionsContainer.appendChild(btn);
   });
 
-  el.questionModal.classList.remove('hidden');
+  openOverlay(el.questionModal);
   startQuestionTimer();
 }
 
@@ -534,24 +539,25 @@ function startQuestionTimer() {
   stopQuestionTimer();
 
   if (gameState.timerDuration === 0) {
-    el.timerDisplay.textContent = 'No Limit';
-    el.questionTimerBar.style.width = '100%';
+    el.modalTimer.classList.add('hidden');
+    el.globalTimerDisplay.classList.add('hidden');
     return;
   }
 
   gameState.timeRemaining = gameState.timerDuration;
-  el.timerDisplay.textContent = `${gameState.timeRemaining}s`;
-  el.questionTimerBar.style.width = '100%';
+  el.modalTimer.classList.remove('hidden');
+  el.globalTimerDisplay.classList.remove('hidden');
+  el.modalTimerValue.textContent = gameState.timeRemaining;
+  el.timerValue.textContent = gameState.timeRemaining;
 
   gameState.timerInterval = setInterval(() => {
     gameState.timeRemaining--;
-    el.timerDisplay.textContent = `${gameState.timeRemaining}s`;
-    const pct = (gameState.timeRemaining / gameState.timerDuration) * 100;
-    el.questionTimerBar.style.width = `${Math.max(pct, 0)}%`;
+    el.modalTimerValue.textContent = gameState.timeRemaining;
+    el.timerValue.textContent = gameState.timeRemaining;
 
     if (gameState.timeRemaining <= 0) {
       stopQuestionTimer();
-      processAnswer(false); // timeout = wrong answer
+      processAnswer(false);
     }
   }, 1000);
 }
@@ -579,7 +585,6 @@ function processAnswer(isCorrect) {
   const tileIndex = gameState.currentTileIndex;
   const questionData = gameState.tileQuestionMap[tileIndex];
 
-  // Highlight correct/incorrect options
   const buttons = el.optionsContainer.querySelectorAll('.option-btn');
   buttons.forEach((btn, idx) => {
     btn.disabled = true;
@@ -588,14 +593,15 @@ function processAnswer(isCorrect) {
   });
 
   el.submitAnswerBtn.classList.add('hidden');
-  el.continueBtn.classList.remove('hidden');
+  el.feedbackText.textContent = isCorrect ? '✅ Correct!' : '❌ Incorrect!';
 
   if (questionData.explanation) {
     el.explanationText.innerHTML = formatScienceText(questionData.explanation);
-    el.explanationContainer.classList.remove('hidden');
+  } else {
+    el.explanationText.textContent = '';
   }
 
-  // Store result for continue-btn handler
+  el.feedbackArea.classList.remove('hidden');
   gameState._pendingResult = { tileIndex, isCorrect };
 }
 
@@ -604,16 +610,15 @@ function processAnswer(isCorrect) {
    ============================================================ */
 
 el.continueBtn.addEventListener('click', () => {
-  el.questionModal.classList.add('hidden');
+  closeOverlay(el.questionModal);
   const { tileIndex, isCorrect } = gameState._pendingResult;
 
   if (!isCorrect) {
-    showToast(`❌ Incorrect! Turn passes.`);
+    showToast('❌ Incorrect! Turn passes.');
     advanceToNextPlayer();
     return;
   }
 
-  // Correct answer — determine what's under the tile
   if (tileIndex === gameState.bombTileIndex) {
     handleBombFound(tileIndex);
   } else if (gameState.decoyTileIndexes.includes(tileIndex)) {
@@ -633,8 +638,7 @@ function revealSafeTile(tileIndex) {
   player.score += 1;
 
   if (gameState.heatMeterEnabled) {
-    const heat = calculateHeatLevel(tileIndex);
-    tileEl.innerHTML = `<span class="heat-emoji">${heat}</span>`;
+    tileEl.innerHTML = `<span class="heat-emoji">${calculateHeatLevel(tileIndex)}</span>`;
   } else {
     tileEl.textContent = '✔️';
   }
@@ -651,7 +655,7 @@ function revealDecoyTile(tileIndex) {
   tileEl.disabled = true;
 
   const player = gameState.players[gameState.currentPlayerIndex];
-  player.score += 2; // 1 for correct answer + 1 decoy bonus
+  player.score += 2;
 
   showToast('💥 FALSE ALARM! That was a decoy bomb. +1 bonus point!');
   renderScoreboard();
@@ -676,7 +680,6 @@ function handleBombFound(tileIndex) {
   tileEl.textContent = '💣';
 
   if (gameState.spinnerWinChance >= 100) {
-    // Instant win, classic mode
     const player = gameState.players[gameState.currentPlayerIndex];
     player.score += 1;
     endGame(player);
@@ -686,77 +689,47 @@ function handleBombFound(tileIndex) {
 }
 
 /* ============================================================
-   SECTION 20: DEFUSE SPINNER — ⚙️ FIXED IMPLEMENTATION
+   SECTION 20: DEFUSE SPINNER — FIXED LOGIC
    ============================================================
-   SPINNER FIX: outcome is now decided FIRST, then the wheel's
-   rotation is mathematically calculated to land inside the
-   correct colored segment. This guarantees the visual result
-   always matches the declared win/lose outcome.
+   Outcome is decided FIRST via probability, then the wheel's
+   rotation is calculated to land inside the segment matching
+   that outcome. Visual result and logical result can never
+   mismatch again.
    ============================================================ */
 
 function openSpinnerModal(tileIndex) {
   gameState._spinnerTileIndex = tileIndex;
-  renderSpinnerWheel(gameState.spinnerWinChance);
-  el.spinBtn.disabled = false;
-  el.spinBtn.classList.remove('hidden');
-  el.spinnerResultText.textContent = '';
-  el.spinnerContinueBtn.classList.add('hidden');
-  el.spinnerModal.classList.remove('hidden');
-}
-
-// Builds a conic-gradient wheel sized proportionally to the actual win chance
-function renderSpinnerWheel(winChancePercent) {
-  const greenDeg = winChancePercent * 3.6; // % -> degrees of 360
-  el.spinnerWheel.style.background =
-    `conic-gradient(#2ecc71 0deg ${greenDeg}deg, #e74c3c ${greenDeg}deg 360deg)`;
-
-  // Reset to a clean, un-rotated, non-animated state
   el.spinnerWheel.classList.remove('spinning');
   el.spinnerWheel.style.transform = 'rotate(0deg)';
+  el.spinBtn.disabled = false;
+  el.spinBtn.classList.remove('hidden');
+  el.spinnerResultArea.classList.add('hidden');
+  openOverlay(el.spinnerModal);
 }
 
-// Decides outcome first, then computes the rotation needed to land on it
 function spinWheel(winChancePercent, onComplete) {
   const wheelEl = el.spinnerWheel;
 
-  // 1. Decide the REAL outcome first — this is the single source of truth
   const isWin = Math.random() * 100 < winChancePercent;
-  const greenDeg = winChancePercent * 3.6;
-  const padding = 10; // degrees of safety margin away from the color boundary
+  const [minAngle, maxAngle] = isWin ? SPINNER_WIN_RANGE : SPINNER_LOSE_RANGE;
+  const targetAngle = minAngle + Math.random() * (maxAngle - minAngle);
 
-  // 2. Pick a random angle safely INSIDE the correct segment
-  let targetAngle;
-  if (isWin) {
-    const safeMin = padding;
-    const safeMax = Math.max(greenDeg - padding, safeMin + 1);
-    targetAngle = safeMin + Math.random() * (safeMax - safeMin);
-  } else {
-    const safeMin = greenDeg + padding;
-    const safeMax = 360 - padding;
-    targetAngle = safeMin + Math.random() * (safeMax - safeMin);
-  }
-
-  // 3. Convert target angle into a rotation value relative to the fixed
-  //    pointer at the top (0deg), plus extra full spins for visual flair
-  const fullSpins = 4 + Math.floor(Math.random() * 3); // 4–6 spins, cosmetic only
+  const fullSpins = 4 + Math.floor(Math.random() * 3);
   const rotationMod = (360 - targetAngle) % 360;
   const finalRotation = fullSpins * 360 + rotationMod;
 
-  // 4. Hard reset (no transition) then force reflow before animating,
-  //    so repeated spins in the same session always animate forward cleanly
   wheelEl.classList.remove('spinning');
   wheelEl.style.transform = 'rotate(0deg)';
-  void wheelEl.offsetWidth; // force reflow
+  void wheelEl.offsetWidth; // force reflow so reset actually applies
   wheelEl.classList.add('spinning');
 
   requestAnimationFrame(() => {
     wheelEl.style.transform = `rotate(${finalRotation}deg)`;
   });
 
-  // 5. Only report the result once the animation has visually finished
   setTimeout(() => {
     onComplete(isWin);
-  }, 4100); // slightly longer than the 4s CSS transition
+  }, 4100);
 }
 
 el.spinBtn.addEventListener('click', () => {
@@ -768,21 +741,21 @@ el.spinBtn.addEventListener('click', () => {
 
 function showSpinnerResult(isWin) {
   el.spinBtn.classList.add('hidden');
-  el.spinnerContinueBtn.classList.remove('hidden');
+  el.spinnerResultArea.classList.remove('hidden');
 
   if (isWin) {
     el.spinnerResultText.textContent = '✅ DEFUSED! You win!';
-    el.spinnerResultText.className = 'spinner-result win';
+    el.spinnerResultText.className = 'spinner-result-text win';
   } else {
     el.spinnerResultText.textContent = '💥 BOOM! The bomb relocates...';
-    el.spinnerResultText.className = 'spinner-result lose';
+    el.spinnerResultText.className = 'spinner-result-text lose';
   }
 
   gameState._spinnerResult = isWin;
 }
 
 el.spinnerContinueBtn.addEventListener('click', () => {
-  el.spinnerModal.classList.add('hidden');
+  closeOverlay(el.spinnerModal);
   const tileIndex = gameState._spinnerTileIndex;
   const isWin = gameState._spinnerResult;
 
@@ -798,11 +771,9 @@ el.spinnerContinueBtn.addEventListener('click', () => {
 });
 
 function relocateBomb(oldTileIndex) {
-  // The tile that was just opened becomes permanently safe
   gameState.permanentlySafeTiles[oldTileIndex] = true;
   gameState.revealedTiles[oldTileIndex] = true;
 
-  // Find a new home for the bomb: any uncleared, non-decoy, non-permanently-safe tile
   const candidates = [];
   for (let i = 0; i < gameState.tileCount; i++) {
     if (
@@ -817,7 +788,6 @@ function relocateBomb(oldTileIndex) {
   if (candidates.length > 0) {
     gameState.bombTileIndex = candidates[getRandomInt(0, candidates.length - 1)];
   } else {
-    // Fallback: convert a decoy tile into the real bomb if no plain tiles remain
     const decoyFallbacks = gameState.decoyTileIndexes.filter(
       i => !gameState.revealedTiles[i] && !gameState.permanentlySafeTiles[i]
     );
@@ -828,7 +798,6 @@ function relocateBomb(oldTileIndex) {
     }
   }
 
-  // Update the old tile's visual to show it's now safely cleared
   const oldTileEl = getTileElement(oldTileIndex);
   oldTileEl.classList.remove('bomb');
   oldTileEl.classList.add('revealed', 'safe');
@@ -844,16 +813,25 @@ function endGame(winner) {
   stopQuestionTimer();
   el.winnerText.textContent = `🎉 ${winner.name} wins by finding the bomb!`;
 
-  el.finalScoresContainer.innerHTML = '';
+  // Build (or rebuild) a final scores block dynamically since the
+  // HTML doesn't have a dedicated container for it
+  let finalScoresEl = document.getElementById('final-scores-dynamic');
+  if (!finalScoresEl) {
+    finalScoresEl = document.createElement('div');
+    finalScoresEl.id = 'final-scores-dynamic';
+    finalScoresEl.className = 'final-scores';
+    el.winnerText.insertAdjacentElement('afterend', finalScoresEl);
+  }
+  finalScoresEl.innerHTML = '';
   const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
   sortedPlayers.forEach(player => {
     const item = document.createElement('div');
     item.className = 'final-score-item';
     item.textContent = `${player.name}: ${player.score} points`;
-    el.finalScoresContainer.appendChild(item);
+    finalScoresEl.appendChild(item);
   });
 
-  showScreen('end');
+  openOverlay(el.endScreen);
   triggerConfetti();
 }
 
@@ -882,14 +860,6 @@ el.startGameBtn.addEventListener('click', () => {
     return;
   }
 
-  const count = parseInt(el.playerCountSelect.value, 10);
-  for (let i = 0; i < count; i++) {
-    const input = document.getElementById(`player-name-${i}`);
-    if (!input.value.trim()) {
-      // Names are optional — will default to "Player N" — no hard block
-    }
-  }
-
   initializeGameState();
   renderTileGrid();
   renderScoreboard();
@@ -898,8 +868,15 @@ el.startGameBtn.addEventListener('click', () => {
   showScreen('game');
 });
 
+el.restartBtn.addEventListener('click', () => {
+  const confirmReset = confirm('Start a new game? Current progress will be lost.');
+  if (confirmReset) {
+    showScreen('setup');
+  }
+});
+
 el.playAgainBtn.addEventListener('click', () => {
-  // Same settings, fresh board — re-run initialization with same question bank/config
+  closeOverlay(el.endScreen);
   initializeGameState();
   renderTileGrid();
   renderScoreboard();
@@ -909,6 +886,7 @@ el.playAgainBtn.addEventListener('click', () => {
 });
 
 el.newSettingsBtn.addEventListener('click', () => {
+  closeOverlay(el.endScreen);
   showScreen('setup');
 });
 
