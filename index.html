@@ -87,7 +87,7 @@
     <h3>Question Bank</h3>
     <div class="form-group">
       <label>
-        <input type="radio" name="source-type" value="url" checked> Load from GitHub URL
+        <input type="radio" name="source-type" value="url" checked> Load by File Name (from this repo's /questions folder)
       </label>
       <label>
         <input type="radio" name="source-type" value="upload"> Upload a JSON file
@@ -95,7 +95,12 @@
     </div>
 
     <div id="url-input-group" class="form-group">
-      <input type="text" id="json-url" placeholder="https://raw.githubusercontent.com/username/repo/main/questions/alkanes-alkenes.json">
+      <label for="json-filename">Question File Name</label>
+      <input type="text" id="json-filename" placeholder="e.g., alkanes-alkenes.json">
+      <p class="twist-helper">
+        Just type the file name — it will be automatically loaded from the
+        <code>/questions</code> folder of this game's GitHub repo.
+      </p>
       <button id="load-preset-btn" type="button" class="secondary-btn">Use Sample: Alkanes &amp; Alkenes</button>
     </div>
 

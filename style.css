@@ -1,6 +1,8 @@
 /* ============================================
    FIND THE BOMB — SCIENCE EDITION
-   Stylesheet (v2 — with Game Twists)
+   Stylesheet (Final Consolidated Version)
+   Light mode only. Includes: twists, heat meter,
+   decoys, spinner, fractions, mixed numbers.
    ============================================ */
 
 :root {
@@ -97,6 +99,13 @@ body {
   margin-top: 4px;
   margin-bottom: 0;
   font-style: italic;
+}
+
+.twist-helper code {
+  background: #f1f5f9;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-style: normal;
 }
 
 .form-group {
@@ -599,10 +608,6 @@ hr {
   z-index: 10;
 }
 
-.spinner-wheel.spinning {
-  /* rotation angle set dynamically via inline style in JS */
-}
-
 #spin-btn {
   max-width: 280px;
   margin: 0 auto;
@@ -655,7 +660,7 @@ hr {
   }
 }
 
-/* ============ SCIENCE FORMATTING ============ */
+/* ============ SCIENCE / MATH FORMATTING ============ */
 sub {
   font-size: 0.75em;
 }
@@ -668,6 +673,40 @@ sup {
   font-weight: 700;
   margin: 0 6px;
   color: var(--color-primary-dark);
+}
+
+/* ---- Fractions ---- */
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 3px;
+  font-size: 0.85em;
+  line-height: 1.1;
+  position: relative;
+  top: 0.1em;
+}
+
+.fraction .numerator {
+  border-bottom: 1.5px solid currentColor;
+  padding: 0 4px 1px;
+}
+
+.fraction .denominator {
+  padding: 1px 4px 0;
+}
+
+/* ---- Mixed Numbers ---- */
+.mixed-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.mixed-number .whole {
+  font-size: 1em;
+  margin-right: 1px;
 }
 
 /* ============ RESPONSIVE ============ */

@@ -1,14 +1,32 @@
 /* ============================================================
    FIND THE BOMB — SCIENCE EDITION
-   app.js — PART A (v2 — with Game Twists)
+   app.js — PART A (Final Consolidated Version)
    Handles: state, setup screen, dynamic player inputs,
-   question loading (URL fetch / file upload), science formatter
+   question loading (by filename / file upload),
+   science + math text formatter (fractions, mixed numbers,
+   subscripts, superscripts, reaction arrows)
    ============================================================ */
 
 // ---------------- GRID LOGIC CONSTANT ----------------
 // Fixed logical column count used for row/col heat-distance math.
 // This matches the primary desktop CSS layout (repeat(5, 1fr)).
 const GRID_COLUMNS = 5;
+
+/* ============================================================
+   QUESTION FILE BASE PATH
+   Admins: set this ONCE to point to where your question JSON
+   files live. Then everyone just types a file name — no long
+   URLs needed.
+
+   OPTION A — Files live in THIS same repo's /questions folder:
+     const GITHUB_BASE_URL = 'questions/';
+
+   OPTION B — Files live in a DIFFERENT GitHub repo:
+     const GITHUB_BASE_URL =
+       'https://raw.githubusercontent.com/<username>/<repo>/<branch>/questions/';
+   ============================================================ */
+const GITHUB_BASE_URL = 'questions/';
+const SAMPLE_QUESTION_FILENAME = 'alkanes-alkenes.json';
 
 // ---------------- GLOBAL STATE ----------------
 const gameState = {
@@ -39,6 +57,7 @@ const gameState = {
   selectedOptionIndex: null,
   pendingResultCorrect: null,
 
+  spinnerPendingTileIndex: null,
   pendingSpinnerOutcome: null // 'win' or 'lose', set after spin resolves
 };
 
@@ -59,7 +78,7 @@ const el = {
   sourceTypeRadios: document.querySelectorAll('input[name="source-type"]'),
   urlInputGroup: document.getElementById('url-input-group'),
   uploadInputGroup: document.getElementById('upload-input-group'),
-  jsonUrlInput: document.getElementById('json-url'),
+  jsonFilenameInput: document.getElementById('json-filename'),
   loadPresetBtn: document.getElementById('load-preset-btn'),
   jsonUploadInput: document.getElementById('json-upload'),
   loadQuestionsBtn: document.getElementById('load-questions-btn'),
@@ -111,28 +130,48 @@ const el = {
   newSettingsBtn: document.getElementById('new-settings-btn')
 };
 
-// Sample preset path — relative to this game's repo location.
-const SAMPLE_QUESTION_PATH = 'questions/alkanes-alkenes.json';
-
 /* ============================================================
-   SCIENCE TEXT FORMATTER
-   Converts shorthand notation into HTML for display:
-     C_2H_6        -> C<sub>2</sub>H<sub>6</sub>
-     x^{2+}        -> x<sup>2+</sup>
-     Fe^{3+}       -> Fe<sup>3+</sup>
-     ->            -> → (reaction arrow)
-     <=>           -> ⇌ (equilibrium arrow)
+   SCIENCE + MATH TEXT FORMATTER
+   Converts shorthand notation into HTML for display.
+
+   Supported syntax:
+     C_2H_6            -> C<sub>2</sub>H<sub>6</sub>
+     C_nH_{2n+2}       -> CₙH₂ₙ₊₂ (braces for multi-character)
+     x^2               -> x²
+     x^{2n+1}          -> x²ⁿ⁺¹ (braces for multi-character/algebra)
+     Fe^{3+}           -> Fe³⁺
+     ->                -> → (reaction/sequence arrow)
+     <=>               -> ⇌ (equilibrium arrow)
+     frac{1}{2}        -> stacked fraction (numeric or algebraic)
+     mixed{2}{1}{2}    -> stacked mixed number (whole + fraction)
    ============================================================ */
 function formatScienceText(rawText) {
   if (!rawText) return '';
   let text = String(rawText);
 
+  // Reaction / equilibrium arrows (process first to avoid clashes)
   text = text.replace(/<=>/g, '<span class="chem-arrow">⇌</span>');
   text = text.replace(/->/g, '<span class="chem-arrow">→</span>');
 
+  // Mixed numbers: mixed{whole}{num}{den} -> whole number + stacked fraction
+  text = text.replace(
+    /mixed\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/g,
+    '<span class="mixed-number"><span class="whole">$1</span>' +
+    '<span class="fraction"><span class="numerator">$2</span><span class="denominator">$3</span></span></span>'
+  );
+
+  // Fractions: frac{num}{den} -> stacked fraction display
+  // Supports numeric AND algebraic content, e.g. frac{x+1}{y-2}
+  text = text.replace(
+    /frac\{([^}]+)\}\{([^}]+)\}/g,
+    '<span class="fraction"><span class="numerator">$1</span><span class="denominator">$2</span></span>'
+  );
+
+  // Braced subscript/superscript groups (required for algebra/multi-char)
   text = text.replace(/_\{([^}]+)\}/g, '<sub>$1</sub>');
   text = text.replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>');
 
+  // Single-character subscript/superscript (simple numeric cases)
   text = text.replace(/_([A-Za-z0-9+\-]+)/g, '<sub>$1</sub>');
   text = text.replace(/\^([A-Za-z0-9+\-]+)/g, '<sup>$1</sup>');
 
@@ -167,7 +206,7 @@ el.gridSizeSlider.addEventListener('input', () => {
 });
 
 /* ============================================================
-   SETUP SCREEN: Toggle URL vs Upload input
+   SETUP SCREEN: Toggle URL(filename) vs Upload input
    ============================================================ */
 el.sourceTypeRadios.forEach(radio => {
   radio.addEventListener('change', (e) => {
@@ -185,8 +224,8 @@ el.sourceTypeRadios.forEach(radio => {
    SETUP SCREEN: "Use Sample" quick-load button
    ============================================================ */
 el.loadPresetBtn.addEventListener('click', () => {
-  el.jsonUrlInput.value = SAMPLE_QUESTION_PATH;
-  loadQuestionsFromUrl(SAMPLE_QUESTION_PATH);
+  el.jsonFilenameInput.value = SAMPLE_QUESTION_FILENAME;
+  loadQuestionsFromUrl(GITHUB_BASE_URL + SAMPLE_QUESTION_FILENAME);
 });
 
 /* ============================================================
@@ -196,12 +235,13 @@ el.loadQuestionsBtn.addEventListener('click', () => {
   const sourceType = document.querySelector('input[name="source-type"]:checked').value;
 
   if (sourceType === 'url') {
-    const url = el.jsonUrlInput.value.trim();
-    if (!url) {
-      setLoadStatus('Please enter a URL or click "Use Sample".', 'error');
+    const filename = el.jsonFilenameInput.value.trim();
+    if (!filename) {
+      setLoadStatus('Please enter a file name or click "Use Sample".', 'error');
       return;
     }
-    loadQuestionsFromUrl(url);
+    const fullUrl = GITHUB_BASE_URL + filename;
+    loadQuestionsFromUrl(fullUrl);
   } else {
     const file = el.jsonUploadInput.files[0];
     if (!file) {
@@ -316,7 +356,7 @@ renderPlayerNameInputs();
 
 /* ============================================================
    FIND THE BOMB — SCIENCE EDITION
-   app.js — PART B (v2 — with Game Twists)
+   app.js — PART B (Final Consolidated Version)
    Handles: grid generation, tile clicks, question modal flow,
    heat meter, decoy bombs, defuse spinner, bomb relocation,
    turn switching, win detection, confetti, restart
