@@ -1,0 +1,156 @@
+{
+  "topic": "Expanding Brackets & Algebraic Simplification (Worksheet B)",
+  "level": "Secondary 3 E-Math (G2)",
+  "questions": [
+    {
+      "question": "Expand and simplify: 5(3x + 4) - 2(x - 6)",
+      "options": ["13x + 32", "13x + 8", "17x + 32", "13x + 20"],
+      "correctIndex": 0,
+      "explanation": "5(3x+4) = 15x+20; -2(x-6) = -2x+12. Combining: 15x+20-2x+12 = 13x+32."
+    },
+    {
+      "question": "Expand and simplify: 7(x - 3) - 3(2x - 5)",
+      "options": ["x - 6", "x - 36", "13x - 36", "x + 6"],
+      "correctIndex": 0,
+      "explanation": "7(x-3) = 7x-21; -3(2x-5) = -6x+15. Combining: 7x-21-6x+15 = x-6."
+    },
+    {
+      "question": "Expand and simplify: 2(5y - 2) - (3y - 9)",
+      "options": ["7y + 5", "7y - 13", "13y - 13", "7y - 5"],
+      "correctIndex": 0,
+      "explanation": "2(5y-2) = 10y-4; -(3y-9) = -3y+9. Combining: 10y-4-3y+9 = 7y+5."
+    },
+    {
+      "question": "Expand and simplify: 6(3a + 1) - 5(2a - 3) - 4",
+      "options": ["8a + 17", "8a - 13", "8a + 21", "28a - 13"],
+      "correctIndex": 0,
+      "explanation": "18a+6-10a+15-4. a terms: 18a-10a=8a. Constants: 6+15-4=17. Answer: 8a+17."
+    },
+    {
+      "question": "Expand and simplify: 10 - 3(2k - 3) - 5(k + 2)",
+      "options": ["-11k + 9", "-11k - 9", "-11k + 29", "-k + 9"],
+      "correctIndex": 0,
+      "explanation": "10-6k+9-5k-10. k terms: -6k-5k=-11k. Constants: 10+9-10=9. Answer: -11k+9."
+    },
+    {
+      "question": "Expand and simplify: 9(2m - 1) - 4(3m - 5)",
+      "options": ["6m + 11", "6m - 29", "30m - 29", "6m + 9"],
+      "correctIndex": 0,
+      "explanation": "18m-9-12m+20. m terms: 18m-12m=6m. Constants: -9+20=11. Answer: 6m+11."
+    },
+    {
+      "question": "Expand and simplify: (x + 4)(x + 6) - (8x + 10)",
+      "options": ["x^2 + 2x + 14", "x^2 + 18x + 34", "x^2 + 10x + 14", "x^2 + 2x + 34"],
+      "correctIndex": 0,
+      "explanation": "(x+4)(x+6) = x^2+10x+24. Minus (8x+10): x^2+10x+24-8x-10 = x^2+2x+14."
+    },
+    {
+      "question": "Expand and simplify: (x + 5)(x - 3) - (2x - 7)",
+      "options": ["x^2 - 8", "x^2 - 22", "x^2 + 4x - 22", "x^2 + 2x - 8"],
+      "correctIndex": 0,
+      "explanation": "(x+5)(x-3) = x^2+2x-15. Minus (2x-7): x^2+2x-15-2x+7 = x^2-8."
+    },
+    {
+      "question": "Expand and simplify: (x - 6)(x - 2) - (3x + 8)",
+      "options": ["x^2 - 11x + 4", "x^2 - 5x + 4", "x^2 - 11x + 20", "x^2 - 8x + 4"],
+      "correctIndex": 0,
+      "explanation": "(x-6)(x-2) = x^2-8x+12. Minus (3x+8): x^2-8x+12-3x-8 = x^2-11x+4."
+    },
+    {
+      "question": "Expand and simplify: (x + 8)(x - 2) - 4(2x - 1)",
+      "options": ["x^2 - 2x - 12", "x^2 + 14x - 20", "x^2 - 2x - 20", "x^2 + 6x - 12"],
+      "correctIndex": 0,
+      "explanation": "(x+8)(x-2) = x^2+6x-16. Minus 4(2x-1)=8x-4: x^2+6x-16-8x+4 = x^2-2x-12."
+    },
+    {
+      "question": "Expand and simplify: (3x + 2)(x - 5) - (x - 11)",
+      "options": ["3x^2 - 14x + 1", "3x^2 - 12x - 21", "3x^2 - 14x - 21", "3x^2 - 13x + 1"],
+      "correctIndex": 0,
+      "explanation": "(3x+2)(x-5) = 3x^2-13x-10. Minus (x-11): 3x^2-13x-10-x+11 = 3x^2-14x+1."
+    },
+    {
+      "question": "Expand and simplify: (x - 4)(x + 6) - (9 - 2x)",
+      "options": ["x^2 + 4x - 33", "x^2 - 33", "x^2 + 4x - 15", "x^2 + 2x - 33"],
+      "correctIndex": 0,
+      "explanation": "(x-4)(x+6) = x^2+2x-24. Minus (9-2x): x^2+2x-24-9+2x = x^2+4x-33."
+    },
+    {
+      "question": "Expand and simplify: (x + 6)(x + 2) - x(x + 4)",
+      "options": ["4x + 12", "12x + 12", "x^2 + 4x + 12", "8x + 12"],
+      "correctIndex": 0,
+      "explanation": "(x+6)(x+2) = x^2+8x+12. x(x+4) = x^2+4x. Difference: x^2+8x+12-x^2-4x = 4x+12."
+    },
+    {
+      "question": "Expand and simplify: (x + 9)(x - 3) - x(x + 2)",
+      "options": ["4x - 27", "8x - 27", "x^2 + 4x - 27", "6x - 27"],
+      "correctIndex": 0,
+      "explanation": "(x+9)(x-3) = x^2+6x-27. x(x+2) = x^2+2x. Difference: x^2+6x-27-x^2-2x = 4x-27."
+    },
+    {
+      "question": "Expand and simplify: (x - 5)(x - 4) - x(x - 7)",
+      "options": ["-2x + 20", "-16x + 20", "x^2 - 2x + 20", "-9x + 20"],
+      "correctIndex": 0,
+      "explanation": "(x-5)(x-4) = x^2-9x+20. x(x-7) = x^2-7x. Difference: x^2-9x+20-x^2+7x = -2x+20."
+    },
+    {
+      "question": "Expand and simplify: (x + 7)^2 - x(x + 9)",
+      "options": ["5x + 49", "23x + 49", "x^2 + 5x + 49", "14x + 49"],
+      "correctIndex": 0,
+      "explanation": "(x+7)^2 = x^2+14x+49. x(x+9) = x^2+9x. Difference: x^2+14x+49-x^2-9x = 5x+49."
+    },
+    {
+      "question": "Expand and simplify: (x + 3)(x - 6) - (x^2 - 21)",
+      "options": ["-3x + 3", "-3x - 39", "x^2 - 3x + 3", "2x^2 - 3x + 3"],
+      "correctIndex": 0,
+      "explanation": "(x+3)(x-6) = x^2-3x-18. Minus (x^2-21): x^2-3x-18-x^2+21 = -3x+3."
+    },
+    {
+      "question": "Expand and simplify: (x - 5)^2 - x(x - 8)",
+      "options": ["-2x + 25", "-18x + 25", "x^2 - 2x + 25", "-10x + 25"],
+      "correctIndex": 0,
+      "explanation": "(x-5)^2 = x^2-10x+25. x(x-8) = x^2-8x. Difference: x^2-10x+25-x^2+8x = -2x+25."
+    },
+    {
+      "question": "Given that 5(x - 2) + 8 = Ax + B for all values of x. Find the value of A and of B.",
+      "options": ["A = 5, B = -2", "A = 5, B = -10", "A = -5, B = -2", "A = 5, B = 18"],
+      "correctIndex": 0,
+      "explanation": "5(x-2)+8 = 5x-10+8 = 5x-2. Comparing: A=5, B=-2."
+    },
+    {
+      "question": "Given that p(x + 4) - 9 = 3x + q for all values of x. Find the value of p and of q.",
+      "options": ["p = 3, q = 3", "p = 3, q = -9", "p = 3, q = 21", "p = 9, q = 3"],
+      "correctIndex": 0,
+      "explanation": "p(x+4)-9 = px+4p-9. Comparing x terms: p=3. Comparing constants: 4(3)-9=3=q."
+    },
+    {
+      "question": "Given that 4(3x - 2) - 5(x - 3) = Mx + N for all values of x. Find the value of M and of N.",
+      "options": ["M = 7, N = 7", "M = 7, N = -23", "M = 17, N = 7", "M = -7, N = 7"],
+      "correctIndex": 0,
+      "explanation": "4(3x-2)-5(x-3) = 12x-8-5x+15 = 7x+7. So M=7, N=7."
+    },
+    {
+      "question": "Given that a(x - 1) + b(x + 3) = 7x + 9 for all values of x. Find the value of a and of b.",
+      "options": ["a = 3, b = 4", "a = 4, b = 3", "a = 7, b = 9", "a = 3, b = -4"],
+      "correctIndex": 0,
+      "explanation": "a(x-1)+b(x+3) = (a+b)x + (3b-a). So a+b=7 and 3b-a=9. Solving gives a=3, b=4."
+    },
+    {
+      "question": "Given that (x + 2)(x + k) = x^2 + 9x + c for all values of x. Find the value of k, and hence the value of c.",
+      "options": ["k = 7, c = 14", "k = 7, c = 9", "k = 7, c = 49", "k = 11, c = 22"],
+      "correctIndex": 0,
+      "explanation": "(x+2)(x+k) = x^2+(2+k)x+2k. Comparing x terms: 2+k=9, so k=7. Then c=2k=2(7)=14."
+    },
+    {
+      "question": "It is given that (x - 3)(x + 6) - x(x - 2) = Px + Q for all values of x. Find the value of P and of Q.",
+      "options": ["P = 5, Q = -18", "P = 1, Q = -18", "P = 5, Q = -16", "P = 3, Q = -18"],
+      "correctIndex": 0,
+      "explanation": "(x-3)(x+6) = x^2+3x-18. x(x-2) = x^2-2x. Difference: x^2+3x-18-x^2+2x = 5x-18."
+    },
+    {
+      "question": "It is given that 3(x + 5) - 4(x - 2) = Cx + D for all values of x. Find the value of C and of D.",
+      "options": ["C = -1, D = 23", "C = -1, D = 7", "C = 7, D = 23", "C = -1, D = -23"],
+      "correctIndex": 0,
+      "explanation": "3(x+5)-4(x-2) = 3x+15-4x+8 = -x+23. So C=-1, D=23."
+    }
+  ]
+}
