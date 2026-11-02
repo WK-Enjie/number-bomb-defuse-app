@@ -1,6 +1,9 @@
 /* ============================================================
    FIND THE BOMB — SCIENCE EDITION
-   app.js — Complete Game Logic (matched to actual index.html)
+   app.js — Complete Game Logic
+   Matched to actual index.html IDs
+   Includes: stacked-fraction formatter, spinner fix,
+             filename auto-.json, detailed load errors
    ============================================================ */
 
 /* ============================================================
@@ -11,11 +14,8 @@ const GRID_COLUMNS = 5;
 const GITHUB_BASE_URL = 'questions/';
 const SAMPLE_QUESTION_FILENAME = 'alkanes-alkenes.json';
 
-// Spinner wheel segment angle ranges (degrees), with padding built in.
-// Assumes win-segment occupies 0°-180° and lose-segment occupies 180°-360°
-// of the wheel's UNROTATED state, with the pointer fixed at the top (0°/360°).
-// If your CSS actually splits the wheel left/right instead of top/bottom,
-// or the win segment is on the other side, just swap these two ranges.
+// Spinner wheel segments: win = RIGHT half (0°-180°), lose = LEFT half (180°-360°)
+// These MUST stay in sync with .win-segment / .lose-segment in style.css
 const SPINNER_WIN_RANGE = [10, 170];
 const SPINNER_LOSE_RANGE = [190, 350];
 
@@ -48,27 +48,22 @@ const gameState = {
 };
 
 /* ============================================================
-   SECTION 3: DOM ELEMENT REFERENCES — matched to real HTML IDs
+   SECTION 3: DOM ELEMENT REFERENCES
    ============================================================ */
 
 const el = {
-  // Setup — players
   numPlayersSelect: document.getElementById('num-players'),
   playerNamesContainer: document.getElementById('player-names-container'),
 
-  // Setup — grid
   gridSizeSlider: document.getElementById('grid-size'),
   gridSizeValue: document.getElementById('grid-size-value'),
 
-  // Setup — timer
   timerSelect: document.getElementById('timer-select'),
 
-  // Setup — twists
   heatMeterSelect: document.getElementById('heat-meter-select'),
   decoySelect: document.getElementById('decoy-select'),
   spinnerSelect: document.getElementById('spinner-select'),
 
-  // Setup — question source
   sourceTypeRadios: document.querySelectorAll('input[name="source-type"]'),
   urlInputGroup: document.getElementById('url-input-group'),
   uploadInputGroup: document.getElementById('upload-input-group'),
@@ -79,11 +74,9 @@ const el = {
   loadStatus: document.getElementById('load-status'),
   startGameBtn: document.getElementById('start-game-btn'),
 
-  // Screens
   setupScreen: document.getElementById('setup-screen'),
   gameScreen: document.getElementById('game-screen'),
 
-  // Game screen
   currentTurnDisplay: document.getElementById('current-turn-display'),
   globalTimerDisplay: document.getElementById('global-timer-display'),
   timerValue: document.getElementById('timer-value'),
@@ -92,10 +85,8 @@ const el = {
   tileGrid: document.getElementById('tile-grid'),
   scoreboard: document.getElementById('scoreboard'),
 
-  // Toast
   toastBanner: document.getElementById('toast-banner'),
 
-  // Question modal
   questionModal: document.getElementById('question-modal'),
   modalTimer: document.getElementById('modal-timer'),
   modalTimerValue: document.getElementById('modal-timer-value'),
@@ -107,7 +98,6 @@ const el = {
   explanationText: document.getElementById('explanation-text'),
   continueBtn: document.getElementById('continue-btn'),
 
-  // Spinner modal
   spinnerModal: document.getElementById('spinner-modal'),
   spinnerWheel: document.getElementById('spinner-wheel'),
   spinBtn: document.getElementById('spin-btn'),
@@ -115,7 +105,6 @@ const el = {
   spinnerResultText: document.getElementById('spinner-result-text'),
   spinnerContinueBtn: document.getElementById('spinner-continue-btn'),
 
-  // End screen
   endScreen: document.getElementById('end-screen'),
   winnerText: document.getElementById('winner-text'),
   confettiContainer: document.getElementById('confetti-container'),
@@ -124,31 +113,66 @@ const el = {
 };
 
 /* ============================================================
-   SECTION 4: SCIENCE/MATH TEXT FORMATTER
+   SECTION 4: SCIENCE / MATH TEXT FORMATTER
+   ============================================================
+   Supported shorthand:
+     ->            →
+     <=>           ⇌
+     frac{a}{b}    stacked fraction (works with algebra)
+     mixed{w}{n}{d} stacked mixed number
+     3/4           AUTO stacked fraction (pure numbers only)
+     x^{2n+1}      superscript (braces)
+     x^(2n+1)      superscript (parentheses)
+     x^2 / x^-3    superscript (numbers, incl. negatives)
+     x^n           superscript (single letter)
+     C_2 / C_{2n}  subscripts
    ============================================================ */
 
 function formatScienceText(raw) {
   if (!raw) return '';
   let text = raw;
 
+  // --- 1. Reaction arrows (run first, before any other symbol handling)
   text = text.replace(/<=>/g, '⇌');
   text = text.replace(/->/g, '→');
 
+  // --- 2. Mixed numbers: mixed{whole}{num}{den}
   text = text.replace(/mixed\{([^{}]+)\}\{([^{}]+)\}\{([^{}]+)\}/g,
-    (m, whole, num, den) => {
-      return `<span class="mixed-number">${whole}<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span></span>`;
-    });
+    (m, whole, num, den) =>
+      `<span class="mixed-number">${whole}<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span></span>`
+  );
 
+  // --- 3. Explicit stacked fractions: frac{numerator}{denominator}
+  //        Use this for ANY algebraic fraction, e.g. frac{x+1}{y-2}
   text = text.replace(/frac\{([^{}]+)\}\{([^{}]+)\}/g,
-    (m, num, den) => {
-      return `<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span>`;
-    });
+    (m, num, den) =>
+      `<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span>`
+  );
 
+  // --- 4. AUTO stacked fractions for plain numeric fractions like 2/3, 1/25, 9/4
+  //        Rule: only digits/digits, and NOT immediately after a ^ or an
+  //        alphanumeric character. This protects things like x^2/3 (= x² ÷ 3)
+  //        and avoids mangling already-generated HTML.
+  text = text.replace(/(^|[^\^0-9A-Za-z])(\d+)\/(\d+)/g,
+    (m, prefix, num, den) =>
+      `${prefix}<span class="fraction"><span class="num">${num}</span><span class="den">${den}</span></span>`
+  );
+
+  // --- 5. Multi-character superscripts: braces AND parentheses
   text = text.replace(/\^\{([^{}]+)\}/g, (m, p1) => `<sup>${p1}</sup>`);
+  text = text.replace(/\^\(([^()]+)\)/g, (m, p1) => `<sup>${p1}</sup>`);
+
+  // --- 6. Multi-character subscripts: braces
   text = text.replace(/_\{([^{}]+)\}/g, (m, p1) => `<sub>${p1}</sub>`);
 
-  text = text.replace(/\^([a-zA-Z0-9+\-])/g, (m, p1) => `<sup>${p1}</sup>`);
-  text = text.replace(/_([a-zA-Z0-9+\-])/g, (m, p1) => `<sub>${p1}</sub>`);
+  // --- 7. Numeric superscripts, including negatives: ^2, ^-2, ^12
+  text = text.replace(/\^(-?\d+)/g, (m, p1) => `<sup>${p1}</sup>`);
+
+  // --- 8. Single-letter superscripts: ^x, ^n, ^a
+  text = text.replace(/\^([a-zA-Z])/g, (m, p1) => `<sup>${p1}</sup>`);
+
+  // --- 9. Single-character subscripts: _2, _n
+  text = text.replace(/_([a-zA-Z0-9])/g, (m, p1) => `<sub>${p1}</sub>`);
 
   return text;
 }
@@ -171,12 +195,12 @@ function getRandomInt(min, max) {
 }
 
 function getRowCol(tileIndex) {
-  const row = Math.floor(tileIndex / GRID_COLUMNS);
-  const col = tileIndex % GRID_COLUMNS;
-  return { row, col };
+  return {
+    row: Math.floor(tileIndex / GRID_COLUMNS),
+    col: tileIndex % GRID_COLUMNS
+  };
 }
 
-// Screens (setup/game) use the .active class per your CSS/HTML structure
 function showScreen(screenName) {
   el.setupScreen.classList.remove('active');
   el.gameScreen.classList.remove('active');
@@ -184,10 +208,10 @@ function showScreen(screenName) {
   if (screenName === 'game') el.gameScreen.classList.add('active');
 }
 
-// Modals/overlays use the .hidden class
 function openOverlay(overlayEl) {
   overlayEl.classList.remove('hidden');
 }
+
 function closeOverlay(overlayEl) {
   overlayEl.classList.add('hidden');
 }
@@ -296,8 +320,11 @@ function handleLoadedQuestionData(data) {
   }
 
   gameState.questionBank = data;
-  setLoadStatus(`✅ Loaded "${data.topic || 'Untitled'}" — ${data.questions.length} questions.`, false);
-  el.startGameBtn.disabled = false; // <-- was missing: button starts disabled in HTML
+  setLoadStatus(
+    `✅ Loaded "${data.topic || 'Untitled'}" — ${data.questions.length} questions.`,
+    false
+  );
+  el.startGameBtn.disabled = false;
   return true;
 }
 
@@ -306,8 +333,21 @@ function loadQuestionsFromGithub(filename) {
     setLoadStatus('❌ Please enter a filename.', true);
     return;
   }
-  const url = GITHUB_BASE_URL + filename.trim();
-  setLoadStatus('⏳ Loading...', false);
+
+  let cleanFilename = filename.trim();
+
+  // Strip a leading "questions/" if the user pasted the full path
+  if (cleanFilename.toLowerCase().startsWith('questions/')) {
+    cleanFilename = cleanFilename.slice('questions/'.length);
+  }
+
+  // Auto-append .json if omitted
+  if (!cleanFilename.toLowerCase().endsWith('.json')) {
+    cleanFilename += '.json';
+  }
+
+  const url = GITHUB_BASE_URL + cleanFilename;
+  setLoadStatus(`⏳ Loading "${url}"...`, false);
 
   fetch(url)
     .then(res => {
@@ -316,7 +356,10 @@ function loadQuestionsFromGithub(filename) {
     })
     .then(data => handleLoadedQuestionData(data))
     .catch(err => {
-      setLoadStatus(`❌ Failed to load "${filename}". Check the filename and that it exists in /questions/.`, true);
+      setLoadStatus(
+        `❌ Failed to load "${url}" (${err.message}). Check: (1) exact filename and capitalisation, (2) file sits inside the /questions/ folder, (3) GitHub Pages has finished deploying.`,
+        true
+      );
       console.error(err);
     });
 }
@@ -340,7 +383,7 @@ el.jsonUploadInput.addEventListener('change', (e) => {
       const data = JSON.parse(event.target.result);
       handleLoadedQuestionData(data);
     } catch (err) {
-      setLoadStatus('❌ Could not parse file as JSON.', true);
+      setLoadStatus('❌ Could not parse that file as JSON.', true);
       el.startGameBtn.disabled = true;
       console.error(err);
     }
@@ -408,7 +451,7 @@ function initializeGameState() {
 }
 
 /* ============================================================
-   SECTION 12: TILE GRID RENDERING
+   SECTION 12: TILE GRID
    ============================================================ */
 
 function renderTileGrid() {
@@ -418,6 +461,7 @@ function renderTileGrid() {
   for (let i = 0; i < gameState.tileCount; i++) {
     const tile = document.createElement('button');
     tile.className = 'tile';
+    tile.type = 'button';
     tile.dataset.index = i;
     tile.textContent = i + 1;
     tile.addEventListener('click', () => handleTileClick(i));
@@ -432,8 +476,7 @@ function getTileElement(index) {
 }
 
 function setTilesInteractable(interactable) {
-  const tiles = el.tileGrid.querySelectorAll('.tile');
-  tiles.forEach(tile => {
+  el.tileGrid.querySelectorAll('.tile').forEach(tile => {
     const idx = parseInt(tile.dataset.index, 10);
     tile.disabled = !(interactable && !gameState.revealedTiles[idx]);
   });
@@ -513,6 +556,7 @@ function openQuestionModal(questionData) {
   questionData.options.forEach((optionText, idx) => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
+    btn.type = 'button';
     btn.innerHTML = formatScienceText(optionText);
     btn.dataset.index = idx;
     btn.addEventListener('click', () => selectOption(idx));
@@ -570,23 +614,21 @@ function stopQuestionTimer() {
 }
 
 /* ============================================================
-   SECTION 17: ANSWER SUBMISSION & PROCESSING
+   SECTION 17: ANSWER SUBMISSION
    ============================================================ */
 
 el.submitAnswerBtn.addEventListener('click', () => {
   if (selectedOptionIndex === null) return;
   stopQuestionTimer();
   const questionData = gameState.tileQuestionMap[gameState.currentTileIndex];
-  const isCorrect = selectedOptionIndex === questionData.correctIndex;
-  processAnswer(isCorrect);
+  processAnswer(selectedOptionIndex === questionData.correctIndex);
 });
 
 function processAnswer(isCorrect) {
   const tileIndex = gameState.currentTileIndex;
   const questionData = gameState.tileQuestionMap[tileIndex];
 
-  const buttons = el.optionsContainer.querySelectorAll('.option-btn');
-  buttons.forEach((btn, idx) => {
+  el.optionsContainer.querySelectorAll('.option-btn').forEach((btn, idx) => {
     btn.disabled = true;
     if (idx === questionData.correctIndex) btn.classList.add('correct');
     else if (idx === selectedOptionIndex && !isCorrect) btn.classList.add('incorrect');
@@ -606,7 +648,7 @@ function processAnswer(isCorrect) {
 }
 
 /* ============================================================
-   SECTION 18: CONTINUE BUTTON — RESOLVE TILE OUTCOME
+   SECTION 18: CONTINUE — RESOLVE TILE OUTCOME
    ============================================================ */
 
 el.continueBtn.addEventListener('click', () => {
@@ -634,8 +676,7 @@ function revealSafeTile(tileIndex) {
   tileEl.classList.add('revealed', 'safe');
   tileEl.disabled = true;
 
-  const player = gameState.players[gameState.currentPlayerIndex];
-  player.score += 1;
+  gameState.players[gameState.currentPlayerIndex].score += 1;
 
   if (gameState.heatMeterEnabled) {
     tileEl.innerHTML = `<span class="heat-emoji">${calculateHeatLevel(tileIndex)}</span>`;
@@ -654,8 +695,7 @@ function revealDecoyTile(tileIndex) {
   tileEl.textContent = '🎭';
   tileEl.disabled = true;
 
-  const player = gameState.players[gameState.currentPlayerIndex];
-  player.score += 2;
+  gameState.players[gameState.currentPlayerIndex].score += 2;
 
   showToast('💥 FALSE ALARM! That was a decoy bomb. +1 bonus point!');
   renderScoreboard();
@@ -671,7 +711,7 @@ function advanceToNextPlayer() {
 }
 
 /* ============================================================
-   SECTION 19: BOMB FOUND — WIN OR SPINNER
+   SECTION 19: BOMB FOUND
    ============================================================ */
 
 function handleBombFound(tileIndex) {
@@ -689,12 +729,7 @@ function handleBombFound(tileIndex) {
 }
 
 /* ============================================================
-   SECTION 20: DEFUSE SPINNER — FIXED LOGIC
-   ============================================================
-   Outcome is decided FIRST via probability, then the wheel's
-   rotation is calculated to land inside the segment matching
-   that outcome. Visual result and logical result can never
-   mismatch again.
+   SECTION 20: DEFUSE SPINNER (outcome-first, no mismatch)
    ============================================================ */
 
 function openSpinnerModal(tileIndex) {
@@ -710,7 +745,9 @@ function openSpinnerModal(tileIndex) {
 function spinWheel(winChancePercent, onComplete) {
   const wheelEl = el.spinnerWheel;
 
+  // Outcome decided FIRST — single source of truth
   const isWin = Math.random() * 100 < winChancePercent;
+
   const [minAngle, maxAngle] = isWin ? SPINNER_WIN_RANGE : SPINNER_LOSE_RANGE;
   const targetAngle = minAngle + Math.random() * (maxAngle - minAngle);
 
@@ -720,23 +757,19 @@ function spinWheel(winChancePercent, onComplete) {
 
   wheelEl.classList.remove('spinning');
   wheelEl.style.transform = 'rotate(0deg)';
-  void wheelEl.offsetWidth; // force reflow so reset actually applies
+  void wheelEl.offsetWidth; // force reflow so the reset applies
   wheelEl.classList.add('spinning');
 
   requestAnimationFrame(() => {
     wheelEl.style.transform = `rotate(${finalRotation}deg)`;
   });
 
-  setTimeout(() => {
-    onComplete(isWin);
-  }, 4100);
+  setTimeout(() => onComplete(isWin), 4100);
 }
 
 el.spinBtn.addEventListener('click', () => {
   el.spinBtn.disabled = true;
-  spinWheel(gameState.spinnerWinChance, (isWin) => {
-    showSpinnerResult(isWin);
-  });
+  spinWheel(gameState.spinnerWinChance, showSpinnerResult);
 });
 
 function showSpinnerResult(isWin) {
@@ -757,9 +790,8 @@ function showSpinnerResult(isWin) {
 el.spinnerContinueBtn.addEventListener('click', () => {
   closeOverlay(el.spinnerModal);
   const tileIndex = gameState._spinnerTileIndex;
-  const isWin = gameState._spinnerResult;
 
-  if (isWin) {
+  if (gameState._spinnerResult) {
     const player = gameState.players[gameState.currentPlayerIndex];
     player.score += 1;
     endGame(player);
@@ -794,7 +826,8 @@ function relocateBomb(oldTileIndex) {
     if (decoyFallbacks.length > 0) {
       const newBombIndex = decoyFallbacks[getRandomInt(0, decoyFallbacks.length - 1)];
       gameState.bombTileIndex = newBombIndex;
-      gameState.decoyTileIndexes = gameState.decoyTileIndexes.filter(i => i !== newBombIndex);
+      gameState.decoyTileIndexes =
+        gameState.decoyTileIndexes.filter(i => i !== newBombIndex);
     }
   }
 
@@ -813,8 +846,6 @@ function endGame(winner) {
   stopQuestionTimer();
   el.winnerText.textContent = `🎉 ${winner.name} wins by finding the bomb!`;
 
-  // Build (or rebuild) a final scores block dynamically since the
-  // HTML doesn't have a dedicated container for it
   let finalScoresEl = document.getElementById('final-scores-dynamic');
   if (!finalScoresEl) {
     finalScoresEl = document.createElement('div');
@@ -823,13 +854,15 @@ function endGame(winner) {
     el.winnerText.insertAdjacentElement('afterend', finalScoresEl);
   }
   finalScoresEl.innerHTML = '';
-  const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
-  sortedPlayers.forEach(player => {
-    const item = document.createElement('div');
-    item.className = 'final-score-item';
-    item.textContent = `${player.name}: ${player.score} points`;
-    finalScoresEl.appendChild(item);
-  });
+
+  [...gameState.players]
+    .sort((a, b) => b.score - a.score)
+    .forEach(player => {
+      const item = document.createElement('div');
+      item.className = 'final-score-item';
+      item.textContent = `${player.name}: ${player.score} points`;
+      finalScoresEl.appendChild(item);
+    });
 
   openOverlay(el.endScreen);
   triggerConfetti();
@@ -851,7 +884,7 @@ function triggerConfetti() {
 }
 
 /* ============================================================
-   SECTION 22: GAME START / RESTART HANDLERS
+   SECTION 22: START / RESTART HANDLERS
    ============================================================ */
 
 el.startGameBtn.addEventListener('click', () => {
@@ -869,8 +902,7 @@ el.startGameBtn.addEventListener('click', () => {
 });
 
 el.restartBtn.addEventListener('click', () => {
-  const confirmReset = confirm('Start a new game? Current progress will be lost.');
-  if (confirmReset) {
+  if (confirm('Start a new game? Current progress will be lost.')) {
     showScreen('setup');
   }
 });
