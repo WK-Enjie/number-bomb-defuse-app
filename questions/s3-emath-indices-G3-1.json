@@ -1,0 +1,150 @@
+{
+  "topic": "Indices: Laws, Simplification & Equations (Part 1)",
+  "level": "Secondary 3 E-Math (G3)",
+  "questions": [
+    {
+      "question": "Simplify (2x^2 y^3)^3.",
+      "options": ["6x^5 y^6", "8x^6 y^9", "8x^5 y^9", "2x^6 y^9"],
+      "correctIndex": 1,
+      "explanation": "Apply the power of a product rule: 2^3 = 8, (x^2)^3 = x^6, (y^3)^3 = y^9. Result is 8x^6 y^9."
+    },
+    {
+      "question": "Evaluate 27^(2/3).",
+      "options": ["9", "18", "3", "81"],
+      "correctIndex": 0,
+      "explanation": "27^(2/3) = (27^(1/3))^2 = 3^2 = 9."
+    },
+    {
+      "question": "Solve 3^(x+1) = 81.",
+      "options": ["x = 2", "x = 4", "x = 3", "x = 5"],
+      "correctIndex": 2,
+      "explanation": "Express 81 as a power of 3: 3^(x+1) = 3^4. Equate indices: x + 1 = 4, so x = 3."
+    },
+    {
+      "question": "Simplify (a^-2 b^3)^-2, leaving your answer in positive indices.",
+      "options": ["b^6 / a^4", "1 / (a^4 b^6)", "a^4 / b^6", "a^4 b^6"],
+      "correctIndex": 2,
+      "explanation": "Multiply the indices: a^(-2 × -2) b^(3 × -2) = a^4 b^-6 = a^4 / b^6."
+    },
+    {
+      "question": "Given that 5^x = 2, find the value of 5^(2x+1).",
+      "options": ["5", "10", "20", "25"],
+      "correctIndex": 2,
+      "explanation": "5^(2x+1) = 5^(2x) × 5^1 = (5^x)^2 × 5 = 2^2 × 5 = 4 × 5 = 20."
+    },
+    {
+      "question": "Solve 4^(2x-1) = 8^(x+2).",
+      "options": ["x = 6", "x = 7", "x = 8", "x = 9"],
+      "correctIndex": 2,
+      "explanation": "Convert to base 2: (2^2)^(2x-1) = (2^3)^(x+2) → 2^(4x-2) = 2^(3x+6). Equate indices: 4x - 2 = 3x + 6 → x = 8."
+    },
+    {
+      "question": "Simplify (x^3 y^-2)^2 ÷ (x^-1 y^4), leaving your answer in positive indices.",
+      "options": ["x^7 / y^8", "x^5 y^8", "x^7 y^8", "x^5 / y^8"],
+      "correctIndex": 0,
+      "explanation": "Numerator: x^6 y^-4. Dividing by x^-1 y^4 gives x^(6 - -1) y^(-4 - 4) = x^7 y^-8 = x^7 / y^8."
+    },
+    {
+      "question": "Solve 2^x × 4^(x+1) = 32.",
+      "options": ["x = 2", "x = 1", "x = 3", "x = 4"],
+      "correctIndex": 1,
+      "explanation": "Convert to base 2: 2^x × 2^(2x+2) = 2^5 → 2^(3x+2) = 2^5. Equate indices: 3x + 2 = 5 → 3x = 3 → x = 1."
+    },
+    {
+      "question": "Solve 3^x + 3^x + 3^x = 81.",
+      "options": ["x = 2", "x = 3", "x = 4", "x = 5"],
+      "correctIndex": 1,
+      "explanation": "Combine like terms: 3 × 3^x = 3^(x+1). Since 81 = 3^4, x + 1 = 4 → x = 3."
+    },
+    {
+      "question": "Evaluate (0.125)^(1/3).",
+      "options": ["0.05", "0.5", "0.25", "0.125"],
+      "correctIndex": 1,
+      "explanation": "0.125 = 1/8. (1/8)^(1/3) is the cube root of 1/8, which is 1/2 or 0.5."
+    },
+    {
+      "question": "Solve 2^x × 5^x = 1000.",
+      "options": ["x = 2", "x = 4", "x = 3", "x = 5"],
+      "correctIndex": 2,
+      "explanation": "Group the bases with the same index: (2 × 5)^x = 10^x. Since 1000 = 10^3, x = 3."
+    },
+    {
+      "question": "A bacteria population doubles every hour. If the initial population is 100, find the time it takes to reach 800.",
+      "options": ["2 hours", "4 hours", "5 hours", "3 hours"],
+      "correctIndex": 3,
+      "explanation": "Population after t hours is 100 × 2^t. 100 × 2^t = 800 → 2^t = 8 = 2^3 → t = 3 hours."
+    },
+    {
+      "question": "Simplify (2a^2 b)^3 × (3ab^-2)^2, leaving your answer in positive indices.",
+      "options": ["72a^8 / b", "72a^8 b", "12a^8 / b", "12a^8 b"],
+      "correctIndex": 0,
+      "explanation": "(8a^6 b^3) × (9a^2 b^-4) = 72a^8 b^-1 = 72a^8 / b."
+    },
+    {
+      "question": "Solve 5^(2-x) = 1/25.",
+      "options": ["x = 2", "x = 3", "x = 5", "x = 4"],
+      "correctIndex": 3,
+      "explanation": "1/25 = 5^-2. So 5^(2-x) = 5^-2 → 2 - x = -2 → x = 4."
+    },
+    {
+      "question": "Given that 2^a = x and 2^b = y, express 2^(3a+b) in terms of x and y.",
+      "options": ["3x + y", "x^3 y", "x^3 + y", "x^3 / y"],
+      "correctIndex": 1,
+      "explanation": "2^(3a+b) = 2^(3a) × 2^b = (2^a)^3 × 2^b = x^3 y."
+    },
+    {
+      "question": "Simplify (2x^3)^2 × (3x^-1)^3 ÷ (6x^2).",
+      "options": ["18x", "18x^5", "108x", "108x^5"],
+      "correctIndex": 0,
+      "explanation": "(4x^6) × (27x^-3) = 108x^3. Dividing by 6x^2 gives (108/6)x^(3-2) = 18x."
+    },
+    {
+      "question": "Solve 9^x - 3^(x+1) = 0.",
+      "options": ["x = 0", "x = 2", "x = 1", "x = 3"],
+      "correctIndex": 2,
+      "explanation": "9^x = 3^(2x). So 3^(2x) = 3^(x+1) → 2x = x + 1 → x = 1."
+    },
+    {
+      "question": "Evaluate 16^(3/4) × 8^(-2/3).",
+      "options": ["1/2", "1", "2", "4"],
+      "correctIndex": 2,
+      "explanation": "16^(3/4) = (2^4)^(3/4) = 2^3 = 8. 8^(-2/3) = (2^3)^(-2/3) = 2^-2 = 1/4. 8 × 1/4 = 2."
+    },
+    {
+      "question": "Solve 3^(x+1) × 2^(x+1) = 36.",
+      "options": ["x = 0", "x = 2", "x = 3", "x = 1"],
+      "correctIndex": 3,
+      "explanation": "Group bases with the same index: (3 × 2)^(x+1) = 6^(x+1). Since 36 = 6^2, x + 1 = 2 → x = 1."
+    },
+    {
+      "question": "Simplify (8^n × 27^n) ÷ (6^n × 36^n).",
+      "options": ["1", "6^n", "3^n", "2^n"],
+      "correctIndex": 0,
+      "explanation": "Numerator: 2^(3n) × 3^(3n). Denominator: (2×3)^n × (2^2×3)^n = 2^(3n) × 3^(3n). The terms cancel completely to give 1."
+    },
+    {
+      "question": "Solve 2^(x+2) - 2^x = 24.",
+      "options": ["x = 2", "x = 4", "x = 5", "x = 3"],
+      "correctIndex": 3,
+      "explanation": "Factorize 2^x: 2^x(2^2 - 1) = 24 → 2^x(3) = 24 → 2^x = 8 = 2^3 → x = 3."
+    },
+    {
+      "question": "Simplify (x^2 y^3)^-1 × (x y^-1)^-2, leaving your answer in positive indices.",
+      "options": ["1 / (x^4 y)", "x^4 y", "y / x^4", "x^4 / y"],
+      "correctIndex": 0,
+      "explanation": "(x^-2 y^-3) × (x^-2 y^2) = x^(-2-2) y^(-3+2) = x^-4 y^-1 = 1 / (x^4 y)."
+    },
+    {
+      "question": "Evaluate (2/3)^-2 × (4/9)^(1/2).",
+      "options": ["1", "3/2", "2", "9/4"],
+      "correctIndex": 1,
+      "explanation": "(2/3)^-2 = (3/2)^2 = 9/4. (4/9)^(1/2) = 2/3. Multiplying them: 9/4 × 2/3 = 3/2."
+    },
+    {
+      "question": "Solve 27^(x-1) = 9^(2x).",
+      "options": ["x = -3", "x = -2", "x = 2", "x = 3"],
+      "correctIndex": 0,
+      "explanation": "Convert to base 3: (3^3)^(x-1) = (3^2)^(2x) → 3^(3x-3) = 3^(4x). Equate indices: 3x - 3 = 4x → x = -3."
+    }
+  ]
+}
