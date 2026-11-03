@@ -1,0 +1,150 @@
+{
+  "topic": "Moles, Gas Volumes & Concentration (Part 1)",
+  "level": "Secondary 3/4 Pure Chemistry",
+  "questions": [
+    {
+      "question": "Calculate the number of moles present in 12.0 g of carbon (C). [A_r: C = 12]",
+      "options": ["0.10 mol", "1.0 mol", "12.0 mol", "144 mol"],
+      "correctIndex": 1,
+      "explanation": "Moles = frac{mass}{M_r} = frac{12.0}{12.0} = 1.0 mol."
+    },
+    {
+      "question": "Calculate the mass, in grams, of 0.50 moles of water (H_2O). [A_r: H = 1, O = 16]",
+      "options": ["4.5 g", "9.0 g", "18.0 g", "36.0 g"],
+      "correctIndex": 1,
+      "explanation": "M_r of H_2O = 2(1) + 16 = 18. Mass = moles × M_r = 0.50 × 18 = 9.0 g."
+    },
+    {
+      "question": "A student weighs out 11.1 g of anhydrous calcium chloride (CaCl_2). Calculate the number of moles used. [A_r: Ca = 40, Cl = 35.5]",
+      "options": ["0.050 mol", "0.10 mol", "0.20 mol", "0.50 mol"],
+      "correctIndex": 1,
+      "explanation": "M_r of CaCl_2 = 40 + 2(35.5) = 111. Moles = frac{11.1}{111} = 0.10 mol."
+    },
+    {
+      "question": "What is the mass of 2.50 moles of sulfuric acid (H_2SO_4)? [A_r: H = 1, S = 32, O = 16]",
+      "options": ["49.0 g", "98.0 g", "245 g", "490 g"],
+      "correctIndex": 2,
+      "explanation": "M_r of H_2SO_4 = 2(1) + 32 + 4(16) = 98. Mass = 2.50 × 98 = 245 g."
+    },
+    {
+      "question": "Calculate the number of moles of oxygen atoms present in 4.6 g of nitrogen dioxide (NO_2). [A_r: N = 14, O = 16]",
+      "options": ["0.10 mol", "0.20 mol", "0.40 mol", "0.50 mol"],
+      "correctIndex": 1,
+      "explanation": "M_r of NO_2 = 14 + 2(16) = 46. Moles of NO_2 = frac{4.6}{46} = 0.10 mol. Each NO_2 has 2 O atoms, so moles of O = 0.10 × 2 = 0.20 mol."
+    },
+    {
+      "question": "Which sample contains a greater number of moles: 10.0 g of NaOH or 10.0 g of KOH? [A_r: Na = 23, K = 39, O = 16, H = 1]",
+      "options": ["NaOH, because it has a lower M_r", "KOH, because it has a higher M_r", "Both contain the same number of moles", "Cannot be determined"],
+      "correctIndex": 0,
+      "explanation": "Moles = frac{mass}{M_r}. For the same mass, the compound with the lower M_r (NaOH, M_r = 40) will have more moles than the one with the higher M_r (KOH, M_r = 56)."
+    },
+    {
+      "question": "A sample of an unknown gas has a mass of 8.8 g and contains exactly 0.20 moles. Calculate its M_r and suggest its identity.",
+      "options": ["M_r = 22, CO", "M_r = 44, CO_2", "M_r = 44, NO_2", "M_r = 88, C_3H_8"],
+      "correctIndex": 1,
+      "explanation": "M_r = frac{mass}{moles} = frac{8.8}{0.20} = 44. The common carbon oxide with M_r = 44 is CO_2 (12 + 2(16) = 44)."
+    },
+    {
+      "question": "Calculate the exact mass of 0.100 moles of hydrated copper(II) sulfate (CuSO_4·5H_2O). [A_r: Cu = 63.5, S = 32, O = 16, H = 1]",
+      "options": ["15.95 g", "24.95 g", "31.90 g", "249.5 g"],
+      "correctIndex": 1,
+      "explanation": "M_r = 63.5 + 32 + 4(16) + 5(18) = 249.5. Mass = 0.100 × 249.5 = 24.95 g."
+    },
+    {
+      "question": "1.00 g of a Group 2 metal carbonate (XCO_3) contains 0.010 moles. Calculate the A_r of metal X and identify it. [A_r: C = 12, O = 16]",
+      "options": ["A_r = 24, Magnesium", "A_r = 40, Calcium", "A_r = 56, Iron", "A_r = 65, Zinc"],
+      "correctIndex": 1,
+      "explanation": "M_r of XCO_3 = frac{1.00}{0.010} = 100. X + 12 + 3(16) = 100 → X + 60 = 100 → X = 40 (Calcium)."
+    },
+    {
+      "question": "Calculate the volume, in dm^3, occupied by 0.50 moles of oxygen gas (O_2) at r.t.p.",
+      "options": ["6.0 dm^3", "12.0 dm^3", "24.0 dm^3", "48.0 dm^3"],
+      "correctIndex": 1,
+      "explanation": "Volume = moles × 24 dm^3 = 0.50 × 24 = 12.0 dm^3."
+    },
+    {
+      "question": "A gas syringe collects 4.80 dm^3 of hydrogen gas (H_2) at r.t.p. Calculate the number of moles collected.",
+      "options": ["0.10 mol", "0.20 mol", "0.40 mol", "5.0 mol"],
+      "correctIndex": 1,
+      "explanation": "Moles = frac{volume}{24} = frac{4.80}{24} = 0.20 mol."
+    },
+    {
+      "question": "What is the volume, in cm^3, of 0.020 moles of carbon dioxide (CO_2) at r.t.p.?",
+      "options": ["48 cm^3", "240 cm^3", "480 cm^3", "2400 cm^3"],
+      "correctIndex": 2,
+      "explanation": "Volume in dm^3 = 0.020 × 24 = 0.48 dm^3. Convert to cm^3: 0.48 × 1000 = 480 cm^3."
+    },
+    {
+      "question": "Calculate the mass of 1.20 dm^3 of sulfur dioxide (SO_2) gas at r.t.p. [A_r: S = 32, O = 16]",
+      "options": ["1.6 g", "3.2 g", "6.4 g", "64.0 g"],
+      "correctIndex": 1,
+      "explanation": "Moles = frac{1.20}{24} = 0.050 mol. M_r of SO_2 = 32 + 2(16) = 64. Mass = 0.050 × 64 = 3.2 g."
+    },
+    {
+      "question": "Flask A contains 4.0 g of helium (He) and Flask B contains 4.0 g of methane (CH_4). Both are at r.t.p. Which flask contains the larger volume of gas?",
+      "options": ["Flask A, because He has fewer moles", "Flask A, because He has more moles", "Flask B, because CH_4 has a higher M_r", "Both contain the same volume"],
+      "correctIndex": 1,
+      "explanation": "Moles of He = frac{4.0}{4} = 1.0 mol. Moles of CH_4 = frac{4.0}{16} = 0.25 mol. Flask A has more moles, hence a larger volume."
+    },
+    {
+      "question": "0.10 mol of solid calcium carbonate (CaCO_3) is heated strongly until it completely decomposes. Calculate the maximum volume of CO_2 produced at r.t.p.",
+      "options": ["1.2 dm^3", "2.4 dm^3", "12.0 dm^3", "24.0 dm^3"],
+      "correctIndex": 1,
+      "explanation": "CaCO_3 → CaO + CO_2. Molar ratio is 1:1. Moles of CO_2 = 0.10 mol. Volume = 0.10 × 24 = 2.4 dm^3."
+    },
+    {
+      "question": "A student vaporizes a liquid and collects 240 cm^3 of its gas at r.t.p. If the mass is 0.60 g, calculate the M_r of the liquid.",
+      "options": ["30", "60", "120", "240"],
+      "correctIndex": 1,
+      "explanation": "Volume = 240 cm^3 = 0.24 dm^3. Moles = frac{0.24}{24} = 0.010 mol. M_r = frac{mass}{moles} = frac{0.60}{0.010} = 60."
+    },
+    {
+      "question": "A gas mixture contains 0.10 mol of O_2 and 0.20 mol of N_2. Calculate the total volume of this mixture at r.t.p.",
+      "options": ["2.4 dm^3", "4.8 dm^3", "7.2 dm^3", "9.6 dm^3"],
+      "correctIndex": 2,
+      "explanation": "Total moles = 0.10 + 0.20 = 0.30 mol. Total volume = 0.30 × 24 = 7.2 dm^3."
+    },
+    {
+      "question": "A student wishes to collect exactly 0.0050 moles of hydrogen gas at r.t.p. What volume, in cm^3, should they aim to collect?",
+      "options": ["12 cm^3", "120 cm^3", "240 cm^3", "1200 cm^3"],
+      "correctIndex": 1,
+      "explanation": "Volume in dm^3 = 0.0050 × 24 = 0.12 dm^3. Convert to cm^3: 0.12 × 1000 = 120 cm^3."
+    },
+    {
+      "question": "Calculate the concentration, in mol/dm^3, of a solution containing 0.20 moles of NaCl dissolved in 0.50 dm^3 of water.",
+      "options": ["0.10 mol/dm^3", "0.25 mol/dm^3", "0.40 mol/dm^3", "2.5 mol/dm^3"],
+      "correctIndex": 2,
+      "explanation": "Concentration = frac{moles}{volume} = frac{0.20}{0.50} = 0.40 mol/dm^3."
+    },
+    {
+      "question": "A solution of HCl has a concentration of 2.0 mol/dm^3. Calculate the number of moles of HCl present in 250 cm^3 of this solution.",
+      "options": ["0.25 mol", "0.50 mol", "2.0 mol", "8.0 mol"],
+      "correctIndex": 1,
+      "explanation": "Volume = 250 cm^3 = 0.25 dm^3. Moles = concentration × volume = 2.0 × 0.25 = 0.50 mol."
+    },
+    {
+      "question": "4.0 g of solid NaOH is dissolved in water to make exactly 200 cm^3 of solution. Calculate the concentration in mol/dm^3. [A_r: Na = 23, O = 16, H = 1]",
+      "options": ["0.10 mol/dm^3", "0.20 mol/dm^3", "0.50 mol/dm^3", "1.0 mol/dm^3"],
+      "correctIndex": 2,
+      "explanation": "M_r of NaOH = 40. Moles = frac{4.0}{40} = 0.10 mol. Volume = 200 cm^3 = 0.20 dm^3. Concentration = frac{0.10}{0.20} = 0.50 mol/dm^3."
+    },
+    {
+      "question": "Convert a concentration of 0.50 mol/dm^3 of H_2SO_4 into g/dm^3. [A_r: H = 1, S = 32, O = 16]",
+      "options": ["24.5 g/dm^3", "49.0 g/dm^3", "98.0 g/dm^3", "196 g/dm^3"],
+      "correctIndex": 1,
+      "explanation": "M_r of H_2SO_4 = 98. Concentration in g/dm^3 = mol/dm^3 × M_r = 0.50 × 98 = 49.0 g/dm^3."
+    },
+    {
+      "question": "A commercial bottle of aqueous ammonia (NH_3) has a concentration of 34.0 g/dm^3. Calculate its concentration in mol/dm^3. [A_r: N = 14, H = 1]",
+      "options": ["0.50 mol/dm^3", "1.0 mol/dm^3", "2.0 mol/dm^3", "17.0 mol/dm^3"],
+      "correctIndex": 2,
+      "explanation": "M_r of NH_3 = 14 + 3(1) = 17. Concentration in mol/dm^3 = frac{34.0}{17} = 2.0 mol/dm^3."
+    },
+    {
+      "question": "50.0 cm^3 of a 2.0 mol/dm^3 CuSO_4 solution is diluted with water to a total volume of 500 cm^3. Calculate the new concentration.",
+      "options": ["0.10 mol/dm^3", "0.20 mol/dm^3", "0.50 mol/dm^3", "1.0 mol/dm^3"],
+      "correctIndex": 1,
+      "explanation": "Moles of CuSO_4 = 2.0 × (frac{50}{1000}) = 0.10 mol. New volume = 500 cm^3 = 0.50 dm^3. New concentration = frac{0.10}{0.50} = 0.20 mol/dm^3."
+    }
+  ]
+}
