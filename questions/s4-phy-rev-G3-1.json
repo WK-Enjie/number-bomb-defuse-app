@@ -1,0 +1,353 @@
+{
+  "topic": "Physics: Forces, Thermal, Electromagnetism, Waves & Circuits",
+  "level": "Secondary 3/4 O-Level Physics",
+  "questions": [
+    {
+      "question": "Two forces of 5 N and 15 N act on an object. Which of the following CANNOT be the magnitude of their resultant force?",
+      "options": ["10 N", "12 N", "18 N", "22 N"],
+      "correctIndex": 3,
+      "explanation": "The maximum resultant is 15 + 5 = 20 N (same direction). The minimum is 15 - 5 = 10 N (opposite directions). Any value outside 10 N to 20 N is impossible."
+    },
+    {
+      "question": "Two forces, each of magnitude 10 N, act on an object at an angle of 90° to each other. What is the magnitude of the resultant force?",
+      "options": ["0 N", "10 N", "14.1 N", "20 N"],
+      "correctIndex": 2,
+      "explanation": "Using Pythagoras' theorem: Resultant = √(10² + 10²) = √200 ≈ 14.1 N."
+    },
+    {
+      "question": "A car is travelling along a straight horizontal road at a constant velocity of 20 m/s. What is the magnitude of the resultant force acting on the car?",
+      "options": ["0 N", "20 N", "Depends on the mass of the car", "Depends on the engine power"],
+      "correctIndex": 0,
+      "explanation": "According to Newton's First Law, an object moving at constant velocity has zero acceleration, meaning the resultant force acting on it is exactly 0 N."
+    },
+    {
+      "question": "Three forces act on a point object and keep it in equilibrium. If two of the forces are 6 N and 8 N acting at 90° to each other, what is the magnitude of the third force?",
+      "options": ["2 N", "10 N", "14 N", "48 N"],
+      "correctIndex": 1,
+      "explanation": "For equilibrium, the third force must exactly balance the resultant of the first two. Resultant of 6 N and 8 N at 90° is √(6² + 8²) = 10 N. The third force is 10 N in the opposite direction."
+    },
+    {
+      "question": "Which statement correctly defines the specific heat capacity of a substance?",
+      "options": [
+        "The energy required to raise the temperature of 1 kg of the substance by 1 °C",
+        "The energy required to raise the temperature of the entire object by 1 °C",
+        "The energy required to change 1 kg of the substance from solid to liquid at constant temperature",
+        "The total internal energy contained within 1 kg of the substance"
+      ],
+      "correctIndex": 0,
+      "explanation": "Specific heat capacity (c) is defined as the thermal energy required to raise the temperature of a unit mass (1 kg) of a substance by 1 K (or 1 °C)."
+    },
+    {
+      "question": "Block A and Block B are made of the same material. Block A has twice the mass of Block B. How do their heat capacities compare?",
+      "options": [
+        "Block A has half the heat capacity of Block B",
+        "Block A has the same heat capacity as Block B",
+        "Block A has twice the heat capacity of Block B",
+        "Block A has four times the heat capacity of Block B"
+      ],
+      "correctIndex": 2,
+      "explanation": "Heat capacity (C) = mass (m) × specific heat capacity (c). Since 'c' is the same and mass of A is twice that of B, the heat capacity of A is twice that of B."
+    },
+    {
+      "question": "5000 J of thermal energy is supplied to a 0.5 kg block of metal, raising its temperature by 20 °C. What is the specific heat capacity of the metal?",
+      "options": ["200 J/(kg·°C)", "500 J/(kg·°C)", "1000 J/(kg·°C)", "5000 J/(kg·°C)"],
+      "correctIndex": 1,
+      "explanation": "Using Q = mcΔθ, we get c = Q / (mΔθ) = 5000 / (0.5 × 20) = 5000 / 10 = 500 J/(kg·°C)."
+    },
+    {
+      "question": "Why do coastal regions generally experience milder temperature variations between day and night compared to inland desert regions?",
+      "options": [
+        "Water has a higher specific heat capacity than sand",
+        "Water has a lower specific heat capacity than sand",
+        "Sand absorbs more sunlight than water",
+        "Water reflects all thermal radiation at night"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water has a much higher specific heat capacity than sand, meaning it requires more energy to heat up and releases more energy to cool down, moderating temperature changes."
+    },
+    {
+      "question": "What happens to the thermal energy supplied to a substance during melting at its melting point?",
+      "options": [
+        "It increases the kinetic energy of the particles, raising the temperature",
+        "It is used to overcome intermolecular forces, keeping the temperature constant",
+        "It is lost to the surroundings as latent heat of vaporization",
+        "It increases the potential energy of the nucleus of each atom"
+      ],
+      "correctIndex": 1,
+      "explanation": "During a phase change, the supplied thermal energy is used to break or weaken intermolecular bonds (increasing potential energy), not to increase kinetic energy, so the temperature remains constant."
+    },
+    {
+      "question": "Calculate the thermal energy required to completely melt 0.2 kg of ice at 0 °C. [Specific latent heat of fusion of ice = 334,000 J/kg]",
+      "options": ["16,700 J", "33,400 J", "66,800 J", "334,000 J"],
+      "correctIndex": 2,
+      "explanation": "Using Q = ml, Q = 0.2 × 334,000 = 66,800 J."
+    },
+    {
+      "question": "A burn from 100 °C steam is typically more severe than a burn from 100 °C boiling water. Why is this the case?",
+      "options": [
+        "Steam has a higher specific heat capacity than water",
+        "Steam is at a higher temperature than boiling water",
+        "Steam releases a large amount of latent heat of vaporization when it condenses on the skin",
+        "Steam has a higher density than boiling water"
+      ],
+      "correctIndex": 2,
+      "explanation": "When steam condenses on the skin, it releases its specific latent heat of vaporization (a large amount of energy) in addition to the heat released as it cools down, causing more severe tissue damage."
+    },
+    {
+      "question": "A straight vertical wire carries a current flowing downwards. What is the direction of the magnetic field lines around the wire when viewed from above?",
+      "options": ["Clockwise", "Anti-clockwise", "Radially outwards", "Radially inwards"],
+      "correctIndex": 0,
+      "explanation": "Using the Right-Hand Grip Rule: point the right thumb downwards (direction of current), and the fingers curl in a clockwise direction when viewed from above."
+    },
+    {
+      "question": "Two parallel vertical wires carry currents in the same direction. What is the magnetic force between them?",
+      "options": ["They attract each other", "They repel each other", "There is no force between them", "They rotate to become perpendicular"],
+      "correctIndex": 0,
+      "explanation": "Parallel currents in the same direction create magnetic fields that interact to produce an attractive force between the wires."
+    },
+    {
+      "question": "Which of the following changes will NOT increase the strength of the magnetic field inside a current-carrying solenoid?",
+      "options": [
+        "Increasing the current flowing through the wire",
+        "Increasing the number of turns per unit length",
+        "Inserting a soft iron core into the solenoid",
+        "Increasing the diameter of the solenoid coil while keeping the number of turns the same"
+      ],
+      "correctIndex": 3,
+      "explanation": "Increasing the diameter without adding more turns spreads the magnetic field lines further apart, which does not increase (and may slightly decrease) the magnetic field strength inside the core."
+    },
+    {
+      "question": "In Fleming's Left-Hand Rule, what does the middle (second) finger represent?",
+      "options": ["Direction of the magnetic field", "Direction of the conventional current", "Direction of the force or motion", "Direction of the electron flow"],
+      "correctIndex": 1,
+      "explanation": "In Fleming's Left-Hand Rule: Thumb = Thrust (Force/Motion), First finger = Field (N to S), Second finger = Current (conventional, + to -)."
+    },
+    {
+      "question": "A horizontal wire carries a current from left to right. It is placed in a uniform magnetic field directed vertically downwards. What is the direction of the magnetic force on the wire?",
+      "options": ["Upwards", "Downwards", "Into the page", "Out of the page"],
+      "correctIndex": 3,
+      "explanation": "Using Fleming's Left-Hand Rule: First finger points down (Field), second finger points right (Current). The thumb points out of the page (Force)."
+    },
+    {
+      "question": "Fleming's Right-Hand Rule is primarily used to determine the direction of:",
+      "options": [
+        "The force on a current-carrying wire in a motor",
+        "The magnetic field around a straight wire",
+        "The induced current in a wire moving through a magnetic field",
+        "The poles of an electromagnet"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fleming's Right-Hand Rule (Thumb = Motion, First finger = Field, Second finger = Induced Current) is used for generators and electromagnetic induction."
+    },
+    {
+      "question": "A copper wire is moved parallel to the magnetic field lines of a strong permanent magnet. What is the magnitude of the induced electromotive force (e.m.f.) in the wire?",
+      "options": ["Maximum", "Zero", "Depends on the speed of the wire", "Depends on the length of the wire"],
+      "correctIndex": 1,
+      "explanation": "An e.m.f. is only induced when a conductor cuts across magnetic field lines. Moving parallel to the field lines means no field lines are cut, so the induced e.m.f. is zero."
+    },
+    {
+      "question": "A wave has a frequency of 50 Hz and a wavelength of 4 m. What is the speed of the wave?",
+      "options": ["12.5 m/s", "50 m/s", "200 m/s", "400 m/s"],
+      "correctIndex": 2,
+      "explanation": "Using the wave equation v = fλ, v = 50 × 4 = 200 m/s."
+    },
+    {
+      "question": "A water wave travels from deep water into shallow water. Which of the following correctly describes the changes in its properties?",
+      "options": [
+        "Speed decreases, frequency decreases, wavelength decreases",
+        "Speed decreases, frequency remains constant, wavelength decreases",
+        "Speed increases, frequency remains constant, wavelength increases",
+        "Speed remains constant, frequency decreases, wavelength decreases"
+      ],
+      "correctIndex": 1,
+      "explanation": "When a wave changes medium, its frequency (determined by the source) remains constant. In shallow water, the speed decreases, which causes the wavelength to decrease (since v = fλ)."
+    },
+    {
+      "question": "The time period of a pendulum is 2.0 seconds. What is its frequency?",
+      "options": ["0.2 Hz", "0.5 Hz", "2.0 Hz", "4.0 Hz"],
+      "correctIndex": 1,
+      "explanation": "Frequency f = 1 / T = 1 / 2.0 = 0.5 Hz."
+    },
+    {
+      "question": "Which of the following is a characteristic unique to longitudinal waves and not found in transverse waves?",
+      "options": [
+        "They can be reflected",
+        "They can be refracted",
+        "They consist of compressions and rarefactions",
+        "They can transfer energy through a vacuum"
+      ],
+      "correctIndex": 2,
+      "explanation": "Longitudinal waves (like sound) propagate via compressions and rarefactions parallel to the direction of energy transfer. Transverse waves have crests and troughs."
+    },
+    {
+      "question": "A student measures the time for 20 complete oscillations of a wave to be 5.0 seconds. What is the frequency of the wave?",
+      "options": ["0.25 Hz", "4.0 Hz", "10.0 Hz", "100.0 Hz"],
+      "correctIndex": 1,
+      "explanation": "Time period T = Total time / Number of oscillations = 5.0 / 20 = 0.25 s. Frequency f = 1 / T = 1 / 0.25 = 4.0 Hz."
+    },
+    {
+      "question": "A sound wave travels through air at 340 m/s. If the distance between a compression and the adjacent rarefaction is 0.5 m, what is the frequency of the sound wave?",
+      "options": ["170 Hz", "340 Hz", "680 Hz", "1360 Hz"],
+      "correctIndex": 1,
+      "explanation": "The distance from a compression to the adjacent rarefaction is half a wavelength (λ/2). So, λ = 1.0 m. Using v = fλ, f = v / λ = 340 / 1.0 = 340 Hz."
+    },
+    {
+      "question": "The magnetic field strength B at a distance d from a long straight wire is directly proportional to the current I and inversely proportional to d. If the current is doubled and the distance is halved, what happens to B?",
+      "options": ["It is halved", "It remains unchanged", "It is doubled", "It is quadrupled"],
+      "correctIndex": 3,
+      "explanation": "Since B ∝ I/d, the new field strength is proportional to (2I) / (0.5d) = 4(I/d). Therefore, the magnetic field strength quadruples."
+    },
+    {
+      "question": "In an AC generator, at which position of the rotating coil is the induced e.m.f. momentarily zero?",
+      "options": [
+        "When the plane of the coil is parallel to the magnetic field lines",
+        "When the plane of the coil is perpendicular to the magnetic field lines",
+        "When the coil is at a 45° angle to the magnetic field lines",
+        "The induced e.m.f. is never zero in an AC generator"
+      ],
+      "correctIndex": 1,
+      "explanation": "When the coil is perpendicular to the field, the magnetic flux is at a maximum, but the rate of change of flux is zero. Thus, the induced e.m.f. is momentarily zero."
+    },
+    {
+      "question": "In an AC generator, the maximum induced e.m.f. is proportional to the number of turns (N) and the frequency of rotation (f). If N is doubled and f is halved, what happens to the maximum induced e.m.f.?",
+      "options": ["It is halved", "It remains unchanged", "It is doubled", "It is quadrupled"],
+      "correctIndex": 1,
+      "explanation": "Maximum e.m.f. ∝ N × f. If N becomes 2N and f becomes 0.5f, the product is (2N) × (0.5f) = Nf. The maximum induced e.m.f. remains unchanged."
+    },
+    {
+      "question": "What is the primary purpose of slip rings and carbon brushes in an AC generator?",
+      "options": [
+        "To reverse the current direction every half rotation",
+        "To maintain continuous electrical contact with the rotating coil without twisting wires",
+        "To step up the output voltage using electromagnetic induction",
+        "To convert the alternating current into direct current"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slip rings rotate with the coil while carbon brushes remain stationary, maintaining continuous electrical contact and allowing the naturally alternating current to be transferred to the external circuit."
+    },
+    {
+      "question": "Ohm's law states that the current through a conductor is directly proportional to the potential difference across it, provided that:",
+      "options": [
+        "The length of the conductor is doubled",
+        "The physical conditions, such as temperature, remain constant",
+        "The conductor is made of a semiconductor material",
+        "The current is alternating"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ohm's law strictly applies only when physical conditions (most notably temperature) are kept constant, ensuring the resistance of the conductor does not change."
+    },
+    {
+      "question": "The I-V characteristic graph of a filament lamp curves and becomes less steep as the voltage increases. What does this indicate?",
+      "options": [
+        "The resistance of the filament decreases as it gets hotter",
+        "The resistance of the filament increases as it gets hotter",
+        "The filament obeys Ohm's law perfectly at all voltages",
+        "The current is inversely proportional to the voltage"
+      ],
+      "correctIndex": 1,
+      "explanation": "As voltage and current increase, the filament heats up. The increased thermal vibration of the metal ions impedes electron flow, increasing the resistance and causing the graph to curve."
+    },
+    {
+      "question": "A semiconductor diode is connected in reverse bias. Which statement best describes its electrical behavior?",
+      "options": [
+        "It has very low resistance and allows a large current to flow",
+        "It has very high resistance and allows virtually no current to flow",
+        "It acts as a perfect conductor with zero resistance",
+        "It generates its own electromotive force"
+      ],
+      "correctIndex": 1,
+      "explanation": "In reverse bias, the depletion layer widens, creating a very high resistance that prevents current from flowing (except for a negligible leakage current)."
+    },
+    {
+      "question": "A diode is connected in series with a resistor and an AC power supply. What is the shape of the voltage waveform measured across the resistor?",
+      "options": ["A full sine wave", "A flat line at zero", "A half-wave rectified sine wave", "A square wave"],
+      "correctIndex": 2,
+      "explanation": "The diode only allows current to flow during the positive half-cycles of the AC supply, blocking the negative half-cycles. This results in a half-wave rectified output."
+    },
+    {
+      "question": "A potential divider consists of a 4 Ω resistor and a 6 Ω resistor connected in series across a 10 V supply. What is the potential difference across the 6 Ω resistor?",
+      "options": ["4 V", "6 V", "10 V", "2.5 V"],
+      "correctIndex": 1,
+      "explanation": "Using the potential divider formula: V_out = V_in × (R_2 / (R_1 + R_2)) = 10 × (6 / (4 + 6)) = 10 × 0.6 = 6 V."
+    },
+    {
+      "question": "In a potential divider, R_1 is a fixed resistor and R_2 is a thermistor. The output voltage is measured across R_2. What happens to the output voltage when the temperature increases?",
+      "options": ["It increases", "It decreases", "It remains constant", "It fluctuates randomly"],
+      "correctIndex": 1,
+      "explanation": "As temperature increases, the resistance of the thermistor (R_2) decreases. Therefore, it takes a smaller share of the total potential difference, causing the output voltage across it to decrease."
+    },
+    {
+      "question": "An LDR and a fixed resistor form a potential divider, with the output voltage taken across the LDR. Why is the output voltage high in the dark?",
+      "options": [
+        "The LDR's resistance is low in the dark, drawing more current",
+        "The LDR's resistance is high in the dark, taking a larger share of the potential difference",
+        "The fixed resistor's resistance drops to zero in the dark",
+        "The battery voltage automatically increases in the dark"
+      ],
+      "correctIndex": 1,
+      "explanation": "In the dark, the resistance of an LDR is very high. In a series circuit, the component with the higher resistance takes a proportionally larger share of the total supply voltage."
+    },
+    {
+      "question": "If a load resistor is connected in parallel with the bottom resistor (R_2) of a potential divider, what happens to the output voltage across R_2?",
+      "options": ["It increases", "It decreases", "It remains exactly the same", "It becomes equal to the input voltage"],
+      "correctIndex": 1,
+      "explanation": "Adding a resistor in parallel with R_2 decreases the combined resistance of the lower part of the divider. This lower resistance takes a smaller share of the total potential difference, reducing the output voltage."
+    },
+    {
+      "question": "In a vacuum flask, the space between the double glass walls is evacuated. Which modes of heat transfer does this specifically prevent?",
+      "options": ["Radiation only", "Conduction and convection", "Convection and radiation", "Conduction and radiation"],
+      "correctIndex": 1,
+      "explanation": "Conduction and convection both require a material medium (particles) to transfer heat. A vacuum lacks particles, effectively preventing both conduction and convection."
+    },
+    {
+      "question": "Why are the cooling pipes at the back of a refrigerator often painted black and designed with a large surface area?",
+      "options": [
+        "To absorb more thermal radiation from the kitchen",
+        "To emit infrared radiation more effectively to the surroundings",
+        "To increase heat transfer by conduction to the wall",
+        "To prevent convection currents from forming"
+      ],
+      "correctIndex": 1,
+      "explanation": "Black, dull surfaces are the best emitters of infrared radiation. A large surface area further maximizes the rate of heat loss to the surrounding air."
+    },
+    {
+      "question": "Why are metals generally much better conductors of heat than non-metals?",
+      "options": [
+        "Metals have a higher specific heat capacity",
+        "Metals are denser, so particles are closer together",
+        "Metals contain free electrons that rapidly transfer kinetic energy through the lattice",
+        "Metals reflect thermal radiation better than non-metals"
+      ],
+      "correctIndex": 2,
+      "explanation": "In metals, delocalized free electrons gain kinetic energy when heated and move rapidly throughout the metal lattice, transferring thermal energy much faster than the vibration of ions alone."
+    },
+    {
+      "question": "A shiny metal teapot keeps tea hot longer than a black ceramic teapot of the same mass and initial temperature. Why?",
+      "options": [
+        "Shiny surfaces are poor emitters of infrared radiation",
+        "Shiny surfaces are good absorbers of infrared radiation",
+        "Metal has a higher specific heat capacity than ceramic",
+        "The metal teapot is heavier than the ceramic one"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shiny, polished surfaces are poor emitters (and poor absorbers) of infrared radiation, significantly reducing the rate of heat loss via radiation compared to dull, black surfaces."
+    },
+    {
+      "question": "A 12 V battery is connected to a potential divider with a 200 Ω resistor and a 400 Ω resistor in series. What is the potential difference across the 400 Ω resistor?",
+      "options": ["4 V", "6 V", "8 V", "12 V"],
+      "correctIndex": 2,
+      "explanation": "V_out = 12 × (400 / (200 + 400)) = 12 × (400 / 600) = 12 × (2/3) = 8 V."
+    },
+    {
+      "question": "Double-glazed windows consist of two panes of glass with a narrow layer of air trapped between them. Why is this trapped air highly effective at reducing heat loss from a building?",
+      "options": [
+        "Air is a good conductor of thermal energy",
+        "Air is a poor conductor, minimizing heat transfer by conduction",
+        "Air completely blocks all infrared radiation",
+        "Air prevents the glass from expanding"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gases like air are very poor conductors of heat. Trapping the air in a narrow space also prevents convection currents from forming, making it an excellent thermal insulator."
+    }
+  ]
+}
