@@ -1,0 +1,150 @@
+{
+  "topic": "Percentage Change: Allocations, Ratios & Population (Part 2)",
+  "level": "Secondary 1/2 E-Maths",
+  "questions": [
+    {
+      "question": "A school has 1200 students, of which 55% are boys and the rest are girls. Find the initial number of boys in the school.",
+      "options": ["600", "660", "720", "780"],
+      "correctIndex": 1,
+      "explanation": "Number of boys = 55% of 1200 = 0.55 × 1200 = 660."
+    },
+    {
+      "question": "A school has 1200 students, of which 55% are boys and the rest are girls. Find the initial number of girls in the school.",
+      "options": ["480", "540", "600", "660"],
+      "correctIndex": 1,
+      "explanation": "Percentage of girls = 100% - 55% = 45%. Number of girls = 45% of 1200 = 0.45 × 1200 = 540."
+    },
+    {
+      "question": "The number of boys in a school increases by 10%. If there were originally 660 boys, find the new number of boys.",
+      "options": ["726", "693", "756", "792"],
+      "correctIndex": 0,
+      "explanation": "Increase = 10% of 660 = 66. New number = 660 + 66 = 726."
+    },
+    {
+      "question": "The number of girls in a school decreases by 5%. If there were originally 540 girls, find the new number of girls.",
+      "options": ["486", "540", "567", "513"],
+      "correctIndex": 3,
+      "explanation": "Decrease = 5% of 540 = 27. New number = 540 - 27 = 513."
+    },
+    {
+      "question": "A school originally has 1200 students. The number of boys increases from 660 to 726, and girls decrease from 540 to 513. Calculate the overall percentage change in the total student population.",
+      "options": ["2.5%", "3.25%", "4.5%", "5.0%"],
+      "correctIndex": 1,
+      "explanation": "New total = 726 + 513 = 1239. Change = 1239 - 1200 = 39. Percentage change = frac{39}{1200} × 100% = 3.25%."
+    },
+    {
+      "question": "A company's monthly operating budget of $80,000 is split such that 60% is for employee salaries. Find the initial amount allocated for salaries.",
+      "options": ["$32,000", "$40,000", "$48,000", "$56,000"],
+      "correctIndex": 2,
+      "explanation": "Salaries = 60% of 80000 = 0.60 × 80000 = $48,000."
+    },
+    {
+      "question": "Employee salaries of $48,000 increase by 8%. Calculate the new monthly salaries.",
+      "options": ["$51,840", "$50,840", "$52,840", "$53,840"],
+      "correctIndex": 0,
+      "explanation": "Increase = 8% of 48000 = 3840. New salaries = 48000 + 3840 = $51,840."
+    },
+    {
+      "question": "Office rent and utilities originally cost $32,000. This amount decreases by 5%. Calculate the new monthly rent and utilities.",
+      "options": ["$29,400", "$31,400", "$30,400", "$32,400"],
+      "correctIndex": 2,
+      "explanation": "Decrease = 5% of 32000 = 1600. New cost = 32000 - 1600 = $30,400."
+    },
+    {
+      "question": "A company's budget was $80,000. Salaries become $51,840 and rent becomes $30,400. Calculate the new total monthly operating budget.",
+      "options": ["$81,240", "$83,240", "$84,240", "$82,240"],
+      "correctIndex": 3,
+      "explanation": "New total budget = 51840 + 30400 = $82,240."
+    },
+    {
+      "question": "The manufacturing cost of a gadget is in the ratio raw materials : labor : packaging = 5 : 3 : 2. Raw materials increase by 12%, labor by 20%, and packaging decreases by 15%. Calculate the overall percentage change in the total manufacturing cost.",
+      "options": ["8%", "10%", "11%", "9%"],
+      "correctIndex": 3,
+      "explanation": "New cost ratio = 5(1.12) + 3(1.20) + 2(0.85) = 5.6 + 3.6 + 1.7 = 10.9. Original = 10. Change = frac{0.9}{10} × 100% = 9%."
+    },
+    {
+      "question": "A library has 4500 books. 40% of them are fiction and the remainder are non-fiction. Find the initial number of fiction books.",
+      "options": ["1800", "1500", "2100", "2700"],
+      "correctIndex": 0,
+      "explanation": "Fiction books = 40% of 4500 = 0.40 × 4500 = 1800."
+    },
+    {
+      "question": "A library has 4500 books. 40% of them are fiction and the remainder are non-fiction. Find the initial number of non-fiction books.",
+      "options": ["1800", "2250", "2700", "3150"],
+      "correctIndex": 2,
+      "explanation": "Non-fiction = 100% - 40% = 60%. Number = 60% of 4500 = 0.60 × 4500 = 2700."
+    },
+    {
+      "question": "The number of fiction books in a library increases by 25%. If there were originally 1800 fiction books, find the new number of fiction books.",
+      "options": ["2150", "2350", "2250", "2450"],
+      "correctIndex": 2,
+      "explanation": "Increase = 25% of 1800 = 450. New number = 1800 + 450 = 2250."
+    },
+    {
+      "question": "The number of non-fiction books in a library decreases by 10%. If there were originally 2700 non-fiction books, find the new number of non-fiction books.",
+      "options": ["2430", "2330", "2530", "2630"],
+      "correctIndex": 0,
+      "explanation": "Decrease = 10% of 2700 = 270. New number = 2700 - 270 = 2430."
+    },
+    {
+      "question": "In an examination, Paper 1 carries a weighting of 40%, and Paper 2 carries a weighting of 60%. A student scores 75% in Paper 1 and 85% in Paper 2. Calculate the student's overall weighted percentage score.",
+      "options": ["79%", "80%", "81%", "82%"],
+      "correctIndex": 2,
+      "explanation": "Overall score = (0.40 × 75) + (0.60 × 85) = 30 + 51 = 81%."
+    },
+    {
+      "question": "A sports club has 800 members, consisting of adults and youths in the ratio 3 : 2. Find the initial number of adult members.",
+      "options": ["320", "400", "480", "560"],
+      "correctIndex": 2,
+      "explanation": "Adults = frac{3}{3+2} × 800 = frac{3}{5} × 800 = 480."
+    },
+    {
+      "question": "A sports club has 800 members, consisting of adults and youths in the ratio 3 : 2. Find the initial number of youth members.",
+      "options": ["320", "400", "480", "560"],
+      "correctIndex": 0,
+      "explanation": "Youths = frac{2}{3+2} × 800 = frac{2}{5} × 800 = 320."
+    },
+    {
+      "question": "The number of adult members in a club increases by 15%. If there were originally 480 adults, find the new number of adult members.",
+      "options": ["522", "542", "552", "572"],
+      "correctIndex": 2,
+      "explanation": "Increase = 15% of 480 = 72. New number = 480 + 72 = 552."
+    },
+    {
+      "question": "A club's total membership remains strictly unchanged at 800. If the number of adults increases to 552, find the new number of youth members.",
+      "options": ["228", "238", "248", "258"],
+      "correctIndex": 2,
+      "explanation": "New youths = Total - New adults = 800 - 552 = 248."
+    },
+    {
+      "question": "On a farm, 65% of the animals are sheep and 35% are goats. The sheep population increases by 20%, while the goat population decreases by 15%. Calculate the overall percentage change in the total animal population.",
+      "options": ["7.75%", "6.75%", "8.75%", "9.75%"],
+      "correctIndex": 0,
+      "explanation": "New population ratio = 0.65(1.20) + 0.35(0.85) = 0.78 + 0.2975 = 1.0775. Percentage change = 7.75%."
+    },
+    {
+      "question": "A bakery stores 80 kg of flour in two containers. Container P holds 50 kg and Container Q holds 30 kg. The baker uses 18% of the flour in P and 35% of the flour in Q. Find the total mass of flour used.",
+      "options": ["15.5 kg", "17.5 kg", "21.5 kg", "19.5 kg"],
+      "correctIndex": 3,
+      "explanation": "Used from P = 18% of 50 = 9 kg. Used from Q = 35% of 30 = 10.5 kg. Total used = 9 + 10.5 = 19.5 kg."
+    },
+    {
+      "question": "A factory produces 2000 components daily across a Day Shift and a Night Shift. The Day Shift produces 75% of the components. Find the initial daily output of the Day Shift.",
+      "options": ["1200", "1500", "1400", "1600"],
+      "correctIndex": 1,
+      "explanation": "Day Shift output = 75% of 2000 = 0.75 × 2000 = 1500 components."
+    },
+    {
+      "question": "A factory produces 2000 components daily. Day Shift produces 75% (1500) and Night Shift produces 25% (500). Day Shift production increases by 8%, while Night Shift drops by 12%. Calculate the new total daily output.",
+      "options": ["2060", "2040", "2050", "2070"],
+      "correctIndex": 0,
+      "explanation": "New Day = 1500 × 1.08 = 1620. New Night = 500 × 0.88 = 440. Total = 1620 + 440 = 2060."
+    },
+    {
+      "question": "A student allocated his monthly allowance as follows: 45% on food, 30% on transport, and saved the remaining $50. Find his total monthly allowance.",
+      "options": ["$100", "$200", "$150", "$250"],
+      "correctIndex": 1,
+      "explanation": "Percentage saved = 100% - 45% - 30% = 25%. 25% of allowance = $50. Total allowance = frac{50}{0.25} = $200."
+    }
+  ]
+}

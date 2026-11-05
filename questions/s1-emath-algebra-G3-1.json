@@ -1,0 +1,150 @@
+{
+  "topic": "Linear Expressions & Equations (Mixed Practice B)",
+  "level": "Secondary 1/2 E-Maths",
+  "questions": [
+    {
+      "question": "Expand and simplify: $5(3a - 2) - 2(4a - 7)$",
+      "options": ["$7a - 24$", "$7a + 4$", "$23a + 4$", "$7a - 4$"],
+      "correctIndex": 1,
+      "explanation": "Expand: $15a - 10 - 8a + 14$. Collect like terms: $7a + 4$."
+    },
+    {
+      "question": "Expand and simplify: $-3(4m - 5) + 2(6 - m)$",
+      "options": ["$-14m - 3$", "$-10m + 27$", "$-14m + 27$", "$14m + 27$"],
+      "correctIndex": 2,
+      "explanation": "Expand: $-12m + 15 + 12 - 2m$. Collect like terms: $-14m + 27$."
+    },
+    {
+      "question": "Expand and simplify: $8(k + 2) - 3(2k + 5) - 4$",
+      "options": ["$2k - 3$", "$2k + 11$", "$14k - 3$", "$2k + 3$"],
+      "correctIndex": 0,
+      "explanation": "Expand: $8k + 16 - 6k - 15 - 4$. Collect like terms: $2k - 3$."
+    },
+    {
+      "question": "Expand and simplify: $6(2a - b + 3) - 4(a - 2b - 1)$",
+      "options": ["$8a + 2b + 14$", "$16a + 2b + 22$", "$8a - 2b + 22$", "$8a + 2b + 22$"],
+      "correctIndex": 3,
+      "explanation": "Expand: $12a - 6b + 18 - 4a + 8b + 4$. Collect like terms: $8a + 2b + 22$."
+    },
+    {
+      "question": "Expand and simplify: $5x - 2[3 - (2x + 1)]$",
+      "options": ["$x - 4$", "$9x - 4$", "$9x + 4$", "$x + 4$"],
+      "correctIndex": 1,
+      "explanation": "Inner bracket: $5x - 2[3 - 2x - 1] = 5x - 2[2 - 2x]$. Expand outer: $5x - 4 + 4x = 9x - 4$."
+    },
+    {
+      "question": "Expand and simplify: $\\frac{3}{4}(8a - 12) - \\frac{2}{5}(15a - 10)$",
+      "options": ["$-5$", "$5$", "$12a - 5$", "$-12a + 5$"],
+      "correctIndex": 0,
+      "explanation": "Expand: $(6a - 9) - (6a - 4)$. Note the sign change. Simplify: $6a - 9 - 6a + 4 = -5$."
+    },
+    {
+      "question": "Expand and simplify: $9 - 3(2w - 5) + 4(3 - w)$",
+      "options": ["$36 - 10w$", "$-10w - 6$", "$36 + 10w$", "$10w + 36$"],
+      "correctIndex": 0,
+      "explanation": "Expand: $9 - 6w + 15 + 12 - 4w$. Collect like terms: $36 - 10w$."
+    },
+    {
+      "question": "Expand and simplify: $5(2a + 3b) - 2(a - 4b)$",
+      "options": ["$8a + 7b$", "$12a + 23b$", "$8a + 23b$", "$12a + 7b$"],
+      "correctIndex": 2,
+      "explanation": "Expand: $10a + 15b - 2a + 8b$. Collect like terms: $8a + 23b$."
+    },
+    {
+      "question": "Expand and simplify: $3(2x - y) - 4(x - 3y) + 2(x + y)$",
+      "options": ["$4x - 11y$", "$4x + 11y$", "$12x + 11y$", "$12x - 11y$"],
+      "correctIndex": 1,
+      "explanation": "Expand: $6x - 3y - 4x + 12y + 2x + 2y$. Collect like terms: $4x + 11y$."
+    },
+    {
+      "question": "Solve: $5x + 8 = 2x + 29$",
+      "options": ["$x = 5$", "$x = 6$", "$x = 7$", "$x = 8$"],
+      "correctIndex": 2,
+      "explanation": "Subtract $2x$ and 8 from both sides: $3x = 21$. Divide by 3: $x = 7$."
+    },
+    {
+      "question": "Solve: $4(x - 3) = 20$",
+      "options": ["$x = 5$", "$x = 6$", "$x = 8$", "$x = 11$"],
+      "correctIndex": 2,
+      "explanation": "Divide by 4: $x - 3 = 5$. Add 3: $x = 8$."
+    },
+    {
+      "question": "Solve: $5(x + 2) - 3(x - 1) = 21$",
+      "options": ["$x = 2$", "$x = 3$", "$x = 4$", "$x = 5$"],
+      "correctIndex": 2,
+      "explanation": "Expand: $5x + 10 - 3x + 3 = 21$. Simplify: $2x + 13 = 21$. Subtract 13: $2x = 8$. Divide by 2: $x = 4$."
+    },
+    {
+      "question": "Solve: $8 - 3(2 - y) = 14$",
+      "options": ["$y = -4$", "$y = 2$", "$y = 4$", "$y = 6$"],
+      "correctIndex": 2,
+      "explanation": "Expand: $8 - 6 + 3y = 14$. Simplify: $2 + 3y = 14$. Subtract 2: $3y = 12$. Divide by 3: $y = 4$."
+    },
+    {
+      "question": "Solve: $\\frac{x - 3}{4} = 3$",
+      "options": ["$x = 9$", "$x = 12$", "$x = 15$", "$x = 18$"],
+      "correctIndex": 2,
+      "explanation": "Multiply by 4: $x - 3 = 12$. Add 3: $x = 15$."
+    },
+    {
+      "question": "Solve: $\\frac{3x - 1}{5} = \\frac{x + 5}{3}$",
+      "options": ["$x = 3$", "$x = 5$", "$x = 7$", "$x = 9$"],
+      "correctIndex": 2,
+      "explanation": "Cross-multiply: $3(3x - 1) = 5(x + 5)$. Expand: $9x - 3 = 5x + 25$. Subtract $5x$ and add 3: $4x = 28$. Divide by 4: $x = 7$."
+    },
+    {
+      "question": "Solve: $\\frac{x}{2} + \\frac{x}{3} = 10$",
+      "options": ["$x = 6$", "$x = 10$", "$x = 12$", "$x = 15$"],
+      "correctIndex": 2,
+      "explanation": "Multiply entire equation by 6: $3x + 2x = 60$. Simplify: $5x = 60$. Divide by 5: $x = 12$."
+    },
+    {
+      "question": "Solve: $\\frac{3(y + 1)}{2} - \\frac{2(y - 3)}{5} = 6$",
+      "options": ["$y = 1$", "$y = 2$", "$y = 3$", "$y = 4$"],
+      "correctIndex": 2,
+      "explanation": "Multiply entire equation by 10: $15(y + 1) - 4(y - 3) = 60$. Expand: $15y + 15 - 4y + 12 = 60$. Simplify: $11y + 27 = 60$. Subtract 27: $11y = 33$. Divide by 11: $y = 3$."
+    },
+    {
+      "question": "Solve: $3(2x - 1) - 4(x + 2) = 5$",
+      "options": ["$x = 6$", "$x = 7$", "$x = 8$", "$x = 9$"],
+      "correctIndex": 2,
+      "explanation": "Expand: $6x - 3 - 4x - 8 = 5$. Simplify: $2x - 11 = 5$. Add 11: $2x = 16$. Divide by 2: $x = 8$."
+    },
+    {
+      "question": "The sum of three consecutive integers is 72. Find the three integers.",
+      "options": ["22, 23, 24", "23, 24, 25", "24, 25, 26", "21, 24, 27"],
+      "correctIndex": 1,
+      "explanation": "Let integers be $x, x+1, x+2$. Sum: $3x + 3 = 72$. Subtract 3: $3x = 69$. Divide by 3: $x = 23$. The integers are 23, 24, 25."
+    },
+    {
+      "question": "The length of a rectangle is 3 cm longer than twice its width. The perimeter is 42 cm. Find the length and width.",
+      "options": ["Length 18 cm, width 3 cm", "Length 15 cm, width 6 cm", "Length 12 cm, width 9 cm", "Length 21 cm, width 0 cm"],
+      "correctIndex": 1,
+      "explanation": "Let width be $w$. Length is $2w + 3$. Perimeter: $2(w + 2w + 3) = 42$. Simplify: $6w + 6 = 42$. Subtract 6: $6w = 36$. Divide by 6: $w = 6$. Length = $2(6) + 3 = 15$."
+    },
+    {
+      "question": "A father is currently 4 times as old as his son. In 14 years, the father will be twice as old as his son. Find the current age of the son.",
+      "options": ["5", "7", "10", "14"],
+      "correctIndex": 1,
+      "explanation": "Let son's age be $s$. Father's age is $4s$. In 14 years: $4s + 14 = 2(s + 14)$. Expand: $4s + 14 = 2s + 28$. Subtract $2s$ and 14: $2s = 14$. Divide by 2: $s = 7$."
+    },
+    {
+      "question": "Chloe, Dan, and Ethan shared 130 stickers. Dan received 10 more than Chloe, and Ethan received twice as many as Dan. How many stickers did Chloe receive?",
+      "options": ["20", "25", "30", "35"],
+      "correctIndex": 1,
+      "explanation": "Let Chloe's stickers be $c$. Dan's = $c + 10$. Ethan's = $2(c + 10)$. Sum: $c + c + 10 + 2c + 20 = 130$. Simplify: $4c + 30 = 130$. Subtract 30: $4c = 100$. Divide by 4: $c = 25$."
+    },
+    {
+      "question": "Sarah has a box of 20-cent and 50-cent coins. There are 45 coins in total, with a combined value of $15.00. Find the number of 50-cent coins.",
+      "options": ["15", "20", "25", "30"],
+      "correctIndex": 1,
+      "explanation": "Let 50-cent coins be $y$. 20-cent coins are $45 - y$. Equation (in cents): $50y + 20(45 - y) = 1500$. Expand: $50y + 900 - 20y = 1500$. Simplify: $30y = 600$. Divide by 30: $y = 20$."
+    },
+    {
+      "question": "A parking lot has cars and motorcycles. There are 20 vehicles in total and 66 wheels. How many cars are there? (Cars have 4 wheels, motorcycles have 2)",
+      "options": ["11", "12", "13", "14"],
+      "correctIndex": 2,
+      "explanation": "Let cars be $c$. Motorcycles are $20 - c$. Equation: $4c + 2(20 - c) = 66$. Expand: $4c + 40 - 2c = 66$. Simplify: $2c = 26$. Divide by 2: $c = 13$."
+    }
+  ]
+}
