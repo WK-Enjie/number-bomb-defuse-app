@@ -1,0 +1,150 @@
+{
+  "topic": "Mole Calculations: Empirical Formula, Hydrated Salts, Yield & Purity",
+  "level": "Secondary 3/4 Pure Chemistry",
+  "questions": [
+    {
+      "question": "An oxide of iron contains 7.0 g of iron combined with 3.0 g of oxygen. Find its empirical formula. [Ar: Fe=56, O=16]",
+      "options": ["FeO", "Fe₂O₃", "Fe₃O₄", "FeO₂"],
+      "correctIndex": 1,
+      "explanation": "Moles Fe = 7.0/56 = 0.125 mol. Moles O = 3.0/16 = 0.1875 mol. Ratio = 0.125 : 0.1875 = 1 : 1.5 = 2 : 3. Empirical formula = Fe₂O₃."
+    },
+    {
+      "question": "A compound contains 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. Find its empirical formula. [Ar: C=12, H=1, O=16]",
+      "options": ["CH₂O", "C₂H₄O", "CH₄O", "C₂H₆O"],
+      "correctIndex": 0,
+      "explanation": "C: 40.0/12 = 3.33. H: 6.7/1 = 6.7. O: 53.3/16 = 3.33. Ratio = 1 : 2 : 1. Empirical formula = CH₂O."
+    },
+    {
+      "question": "2.4 g of magnesium is burned in air to form 4.0 g of magnesium oxide. Find the empirical formula. [Ar: Mg=24, O=16]",
+      "options": ["MgO₂", "Mg₂O", "MgO", "Mg₃O₄"],
+      "correctIndex": 2,
+      "explanation": "Moles Mg = 2.4/24 = 0.1 mol. Mass O = 4.0 - 2.4 = 1.6 g. Moles O = 1.6/16 = 0.1 mol. Ratio = 1 : 1. Empirical formula = MgO."
+    },
+    {
+      "question": "4.99 g of hydrated copper(II) sulfate, CuSO₄·xH₂O, is heated until constant mass. The anhydrous CuSO₄ remaining is 3.19 g. Find x. [Ar: Cu=63.5, S=32, O=16, H=1]",
+      "options": ["3", "7", "10", "5"],
+      "correctIndex": 3,
+      "explanation": "Mass H₂O = 4.99 - 3.19 = 1.80 g. Moles CuSO₄ = 3.19/159.5 = 0.02 mol. Moles H₂O = 1.80/18 = 0.10 mol. x = 0.10/0.02 = 5."
+    },
+    {
+      "question": "What is the percentage by mass of water of crystallisation in Na₂CO₃·10H₂O? [Ar: Na=23, C=12, O=16, H=1]",
+      "options": ["62.9%", "45.6%", "55.0%", "72.3%"],
+      "correctIndex": 0,
+      "explanation": "Mr Na₂CO₃ = 106. Mr 10H₂O = 180. Total Mr = 286. % water = (180/286) × 100 = 62.9%."
+    },
+    {
+      "question": "A student heats 6.15 g of MgSO₄·xH₂O to constant mass and obtains 3.00 g of anhydrous MgSO₄. Find x. [Ar: Mg=24, S=32, O=16, H=1]",
+      "options": ["5", "7", "6", "8"],
+      "correctIndex": 1,
+      "explanation": "Mass H₂O = 6.15 - 3.00 = 3.15 g. Moles MgSO₄ = 3.00/120 = 0.025 mol. Moles H₂O = 3.15/18 = 0.175 mol. x = 0.175/0.025 = 7."
+    },
+    {
+      "question": "The empirical formula of a compound is CH₂O and its relative molecular mass is 180. Find its molecular formula. [Ar: C=12, H=1, O=16]",
+      "options": ["C₃H₆O₃", "C₄H₈O₄", "C₆H₁₂O₆", "C₅H₁₀O₅"],
+      "correctIndex": 2,
+      "explanation": "Mr of CH₂O = 30. n = 180/30 = 6. Molecular formula = (CH₂O)₆ = C₆H₁₂O₆."
+    },
+    {
+      "question": "A hydrocarbon has Mr = 56 and contains 85.7% carbon by mass. Find its molecular formula. [Ar: C=12, H=1]",
+      "options": ["C₂H₄", "C₃H₆", "C₅H₁₀", "C₄H₈"],
+      "correctIndex": 3,
+      "explanation": "C: 85.7/12 = 7.14. H: 14.3/1 = 14.3. Ratio = 1 : 2, empirical = CH₂ (Mr = 14). n = 56/14 = 4. Molecular formula = C₄H₈."
+    },
+    {
+      "question": "20 cm³ of a gaseous hydrocarbon CₓHᵧ reacts with 100 cm³ of oxygen to produce 60 cm³ of CO₂ (all at r.t.p.). Find the molecular formula.",
+      "options": ["C₃H₈", "C₂H₆", "C₃H₆", "C₄H₁₀"],
+      "correctIndex": 0,
+      "explanation": "Volume ratio = mole ratio. 20 cm³ → 60 cm³ CO₂, so x = 3. C₃Hᵧ + (3 + y/4)O₂ → 3CO₂. 3 + y/4 = 100/20 = 5. y = 8. Formula = C₃H₈."
+    },
+    {
+      "question": "6.5 g of zinc reacts with 100 cm³ of 1.0 mol/dm³ hydrochloric acid. Zn + 2HCl → ZnCl₂ + H₂. Which is the limiting reactant? [Ar: Zn=65]",
+      "options": ["Zn", "HCl", "ZnCl₂", "H₂"],
+      "correctIndex": 1,
+      "explanation": "Moles Zn = 6.5/65 = 0.10 mol. Moles HCl = 0.100 × 1.0 = 0.10 mol. Zn needs 0.20 mol HCl, but only 0.10 mol available. HCl is limiting."
+    },
+    {
+      "question": "5.6 g of iron reacts with 3.2 g of sulfur to form iron(II) sulfide. Fe + S → FeS. What mass of FeS is formed? [Ar: Fe=56, S=32]",
+      "options": ["4.4 g", "12.0 g", "8.8 g", "17.6 g"],
+      "correctIndex": 2,
+      "explanation": "Moles Fe = 5.6/56 = 0.10 mol. Moles S = 3.2/32 = 0.10 mol. 1:1 ratio, both fully react. Mass FeS = 0.10 × 88 = 8.8 g."
+    },
+    {
+      "question": "0.10 mol of calcium carbonate reacts with 0.15 mol of hydrochloric acid. CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. What volume of CO₂ is produced at r.t.p.?",
+      "options": ["1.2 dm³", "2.4 dm³", "3.6 dm³", "1.8 dm³"],
+      "correctIndex": 3,
+      "explanation": "CaCO₃ needs 0.20 mol HCl, only 0.15 mol available. HCl limiting. Moles CO₂ = 0.15/2 = 0.075 mol. Volume = 0.075 × 24 = 1.8 dm³."
+    },
+    {
+      "question": "0.15 mol of magnesium is burned in 0.20 mol of oxygen. 2Mg + O₂ → 2MgO. What mass of excess oxygen remains? [Ar: O=16]",
+      "options": ["4.0 g", "2.0 g", "6.4 g", "1.6 g"],
+      "correctIndex": 0,
+      "explanation": "Mg needs 0.15/2 = 0.075 mol O₂. Excess O₂ = 0.20 - 0.075 = 0.125 mol. Mass = 0.125 × 32 = 4.0 g."
+    },
+    {
+      "question": "10.0 g of calcium carbonate is heated. CaCO₃ → CaO + CO₂. The actual yield of CaO is 4.5 g. Calculate the percentage yield. [Ar: Ca=40, C=12, O=16]",
+      "options": ["70.4%", "80.4%", "90.4%", "60.4%"],
+      "correctIndex": 1,
+      "explanation": "Moles CaCO₃ = 10.0/100 = 0.10 mol. Theoretical mass CaO = 0.10 × 56 = 5.6 g. % yield = (4.5/5.6) × 100 = 80.4%."
+    },
+    {
+      "question": "In an experiment, the theoretical yield of copper(II) sulfate is 12.5 g. If the percentage yield is 72%, what is the actual mass of crystals obtained?",
+      "options": ["7.2 g", "10.8 g", "9.0 g", "8.0 g"],
+      "correctIndex": 2,
+      "explanation": "Actual yield = theoretical yield × (% yield/100) = 12.5 × 0.72 = 9.0 g."
+    },
+    {
+      "question": "6.0 g of carbon is burned in excess oxygen. C + O₂ → CO₂. If 17.6 g of CO₂ is collected, what is the percentage yield? [Ar: C=12, O=16]",
+      "options": ["70%", "75%", "85%", "80%"],
+      "correctIndex": 3,
+      "explanation": "Moles C = 6.0/12 = 0.50 mol. Theoretical mass CO₂ = 0.50 × 44 = 22.0 g. % yield = (17.6/22.0) × 100 = 80%."
+    },
+    {
+      "question": "5.0 g of impure calcium carbonate reacts with excess HCl, producing 840 cm³ of CO₂ at r.t.p. Calculate the percentage purity. [Ar: Ca=40, C=12, O=16]",
+      "options": ["70%", "60%", "80%", "90%"],
+      "correctIndex": 0,
+      "explanation": "Moles CO₂ = 0.840/24 = 0.035 mol. Moles pure CaCO₃ = 0.035 mol. Mass pure = 0.035 × 100 = 3.5 g. % purity = (3.5/5.0) × 100 = 70%."
+    },
+    {
+      "question": "A 10.0 g sample of impure iron(II) sulfate produces 4.5 g of Fe(OH)₂ precipitate with excess NaOH. FeSO₄ + 2NaOH → Fe(OH)₂ + Na₂SO₄. Calculate the percentage purity. [Ar: Fe=56, O=16, H=1, S=32]",
+      "options": ["76%", "68%", "84%", "92%"],
+      "correctIndex": 1,
+      "explanation": "Moles Fe(OH)₂ = 4.5/90 = 0.050 mol. Moles FeSO₄ = 0.050 mol. Mass FeSO₄ = 0.050 × 152 = 7.6 g. % purity = (7.6/10.0) × 100 = 76%."
+    },
+    {
+      "question": "8.0 g of impure magnesium is burned in excess oxygen, forming 10.0 g of magnesium oxide. 2Mg + O₂ → 2MgO. Calculate the percentage purity. [Ar: Mg=24, O=16]",
+      "options": ["60%", "70%", "75%", "65%"],
+      "correctIndex": 2,
+      "explanation": "Moles MgO = 10.0/40 = 0.25 mol. Moles Mg = 0.25 mol. Mass pure Mg = 0.25 × 24 = 6.0 g. % purity = (6.0/8.0) × 100 = 75%."
+    },
+    {
+      "question": "25.0 cm³ of 0.20 mol/dm³ NaOH is neutralized by 20.0 cm³ of HCl. NaOH + HCl → NaCl + H₂O. Find the concentration of HCl.",
+      "options": ["0.15 mol/dm³", "0.20 mol/dm³", "0.30 mol/dm³", "0.25 mol/dm³"],
+      "correctIndex": 3,
+      "explanation": "Moles NaOH = 0.025 × 0.20 = 0.005 mol. Moles HCl = 0.005 mol (1:1 ratio). [HCl] = 0.005/0.020 = 0.25 mol/dm³."
+    },
+    {
+      "question": "50.0 cm³ of 0.10 mol/dm³ H₂SO₄ reacts completely with NaOH. H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What mass of Na₂SO₄ is formed? [Ar: Na=23, S=32, O=16]",
+      "options": ["0.71 g", "1.42 g", "0.355 g", "2.84 g"],
+      "correctIndex": 0,
+      "explanation": "Moles H₂SO₄ = 0.050 × 0.10 = 0.005 mol. Moles Na₂SO₄ = 0.005 mol. Mass = 0.005 × 142 = 0.71 g."
+    },
+    {
+      "question": "What volume of 0.50 mol/dm³ HNO₃ is required to neutralize 2.0 g of NaOH? HNO₃ + NaOH → NaNO₃ + H₂O. [Ar: Na=23, O=16, H=1]",
+      "options": ["200 cm³", "100 cm³", "50 cm³", "25 cm³"],
+      "correctIndex": 1,
+      "explanation": "Moles NaOH = 2.0/40 = 0.050 mol. Moles HNO₃ = 0.050 mol. Volume = 0.050/0.50 = 0.10 dm³ = 100 cm³."
+    },
+    {
+      "question": "2.65 g of sodium carbonate reacts completely with 50.0 cm³ of hydrochloric acid. Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂. Find the concentration of HCl. [Ar: Na=23, C=12, O=16]",
+      "options": ["0.25 mol/dm³", "0.50 mol/dm³", "1.0 mol/dm³", "2.0 mol/dm³"],
+      "correctIndex": 2,
+      "explanation": "Moles Na₂CO₃ = 2.65/106 = 0.025 mol. Moles HCl = 0.050 mol (1:2 ratio). [HCl] = 0.050/0.050 = 1.0 mol/dm³."
+    },
+    {
+      "question": "A metal M (Ar = 27) reacts with excess HCl. 1.08 g of M produces 1440 cm³ of H₂ at r.t.p. Find the formula of the chloride formed.",
+      "options": ["MCl", "MCl₂", "MCl₄", "MCl₃"],
+      "correctIndex": 3,
+      "explanation": "Moles M = 1.08/27 = 0.040 mol. Moles H₂ = 1.440/24 = 0.060 mol. Ratio M : H₂ = 2 : 3. Equation: 2M + 6HCl → 2MCl₃ + 3H₂. Formula = MCl₃."
+    }
+  ]
+}
