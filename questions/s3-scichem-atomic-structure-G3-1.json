@@ -1,204 +1,150 @@
 {
-  "topic": "Atomic Structure: Subatomic Particles, Electronic Configuration & Isotopes",
+  "topic": "Atomic Structure: Subatomic Particles, Electronic Configuration & Isotopes (Set 1)",
   "level": "Secondary 3/4 Pure Chemistry",
   "questions": [
     {
-      "question": "Where are the protons and neutrons strictly located within an atom?",
-      "options": [
-        "Orbiting the central core in fixed circular shells because their negative charge requires them to stay away from the positive center.",
-        "Nucleus",
-        "Randomly distributed throughout the empty space of the atom to maintain perfect spherical symmetry.",
-        "Embedded within the electron cloud to neutralize the repulsive forces between the negatively charged particles."
-      ],
+      "question": "Where are the protons and neutrons located within an atom?",
+      "options": ["In the electron shells", "In the nucleus", "Randomly throughout the atom", "On the surface of the atom"],
       "correctIndex": 1,
       "explanation": "Protons and neutrons are collectively called nucleons and are strictly located in the dense, central nucleus of the atom."
     },
     {
       "question": "What is the relative electrical charge of an electron?",
-      "options": [
-        "+1, because it is the fundamental particle responsible for carrying positive electrical current through metallic wires.",
-        "0, as its mass is so incredibly small that it cannot possibly carry any measurable electrical charge.",
-        "-1",
-        "It varies depending on the isotope, since heavier atoms require electrons with a stronger negative charge to remain stable."
-      ],
+      "options": ["+1", "0", "-1", "Variable"],
       "correctIndex": 2,
       "explanation": "An electron has a relative electrical charge of -1 and a negligible relative mass of approximately 1/1840."
     },
     {
-      "question": "What is the correct definition of the nucleon number (mass number)?",
-      "options": [
-        "Protons plus neutrons.",
-        "The total sum of protons, neutrons, and electrons combined, which dictates the overall atomic mass of the neutral atom.",
-        "The number of valence electrons in the outermost shell, determining the element's chemical reactivity and bonding behavior.",
-        "The number of neutrons only, because protons are considered massless in standard relative atomic mass calculations."
-      ],
+      "question": "What is the relative mass of a neutron?",
+      "options": ["0", "1", "1/1840", "2"],
+      "correctIndex": 1,
+      "explanation": "Both protons and neutrons have a relative mass of 1. Electrons have a relative mass of approximately 1/1840."
+    },
+    {
+      "question": "What is the nucleon number?",
+      "options": ["Sum of protons and neutrons", "Sum of protons and electrons", "Number of valence electrons", "Number of neutrons only"],
       "correctIndex": 0,
       "explanation": "The nucleon number (or mass number) is the sum of the number of protons and neutrons in the nucleus of an atom."
     },
     {
       "question": "What strictly defines the proton number (atomic number) of an element?",
-      "options": [
-        "The total number of nucleons present in the central nucleus, which determines the specific isotope of the element.",
-        "The sum of the positively charged protons and the negatively charged electrons, ensuring the atom remains electrically neutral.",
-        "The number of electron shells occupied by the atom, which dictates its period number in the modern Periodic Table.",
-        "Number of protons."
-      ],
+      "options": ["Total number of nucleons", "Sum of protons and electrons", "Number of electron shells", "Number of protons"],
       "correctIndex": 3,
       "explanation": "The proton number (atomic number) strictly defines the identity of the element and is equal to the number of protons in the nucleus."
     },
     {
       "question": "In a neutral atom, which two subatomic particles must always be equal in number?",
-      "options": [
-        "Protons and neutrons, because the nucleus must maintain a strict 1:1 ratio to prevent radioactive decay in all elements.",
-        "Protons and electrons.",
-        "Neutrons and electrons, as the neutral charge of the neutron perfectly balances the negative charge of the electron cloud.",
-        "Nucleon number and proton number, since the mass of the atom is entirely derived from its positive central core."
-      ],
+      "options": ["Protons and neutrons", "Protons and electrons", "Neutrons and electrons", "Nucleons and electrons"],
       "correctIndex": 1,
       "explanation": "For an atom to be electrically neutral, the number of positively charged protons must exactly equal the number of negatively charged electrons."
     },
     {
-      "question": "Which subatomic particle has a relative mass of 1 and a relative charge of +1?",
-      "options": [
-        "Proton",
-        "Neutron, because it is located in the nucleus alongside the protons and must balance the electrostatic forces.",
-        "Electron, assuming the particle is fundamentally composed of the same subatomic materials as the positron.",
-        "Nucleon, which occasionally escapes the nucleus during standard chemical bonding to form covalent pairs."
-      ],
-      "correctIndex": 0,
-      "explanation": "A proton has a relative mass of 1 and a relative charge of +1. (Neutrons have a charge of 0; electrons have a mass of ~1/1840 and a charge of -1)."
-    },
-    {
       "question": "What is the overall electrical charge of the nucleus?",
-      "options": [
-        "Positive",
-        "Negative, because the high concentration of electrons in the central core overwhelms the positive charge of the protons.",
-        "Neutral, because the positive charge of the protons is perfectly canceled out by the negative charge of the neutrons.",
-        "Zero, assuming the nucleus is completely devoid of any subatomic particles that carry an electrical charge."
-      ],
+      "options": ["Positive", "Negative", "Neutral", "Zero"],
       "correctIndex": 0,
       "explanation": "The nucleus contains positively charged protons and neutral neutrons, giving it an overall positive electrical charge."
     },
     {
-      "question": "What is the electronic configuration of a neutral sodium atom (proton number 11)?",
-      "options": [
-        "2, 8, 1",
-        "2, 8, 8, because the third electron shell can comfortably hold up to 18 electrons, allowing sodium to bypass the fourth shell.",
-        "2, 9, assuming the second electron shell expands to accommodate the extra electrons once the first shell is filled.",
-        "2, 8, 2, because sodium is an alkaline earth metal and must possess two valence electrons to form stable bonds."
-      ],
-      "correctIndex": 0,
-      "explanation": "Sodium has 11 electrons. The first shell holds 2, the second holds 8, and the remaining 1 goes into the third shell: 2, 8, 1."
-    },
-    {
       "question": "What is the maximum number of electrons that can fit into the first electron shell?",
-      "options": [
-        "8, because all electron shells regardless of distance from the nucleus can comfortably hold a full octet of electrons.",
-        "18, assuming the first shell contains the s, p, and d sub-orbitals which can collectively accommodate 18 electrons.",
-        "2",
-        "32, because the maximum capacity of any shell is determined by the formula 2n^2 where n is the nucleon number."
-      ],
+      "options": ["8", "18", "2", "32"],
       "correctIndex": 2,
       "explanation": "The first electron shell (closest to the nucleus) can hold a maximum of 2 electrons."
     },
     {
+      "question": "What is the maximum number of electrons that can fit into the second electron shell?",
+      "options": ["2", "8", "18", "32"],
+      "correctIndex": 1,
+      "explanation": "The second electron shell can hold a maximum of 8 electrons."
+    },
+    {
+      "question": "What is the electronic configuration of a neutral sodium atom (proton number 11)?",
+      "options": ["2, 8, 1", "2, 8, 8", "2, 9", "2, 8, 2"],
+      "correctIndex": 0,
+      "explanation": "Sodium has 11 electrons. The first shell holds 2, the second holds 8, and the remaining 1 goes into the third shell: 2, 8, 1."
+    },
+    {
+      "question": "What is the electronic configuration of a neutral calcium atom (proton number 20)?",
+      "options": ["2, 8, 10", "2, 8, 8, 2", "2, 8, 9, 1", "2, 18"],
+      "correctIndex": 1,
+      "explanation": "Calcium has 20 electrons. The shells fill as 2, 8, 8, and the remaining 2 go into the fourth shell: 2, 8, 8, 2."
+    },
+    {
       "question": "What does the Period number of an element strictly indicate?",
-      "options": [
-        "The total number of protons and neutrons in the nucleus, which dictates the element's relative atomic mass and density.",
-        "The number of valence electrons present in the outermost shell, determining the element's chemical reactivity.",
-        "Number of electron shells.",
-        "The total number of stable isotopes that exist for that specific element in the natural environment."
-      ],
+      "options": ["Total number of nucleons", "Number of valence electrons", "Number of electron shells", "Number of stable isotopes"],
       "correctIndex": 2,
       "explanation": "The Period number indicates the number of occupied electron shells in the atom."
     },
     {
       "question": "What does the Group number (for main group elements) tell us about an atom?",
-      "options": [
-        "The total number of occupied electron shells, which determines the physical size and atomic radius of the element.",
-        "The exact number of neutrons in the most abundant naturally occurring isotope of that specific element.",
-        "The number of electron shells that are completely empty and available to accept new electrons during bonding.",
-        "Outer shell electrons."
-      ],
+      "options": ["Number of electron shells", "Number of neutrons", "Number of empty shells", "Number of outer shell electrons"],
       "correctIndex": 3,
       "explanation": "For main group elements, the Group number indicates the number of valence (outer shell) electrons."
     },
     {
       "question": "Which element is located in Period 3 and Group 2?",
-      "options": [
-        "Beryllium, because it is the second element in the Periodic Table and naturally occupies the second group.",
-        "Magnesium",
-        "Calcium, assuming the period number is determined by the atomic mass rather than occupied shells.",
-        "Sodium, because it is the first metal in the third period and the numbering system arbitrarily shifts."
-      ],
+      "options": ["Beryllium", "Magnesium", "Calcium", "Sodium"],
       "correctIndex": 1,
       "explanation": "Period 3 means 3 electron shells. Group 2 means 2 valence electrons. The configuration is 2, 8, 2, which corresponds to Magnesium (proton number 12)."
     },
     {
+      "question": "Which element is located in Period 2 and Group 7?",
+      "options": ["Fluorine", "Chlorine", "Bromine", "Neon"],
+      "correctIndex": 0,
+      "explanation": "Period 2 means 2 electron shells. Group 7 means 7 valence electrons. The configuration is 2, 7, which corresponds to Fluorine (proton number 9)."
+    },
+    {
       "question": "Which noble gas has the exact electronic configuration of 2, 8?",
-      "options": [
-        "Helium, because it is a noble gas that naturally possesses a full outer shell of 8 electrons plus 2 inner core electrons.",
-        "Neon",
-        "Argon, assuming the noble gases in Period 3 all possess exactly 10 electrons to achieve maximum stability.",
-        "Krypton, because the student forgets to account for the single valence electron that is easily lost during reactions."
-      ],
+      "options": ["Helium", "Neon", "Argon", "Krypton"],
       "correctIndex": 1,
       "explanation": "Neon has a proton number of 10, giving it an electronic configuration of 2, 8, which is a stable noble gas configuration."
     },
     {
+      "question": "Which noble gas has the exact electronic configuration of 2?",
+      "options": ["Helium", "Neon", "Hydrogen", "Lithium"],
+      "correctIndex": 0,
+      "explanation": "Helium has a proton number of 2, giving it an electronic configuration of 2, which is a stable, full first shell."
+    },
+    {
       "question": "An atom has a nucleon number of 19 and a proton number of 9. How many neutrons does it have?",
-      "options": [
-        "19, because the nucleon number strictly represents the total count of neutrons in the nucleus, ignoring the protons.",
-        "9, assuming the atom is electrically neutral and therefore must have an equal number of neutrons and protons.",
-        "10",
-        "28, calculated by adding the atomic number and the mass number together to find the total subatomic particle count."
-      ],
+      "options": ["19", "9", "10", "28"],
       "correctIndex": 2,
       "explanation": "Number of neutrons = Nucleon number - Proton number = 19 - 9 = 10."
     },
     {
       "question": "What strictly happens when a neutral sodium atom forms a sodium ion (Na⁺)?",
-      "options": [
-        "Gains a proton, because adding a positive charge to the nucleus is the only way to create a stable cation.",
-        "Loses one neutron, which drastically reduces the atomic mass and transforms the atom into a different element.",
-        "Gains an electron shell, to physically accommodate the extra positive charge generated by the ionization.",
-        "Loses one electron."
-      ],
+      "options": ["Gains a proton", "Loses a neutron", "Gains an electron shell", "Loses one electron"],
       "correctIndex": 3,
       "explanation": "To form a +1 cation, a neutral sodium atom loses its single valence electron, resulting in a stable 2, 8 configuration."
     },
     {
       "question": "What is the electronic configuration of a chloride ion (Cl⁻)? (Note: Neutral Chlorine is 2,8,7)",
-      "options": [
-        "2, 8, 7, because the gain of an electron only affects the inner core shells, leaving the valence shell unchanged.",
-        "2, 8, 8, 1, assuming the extra electron is placed into a brand new fourth shell to maintain the octet rule.",
-        "2, 8, 6, because the chlorine atom must lose a proton to accommodate the extra negative charge in its nucleus.",
-        "2, 8, 8"
-      ],
+      "options": ["2, 8, 7", "2, 8, 8, 1", "2, 8, 6", "2, 8, 8"],
       "correctIndex": 3,
       "explanation": "A neutral chlorine atom (2, 8, 7) gains one electron to achieve a full outer shell, resulting in the chloride ion configuration of 2, 8, 8."
     },
     {
       "question": "Which statement correctly defines isotopes?",
-      "options": [
-        "Atoms with the same number of neutrons but different numbers of protons, placing them in completely different groups.",
-        "Same protons, different neutrons.",
-        "Atoms with the same mass number but different electronic configurations, causing vastly different chemical reactivities.",
-        "Molecules that contain the exact same number of total atoms but are arranged in different structural geometries."
-      ],
+      "options": ["Same neutrons, different protons", "Same protons, different neutrons", "Same mass number, different electrons", "Same molecules, different structures"],
       "correctIndex": 1,
       "explanation": "Isotopes are atoms of the same element that have the same number of protons (same proton number) but a different number of neutrons (different nucleon number)."
     },
     {
       "question": "Why do two different isotopes of the same element undergo the exact same chemical reactions?",
-      "options": [
-        "Same valence electrons.",
-        "Their nuclei possess the exact same number of neutrons, which strictly governs all chemical bonding and reactivity.",
-        "They have identical nucleon numbers, meaning their overall atomic mass exerts the same gravitational pull.",
-        "The strong nuclear force in both isotopes is identical, preventing external electrons from participating in reactions."
-      ],
+      "options": ["They have the same number of valence electrons", "They have the same number of neutrons", "They have identical nucleon numbers", "They have identical nuclear forces"],
       "correctIndex": 0,
       "explanation": "Chemical reactions are determined by the arrangement of electrons, specifically the valence (outer shell) electrons. Isotopes of the same element have the same number of valence electrons."
+    },
+    {
+      "question": "Why do isotopes of the same element have different physical properties, such as density?",
+      "options": ["They have different electron configurations", "They have different numbers of protons", "They have different atomic masses", "They have different chemical reactivities"],
+      "correctIndex": 2,
+      "explanation": "Isotopes have different numbers of neutrons, which gives them different nucleon numbers (atomic masses). This difference in mass affects physical properties like density and rate of diffusion."
+    },
+    {
+      "question": "An ion has 11 protons and 10 electrons. What is its charge?",
+      "options": ["-1", "0", "+1", "+2"],
+      "correctIndex": 2,
+      "explanation": "Charge = (Number of protons) - (Number of electrons) = 11 - 10 = +1."
     }
   ]
 }

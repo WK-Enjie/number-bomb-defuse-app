@@ -1,0 +1,195 @@
+{
+  "topic": "Atomic Structure: Subatomic Particles, Electronic Configuration & Isotopes (Set 2)",
+  "level": "Secondary 3/4 Pure Chemistry",
+  "questions": [
+    {
+      "question": "How many protons, neutrons, and electrons are present in an ion of aluminium with a +3 charge? (Aluminium atomic number = 13, mass number = 27)",
+      "options": [
+        "13 protons, 14 neutrons, 13 electrons",
+        "13 protons, 14 neutrons, 10 electrons",
+        "10 protons, 17 neutrons, 10 electrons",
+        "13 protons, 13 neutrons, 10 electrons"
+      ],
+      "correctIndex": 1,
+      "explanation": "Protons = 13. Neutrons = 27 - 13 = 14. Electrons = 13 - 3 (due to the +3 charge) = 10."
+    },
+    {
+      "question": "How many protons, neutrons, and electrons are present in an ion of oxygen with a -2 charge? (Oxygen atomic number = 8, mass number = 16)",
+      "options": [
+        "8 protons, 8 neutrons, 8 electrons",
+        "8 protons, 8 neutrons, 10 electrons",
+        "10 protons, 6 neutrons, 10 electrons",
+        "8 protons, 16 neutrons, 10 electrons"
+      ],
+      "correctIndex": 1,
+      "explanation": "Protons = 8. Neutrons = 16 - 8 = 8. Electrons = 8 + 2 (due to the -2 charge) = 10."
+    },
+    {
+      "question": "A sample of chlorine contains 75% chlorine-35 and 25% chlorine-37. What is the relative atomic mass of chlorine?",
+      "options": ["35.0", "35.5", "36.0", "36.5"],
+      "correctIndex": 1,
+      "explanation": "Relative atomic mass = (0.75 × 35) + (0.25 × 37) = 26.25 + 9.25 = 35.5."
+    },
+    {
+      "question": "Element X consists of two isotopes: 60% abundance of the isotope with mass number 69, and 40% abundance of the isotope with mass number 71. What is the relative atomic mass of X?",
+      "options": ["69.0", "69.8", "70.0", "70.2"],
+      "correctIndex": 1,
+      "explanation": "Relative atomic mass = (0.60 × 69) + (0.40 × 71) = 41.4 + 28.4 = 69.8."
+    },
+    {
+      "question": "An element has the electronic configuration 2, 8, 8, 1. In which Period and Group is it located?",
+      "options": ["Period 3, Group 1", "Period 4, Group 1", "Period 4, Group 7", "Period 1, Group 4"],
+      "correctIndex": 1,
+      "explanation": "Four occupied shells means Period 4. One valence electron means Group 1. (This is Potassium)."
+    },
+    {
+      "question": "Element P is in Group 2 and Element Q is in Group 7. What is the combining ratio of atoms in the compound formed between them?",
+      "options": [
+        "One P atom for every one Q atom",
+        "One P atom for every two Q atoms",
+        "Two P atoms for every one Q atom",
+        "Two P atoms for every seven Q atoms"
+      ],
+      "correctIndex": 1,
+      "explanation": "Group 2 elements form ions with a +2 charge. Group 7 elements form ions with a -1 charge. To balance the charges, two Q ions are needed for every P ion."
+    },
+    {
+      "question": "When a neutral atom loses two electrons to form an ion, what happens to its nucleon number?",
+      "options": ["It increases by 2", "It decreases by 2", "It remains unchanged", "It becomes zero"],
+      "correctIndex": 2,
+      "explanation": "The nucleon number is the sum of protons and neutrons in the nucleus. Losing electrons does not change the composition of the nucleus."
+    },
+    {
+      "question": "What is the definition of relative atomic mass?",
+      "options": [
+        "The mass of one atom of an element in grams",
+        "The average mass of an atom of an element compared to one-twelfth the mass of a carbon-12 atom",
+        "The sum of protons and electrons in an atom",
+        "The mass of one mole of a substance"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relative atomic mass is the weighted average mass of an atom of an element relative to one-twelfth the mass of a carbon-12 atom."
+    },
+    {
+      "question": "Which subatomic particle has a negligible relative mass?",
+      "options": ["Proton", "Neutron", "Electron", "Nucleon"],
+      "correctIndex": 2,
+      "explanation": "The electron has a relative mass of approximately 1/1840, which is considered negligible in mass number calculations."
+    },
+    {
+      "question": "When a beam of protons, neutrons, and electrons passes through an electric field, which particle is deflected the most?",
+      "options": ["Proton", "Neutron", "Electron", "They are deflected equally"],
+      "correctIndex": 2,
+      "explanation": "The electron is deflected the most because it has the highest charge-to-mass ratio, despite having the same magnitude of charge as a proton."
+    },
+    {
+      "question": "Which of the following pairs represents isotopes of the same element?",
+      "options": [
+        "carbon-12 and carbon-14",
+        "carbon-14 and nitrogen-14",
+        "oxygen gas and ozone",
+        "regular water and heavy water"
+      ],
+      "correctIndex": 0,
+      "explanation": "Carbon-12 and carbon-14 both have 6 protons (making them Carbon) but different numbers of neutrons (6 and 8, respectively), making them isotopes."
+    },
+    {
+      "question": "What is the electronic configuration of a magnesium ion with a +2 charge?",
+      "options": ["2, 8, 2", "2, 8", "2, 8, 8", "2, 8, 8, 2"],
+      "correctIndex": 1,
+      "explanation": "Neutral magnesium is 2, 8, 2. Losing two valence electrons to form a +2 ion leaves the configuration as 2, 8."
+    },
+    {
+      "question": "What is the electronic configuration of a sulfide ion with a -2 charge? (Neutral sulfur is 2, 8, 6)",
+      "options": ["2, 8, 6", "2, 8, 8", "2, 8, 4", "2, 8, 8, 2"],
+      "correctIndex": 1,
+      "explanation": "Neutral sulfur gains two electrons to achieve a full outer shell, changing its configuration from 2, 8, 6 to 2, 8, 8."
+    },
+    {
+      "question": "How many total electrons are present in a hydroxide ion with a -1 charge? (Oxygen has 8 protons, Hydrogen has 1 proton)",
+      "options": ["8", "9", "10", "11"],
+      "correctIndex": 2,
+      "explanation": "Oxygen contributes 8 electrons, Hydrogen contributes 1 electron, and the -1 charge indicates 1 extra electron. Total = 8 + 1 + 1 = 10."
+    },
+    {
+      "question": "An atom has 3 valence electrons and 3 occupied electron shells. Which element is it?",
+      "options": ["Boron", "Aluminium", "Gallium", "Magnesium"],
+      "correctIndex": 1,
+      "explanation": "3 occupied shells means Period 3. 3 valence electrons means Group 3 (or 13). The configuration is 2, 8, 3, which is Aluminium (atomic number 13)."
+    },
+    {
+      "question": "An element has the electronic configuration 2, 8, 18, 8, 2. Which group does it belong to?",
+      "options": ["Group 2", "Group 8", "Group 18", "Group 20"],
+      "correctIndex": 0,
+      "explanation": "The number of outer shell (valence) electrons determines the group for main group elements. With 2 valence electrons, it is in Group 2."
+    },
+    {
+      "question": "What is the charge of the nucleus of an oxygen atom?",
+      "options": ["-8", "0", "+8", "+16"],
+      "correctIndex": 2,
+      "explanation": "The nucleus contains 8 protons, each with a +1 charge, and 8 neutrons with 0 charge. The overall nuclear charge is +8."
+    },
+    {
+      "question": "How many occupied electron shells are there in a neutral atom of potassium (atomic number 19)?",
+      "options": ["2", "3", "4", "5"],
+      "correctIndex": 2,
+      "explanation": "The electronic configuration of potassium is 2, 8, 8, 1. This occupies 4 electron shells, placing it in Period 4."
+    },
+    {
+      "question": "Why do metal atoms typically form positive ions?",
+      "options": [
+        "They gain protons to become stable",
+        "They lose valence electrons to achieve a full outer shell",
+        "They gain neutrons to increase their mass",
+        "They share electrons equally with other metals"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metals have 1, 2, or 3 valence electrons. It is energetically favorable for them to lose these electrons to achieve a stable, full outer shell, forming a positive ion."
+    },
+    {
+      "question": "Why do non-metal atoms typically form negative ions?",
+      "options": [
+        "They lose protons to become stable",
+        "They gain electrons to achieve a full outer shell",
+        "They lose neutrons to decrease their mass",
+        "They repel other non-metal atoms"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-metals have 5, 6, or 7 valence electrons. It is energetically favorable for them to gain electrons to achieve a stable, full outer shell, forming a negative ion."
+    },
+    {
+      "question": "What is the relative mass of a proton?",
+      "options": ["0", "1", "1/1840", "2"],
+      "correctIndex": 1,
+      "explanation": "Both protons and neutrons are assigned a relative mass of 1 for simplicity in chemical calculations."
+    },
+    {
+      "question": "An atom has 15 protons and 16 neutrons. What is its nucleon number?",
+      "options": ["15", "16", "31", "47"],
+      "correctIndex": 2,
+      "explanation": "Nucleon number = protons + neutrons = 15 + 16 = 31."
+    },
+    {
+      "question": "Which statement about the nucleus of an atom is correct?",
+      "options": [
+        "It contains electrons and protons",
+        "It is very large compared to the total volume of the atom",
+        "It contains protons and neutrons and has a positive charge",
+        "It has a negative charge due to the presence of electrons"
+      ],
+      "correctIndex": 2,
+      "explanation": "The nucleus is very small and dense, contains protons and neutrons, and carries an overall positive charge."
+    },
+    {
+      "question": "Two atoms, X and Y, have the same atomic number but different mass numbers. What can be concluded?",
+      "options": [
+        "They are different elements",
+        "They are isotopes of the same element",
+        "They have different chemical properties",
+        "They have different numbers of electrons in their neutral state"
+      ],
+      "correctIndex": 1,
+      "explanation": "Same atomic number means they are the same element. Different mass numbers mean they have different numbers of neutrons, which is the definition of isotopes."
+    }
+  ]
+}
