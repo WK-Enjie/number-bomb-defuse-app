@@ -1,0 +1,150 @@
+{
+  "topic": "Mathematics: Ratio (Advanced Word Problems & Changing Ratios)",
+  "level": "Primary 5 Mathematics",
+  "questions": [
+    {
+      "question": "Simplify the ratio 2.4 : 3.6 : 1.2 to its lowest terms.",
+      "options": ["2 : 3 : 1", "1 : 2 : 3", "3 : 2 : 1", "4 : 6 : 2"],
+      "correctIndex": 0,
+      "explanation": "Multiply all by 10 to get 24 : 36 : 12. Divide by the highest common factor, 12, to get 2 : 3 : 1."
+    },
+    {
+      "question": "Simplify the ratio 1 1/2 : 2 1/4 to its lowest terms.",
+      "options": ["1 : 2", "2 : 3", "3 : 4", "4 : 5"],
+      "correctIndex": 1,
+      "explanation": "Convert to improper fractions: 3/2 : 9/4. Multiply both by 4 to get 6 : 9. Simplify by dividing by 3 to get 2 : 3."
+    },
+    {
+      "question": "The ratio of A to B is 2 : 3, and the ratio of B to C is 3 : 5. What is the ratio of A : B : C?",
+      "options": ["2 : 5 : 3", "3 : 3 : 5", "2 : 3 : 5", "5 : 3 : 2"],
+      "correctIndex": 2,
+      "explanation": "Since the 'B' part is already the same (3) in both ratios, we can combine them directly to get 2 : 3 : 5."
+    },
+    {
+      "question": "The ratio of A to B is 2 : 3, and the ratio of B to C is 6 : 7. What is the ratio of A : B : C?",
+      "options": ["2 : 3 : 7", "4 : 3 : 7", "2 : 6 : 7", "4 : 6 : 7"],
+      "correctIndex": 3,
+      "explanation": "Make the 'B' parts equal. Multiply the first ratio by 2 to get 4 : 6. Now combine with 6 : 7 to get 4 : 6 : 7."
+    },
+    {
+      "question": "A bag has red and blue beads in the ratio 3 : 5. After adding 10 red beads, the ratio becomes 1 : 1. How many blue beads are there?",
+      "options": ["15", "25", "30", "40"],
+      "correctIndex": 1,
+      "explanation": "Let red be 3u and blue be 5u. After adding 10 red beads, 3u + 10 = 5u. So 2u = 10, meaning 1u = 5. Blue beads = 5 × 5 = 25."
+    },
+    {
+      "question": "The ratio of boys to girls in a class is 4 : 5. If 3 boys leave, the ratio becomes 3 : 4. How many girls are there?",
+      "options": ["45", "48", "50", "60"],
+      "correctIndex": 3,
+      "explanation": "Let boys be 4u and girls be 5u. (4u - 3) / 5u = 3 / 4. Cross-multiply: 16u - 12 = 15u. So u = 12. Girls = 5 × 12 = 60."
+    },
+    {
+      "question": "John and Mary have money in the ratio 5 : 3. John gives Mary $20, and they then have equal amounts. How much did John have initially?",
+      "options": ["$60", "$80", "$100", "$120"],
+      "correctIndex": 2,
+      "explanation": "Let John have 5u and Mary have 3u. 5u - 20 = 3u + 20. So 2u = 40, meaning u = 20. John initially had 5 × 20 = $100."
+    },
+    {
+      "question": "A rectangle's length and width are in the ratio 5 : 3. Its perimeter is 64 cm. What is its area?",
+      "options": ["120 cm²", "160 cm²", "200 cm²", "240 cm²"],
+      "correctIndex": 3,
+      "explanation": "Perimeter = 2 × (5u + 3u) = 16u. 16u = 64, so u = 4. Length = 20 cm, Width = 12 cm. Area = 20 × 12 = 240 cm²."
+    },
+    {
+      "question": "The ratio of adults to children at a concert is 7 : 4. There are 120 more adults than children. How many people are there in total?",
+      "options": ["280", "440", "520", "600"],
+      "correctIndex": 1,
+      "explanation": "Difference in units = 7u - 4u = 3u. 3u = 120, so u = 40. Total people = 7u + 4u = 11u = 11 × 40 = 440."
+    },
+    {
+      "question": "Two-fifths of A's money is equal to one-third of B's money. What is the ratio of A's money to B's money?",
+      "options": ["5 : 6", "6 : 5", "2 : 3", "3 : 2"],
+      "correctIndex": 0,
+      "explanation": "(2/5) × A = (1/3) × B. Multiply both sides by 15 to clear fractions: 6A = 5B. Therefore, A : B = 5 : 6."
+    },
+    {
+      "question": "Alice has 30% more stamps than Bob. What is the ratio of Alice's stamps to Bob's stamps?",
+      "options": ["10 : 13", "3 : 10", "13 : 10", "13 : 3"],
+      "correctIndex": 2,
+      "explanation": "If Bob has 100%, Alice has 130%. The ratio is 130 : 100, which simplifies to 13 : 10."
+    },
+    {
+      "question": "A mixture of juice and water is 3 : 7. If 20 liters of water is added, the ratio becomes 1 : 3. How much juice was there?",
+      "options": ["10 liters", "20 liters", "25 liters", "30 liters"],
+      "correctIndex": 3,
+      "explanation": "Let juice be 3u and water be 7u. 3u / (7u + 20) = 1 / 3. Cross-multiply: 9u = 7u + 20. 2u = 20, so u = 10. Juice = 3 × 10 = 30 liters."
+    },
+    {
+      "question": "The ratio of a father's age to his son's age is 4 : 1. In 10 years, the ratio will be 2 : 1. How old is the son now?",
+      "options": ["10 years old", "5 years old", "15 years old", "20 years old"],
+      "correctIndex": 1,
+      "explanation": "Let father be 4u and son be 1u. (4u + 10) / (u + 10) = 2 / 1. Cross-multiply: 4u + 10 = 2u + 20. 2u = 10, so u = 5. Son is 5."
+    },
+    {
+      "question": "A shop sold apples and oranges in the ratio 5 : 3. If they sold 40 more apples than oranges, how many fruits were sold in total?",
+      "options": ["80", "120", "160", "200"],
+      "correctIndex": 2,
+      "explanation": "Difference in units = 5u - 3u = 2u. 2u = 40, so u = 20. Total fruits = 5u + 3u = 8u = 8 × 20 = 160."
+    },
+    {
+      "question": "Three-eighths of the students in a hall are boys. What is the ratio of boys to girls?",
+      "options": ["3 : 5", "5 : 3", "3 : 8", "5 : 8"],
+      "correctIndex": 0,
+      "explanation": "Boys are 3 units out of 8 total. Girls are 8 - 3 = 5 units. The ratio of boys to girls is 3 : 5."
+    },
+    {
+      "question": "The ratio of $2 notes to $5 notes in a box is 4 : 3. The total value is $138. How many $5 notes are there?",
+      "options": ["12", "15", "16", "18"],
+      "correctIndex": 3,
+      "explanation": "Value ratio = (4 × $2) : (3 × $5) = $8 : $15. Total value units = 8 + 15 = 23. 23u = $138, so u = 6. Number of $5 notes = 3 × 6 = 18."
+    },
+    {
+      "question": "A piece of string is cut into two pieces in the ratio 3 : 7. The longer piece is 28 cm longer than the shorter piece. What is the total length?",
+      "options": ["70 cm", "80 cm", "90 cm", "100 cm"],
+      "correctIndex": 0,
+      "explanation": "Difference in units = 7u - 3u = 4u. 4u = 28 cm, so u = 7 cm. Total length = 3u + 7u = 10u = 10 × 7 = 70 cm."
+    },
+    {
+      "question": "The ratio of red marbles to blue marbles is 2 : 5. After removing 4 red marbles, the ratio becomes 1 : 3. How many blue marbles are there?",
+      "options": ["40", "60", "80", "100"],
+      "correctIndex": 1,
+      "explanation": "Let red be 2u and blue be 5u. (2u - 4) / 5u = 1 / 3. Cross-multiply: 6u - 12 = 5u. So u = 12. Blue marbles = 5 × 12 = 60."
+    },
+    {
+      "question": "Tom and Jerry shared candies in the ratio 3 : 5. If Tom had received 10 more candies, the ratio would have been 1 : 1. How many candies were there in total?",
+      "options": ["30", "35", "40", "45"],
+      "correctIndex": 2,
+      "explanation": "Difference in units = 5u - 3u = 2u. This difference equals the 10 candies needed to make them equal. 2u = 10, so u = 5. Total = 8u = 40."
+    },
+    {
+      "question": "The ratio of a rectangle's length to its breadth is 5 : 2. If the length is increased by 10 cm, the ratio becomes 3 : 1. Find the original breadth.",
+      "options": ["10 cm", "15 cm", "18 cm", "20 cm"],
+      "correctIndex": 3,
+      "explanation": "Let length be 5u and breadth be 2u. (5u + 10) / 2u = 3 / 1. Cross-multiply: 5u + 10 = 6u. So u = 10. Original breadth = 2 × 10 = 20 cm."
+    },
+    {
+      "question": "A box contains red, blue, and green balls in the ratio 2 : 3 : 5. If there are 24 blue balls, how many green balls are there?",
+      "options": ["40", "48", "50", "60"],
+      "correctIndex": 0,
+      "explanation": "Blue balls = 3 units = 24. So 1 unit = 8. Green balls = 5 units = 5 × 8 = 40."
+    },
+    {
+      "question": "40% of the passengers on a bus are men. The rest are women and children in the ratio 3 : 2. What is the ratio of children to all passengers?",
+      "options": ["2 : 5", "3 : 10", "6 : 25", "3 : 25"],
+      "correctIndex": 2,
+      "explanation": "Men are 40%. Women and children are 60%. Children are 2/5 of 60%, which is 24%. The ratio of children to all is 24 : 100, which simplifies to 6 : 25."
+    },
+    {
+      "question": "The ratio of A to B is 3 : 4. The ratio of B to C is 2 : 5. What is the ratio of A to C?",
+      "options": ["3 : 10", "3 : 5", "6 : 10", "5 : 10"],
+      "correctIndex": 0,
+      "explanation": "Make the 'B' parts equal. Multiply the second ratio by 2 to get 4 : 10. Now A : B : C is 3 : 4 : 10. So A : C is 3 : 10."
+    },
+    {
+      "question": "A farmer has chickens and ducks in the ratio 7 : 4. After selling 15 chickens, the ratio becomes 1 : 1. How many ducks does he have?",
+      "options": ["15", "20", "25", "35"],
+      "correctIndex": 1,
+      "explanation": "Let chickens be 7u and ducks be 4u. 7u - 15 = 4u. So 3u = 15, meaning u = 5. Ducks = 4 × 5 = 20."
+    }
+  ]
+}

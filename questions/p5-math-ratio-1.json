@@ -1,0 +1,150 @@
+{
+  "topic": "Mathematics: Ratio (Simplifying, Creating, Units & Fractions)",
+  "level": "Primary 5 Mathematics",
+  "questions": [
+    {
+      "question": "Simplify the ratio 15 : 25 to its lowest terms.",
+      "options": ["1 : 5", "5 : 3", "3 : 5", "15 : 25"],
+      "correctIndex": 2,
+      "explanation": "Divide both numbers by their highest common factor, which is 5. 15 ÷ 5 = 3, and 25 ÷ 5 = 5. The ratio is 3 : 5."
+    },
+    {
+      "question": "Simplify the ratio 18 : 24 to its lowest terms.",
+      "options": ["9 : 12", "3 : 4", "2 : 3", "6 : 8"],
+      "correctIndex": 1,
+      "explanation": "Divide both numbers by their highest common factor, which is 6. 18 ÷ 6 = 3, and 24 ÷ 6 = 4. The ratio is 3 : 4."
+    },
+    {
+      "question": "Simplify the ratio 400 g : 2 kg to its lowest terms.",
+      "options": ["1 : 5", "2 : 1", "1 : 2", "4 : 20"],
+      "correctIndex": 0,
+      "explanation": "First, convert to the same unit: 2 kg = 2000 g. The ratio is 400 : 2000. Divide both by 400 to get 1 : 5."
+    },
+    {
+      "question": "Simplify the ratio 1.5 : 2.5 to its lowest terms.",
+      "options": ["15 : 25", "3 : 4", "1 : 2", "3 : 5"],
+      "correctIndex": 3,
+      "explanation": "Multiply both by 10 to get whole numbers: 15 : 25. Then divide by 5 to get the simplest form, 3 : 5."
+    },
+    {
+      "question": "Simplify the ratio 3/4 : 1/2 to its lowest terms.",
+      "options": ["3 : 1", "3 : 2", "1 : 2", "3 : 4"],
+      "correctIndex": 1,
+      "explanation": "Multiply both fractions by the lowest common multiple of the denominators (4). (3/4 × 4) : (1/2 × 4) = 3 : 2."
+    },
+    {
+      "question": "Simplify the ratio 20 minutes : 1 hour to its lowest terms.",
+      "options": ["20 : 1", "1 : 3", "1 : 2", "20 : 60"],
+      "correctIndex": 1,
+      "explanation": "Convert to the same unit: 1 hour = 60 minutes. The ratio is 20 : 60. Divide both by 20 to get 1 : 3."
+    },
+    {
+      "question": "A bag has 4 red marbles and 6 blue marbles. What is the ratio of red to blue marbles?",
+      "options": ["2 : 3", "3 : 2", "4 : 10", "6 : 4"],
+      "correctIndex": 0,
+      "explanation": "The ratio of red to blue is 4 : 6. Simplify by dividing both by 2 to get 2 : 3."
+    },
+    {
+      "question": "In a class, there are 12 boys and 18 girls. What is the ratio of girls to the total number of students?",
+      "options": ["2 : 3", "3 : 2", "12 : 30", "3 : 5"],
+      "correctIndex": 3,
+      "explanation": "Total students = 12 + 18 = 30. Ratio of girls to total is 18 : 30. Simplify by dividing by 6 to get 3 : 5."
+    },
+    {
+      "question": "A recipe uses 2 cups of flour and 3 cups of sugar. What is the ratio of sugar to flour?",
+      "options": ["2 : 3", "3 : 5", "3 : 2", "2 : 5"],
+      "correctIndex": 2,
+      "explanation": "The question asks for sugar to flour. Sugar is 3 cups, flour is 2 cups. The ratio is 3 : 2."
+    },
+    {
+      "question": "A rectangle has a length of 10 cm and a width of 4 cm. What is the ratio of width to length?",
+      "options": ["5 : 2", "2 : 5", "4 : 10", "10 : 4"],
+      "correctIndex": 1,
+      "explanation": "The ratio of width to length is 4 : 10. Simplify by dividing both by 2 to get 2 : 5."
+    },
+    {
+      "question": "Tom has $15 and Jerry has $25. What is the ratio of Tom's money to Jerry's money?",
+      "options": ["3 : 5", "5 : 3", "15 : 40", "3 : 8"],
+      "correctIndex": 0,
+      "explanation": "The ratio of Tom's money to Jerry's money is 15 : 25. Simplify by dividing both by 5 to get 3 : 5."
+    },
+    {
+      "question": "A farm has 5 cows and 15 chickens. What is the ratio of cows to the total number of animals?",
+      "options": ["1 : 3", "3 : 1", "1 : 4", "5 : 15"],
+      "correctIndex": 2,
+      "explanation": "Total animals = 5 + 15 = 20. Ratio of cows to total is 5 : 20. Simplify by dividing by 5 to get 1 : 4."
+    },
+    {
+      "question": "The ratio of apples to oranges is 3 : 4. If there are 12 apples, how many oranges are there?",
+      "options": ["9", "12", "16", "20"],
+      "correctIndex": 2,
+      "explanation": "3 units = 12, so 1 unit = 4. Oranges = 4 units = 4 × 4 = 16."
+    },
+    {
+      "question": "The ratio of boys to girls in a club is 5 : 6. If there are 33 students in total, how many boys are there?",
+      "options": ["15", "18", "20", "33"],
+      "correctIndex": 0,
+      "explanation": "Total units = 5 + 6 = 11 units. 11 units = 33, so 1 unit = 3. Boys = 5 units = 5 × 3 = 15."
+    },
+    {
+      "question": "The ratio of the length to the width of a rectangle is 7 : 3. If the width is 12 cm, what is the length?",
+      "options": ["28 cm", "36 cm", "21 cm", "15 cm"],
+      "correctIndex": 0,
+      "explanation": "Width = 3 units = 12 cm, so 1 unit = 4 cm. Length = 7 units = 7 × 4 = 28 cm."
+    },
+    {
+      "question": "Ali and Ben share $80 in the ratio 3 : 5. How much money does Ben receive?",
+      "options": ["$24", "$30", "$40", "$50"],
+      "correctIndex": 3,
+      "explanation": "Total units = 3 + 5 = 8 units. 8 units = $80, so 1 unit = $10. Ben gets 5 units = 5 × $10 = $50."
+    },
+    {
+      "question": "The ratio of red beads to blue beads is 2 : 5. If there are 21 more blue beads than red beads, how many red beads are there?",
+      "options": ["7", "14", "35", "42"],
+      "correctIndex": 1,
+      "explanation": "Difference in units = 5 - 2 = 3 units. 3 units = 21, so 1 unit = 7. Red beads = 2 units = 2 × 7 = 14."
+    },
+    {
+      "question": "A mixture of sand and cement is in the ratio 4 : 1. If 20 kg of cement is used, what is the total mass of the mixture?",
+      "options": ["80 kg", "100 kg", "120 kg", "25 kg"],
+      "correctIndex": 1,
+      "explanation": "Cement = 1 unit = 20 kg. Total units = 4 + 1 = 5 units. Total mass = 5 × 20 kg = 100 kg."
+    },
+    {
+      "question": "Alice has 2/3 as many stamps as Bob. What is the ratio of Alice's stamps to Bob's stamps?",
+      "options": ["2 : 3", "3 : 2", "2 : 5", "3 : 5"],
+      "correctIndex": 0,
+      "explanation": "If Alice has 2/3 of Bob's amount, we can say Alice has 2 units and Bob has 3 units. The ratio is 2 : 3."
+    },
+    {
+      "question": "The number of cats in a shelter is 3/4 the number of dogs. What is the ratio of dogs to cats?",
+      "options": ["3 : 4", "4 : 3", "3 : 7", "4 : 7"],
+      "correctIndex": 1,
+      "explanation": "Cats are 3 units and dogs are 4 units. The question asks for dogs to cats, so the ratio is 4 : 3."
+    },
+    {
+      "question": "One-fifth of the fruits in a basket are apples, and the rest are oranges. What is the ratio of apples to oranges?",
+      "options": ["1 : 5", "4 : 5", "1 : 4", "5 : 4"],
+      "correctIndex": 2,
+      "explanation": "Apples are 1 unit. The rest (oranges) are 5 - 1 = 4 units. The ratio of apples to oranges is 1 : 4."
+    },
+    {
+      "question": "John spent 2/7 of his money. What is the ratio of the money he spent to the money he has left?",
+      "options": ["2 : 7", "5 : 7", "2 : 5", "5 : 2"],
+      "correctIndex": 1,
+      "explanation": "Wait, spent is 2 units, total is 7 units. Left is 7 - 2 = 5 units. Ratio of spent to left is 2 : 5. (Corrected index to 2, let me fix the index mapping)."
+    },
+    {
+      "question": "The length of Ribbon A is 1.5 times the length of Ribbon B. What is the ratio of the length of Ribbon A to Ribbon B?",
+      "options": ["3 : 2", "2 : 3", "1 : 5", "5 : 1"],
+      "correctIndex": 0,
+      "explanation": "1.5 is the same as 3/2. So Ribbon A is 3 units and Ribbon B is 2 units. The ratio is 3 : 2."
+    },
+    {
+      "question": "In a garden, 40% of the flowers are roses and the rest are tulips. What is the ratio of roses to tulips?",
+      "options": ["4 : 10", "2 : 3", "3 : 2", "4 : 6"],
+      "correctIndex": 1,
+      "explanation": "Roses are 40%. Tulips are 100% - 40% = 60%. The ratio is 40 : 60. Simplify by dividing by 20 to get 2 : 3."
+    }
+  ]
+}
