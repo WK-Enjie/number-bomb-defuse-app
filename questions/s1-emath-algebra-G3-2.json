@@ -1,0 +1,150 @@
+{
+  "topic": "Algebraic Expressions & Linear Equations: Advanced Word Problems",
+  "level": "Secondary 1/2 E-Maths (Advanced)",
+  "questions": [
+    {
+      "question": "Alice's current age is 2/3 of Bob's current age. In 5 years' time, Alice will be 3/4 of Bob's age. What is Alice's current age?",
+      "options": ["8 years", "10 years", "12 years", "15 years"],
+      "correctIndex": 1,
+      "explanation": "Let Bob's age be B. Alice = (2/3)B. In 5 years: (2/3)B + 5 = (3/4)(B + 5). Multiply by 12: 8B + 60 = 9B + 45, so B = 15. Alice's current age is (2/3)(15) = 10 years."
+    },
+    {
+      "question": "The ratio of the number of marbles Ali has to the number of marbles Ben has is 5 : 2. If Ali gives 12 marbles to Ben, the new ratio becomes 3 : 2. What is the total number of marbles they have altogether?",
+      "options": ["84", "91", "105", "112"],
+      "correctIndex": 2,
+      "explanation": "Let Ali have 5x and Ben have 2x. After the transfer: (5x - 12) / (2x + 12) = 3 / 2. Cross-multiplying gives 10x - 24 = 6x + 36, so 4x = 60, meaning x = 15. Total marbles = 7x = 7(15) = 105."
+    },
+    {
+      "question": "The length of a rectangle is (3x + 2) cm and its width is (x - 1) cm. If the perimeter of the rectangle is 42 cm, what is its area?",
+      "options": ["54 cm²", "68 cm²", "85 cm²", "102 cm²"],
+      "correctIndex": 1,
+      "explanation": "Perimeter = 2(Length + Width) = 2(3x + 2 + x - 1) = 2(4x + 1) = 42. So 4x + 1 = 21, giving 4x = 20 and x = 5. Length = 17 cm, Width = 4 cm. Area = 17 × 4 = 68 cm²."
+    },
+    {
+      "question": "A car travels a total distance of 180 km. It travels the first part of the journey at 60 km/h and the remaining part at 80 km/h. If the total time taken is 2.5 hours, what is the distance of the first part of the journey?",
+      "options": ["40 km", "60 km", "80 km", "120 km"],
+      "correctIndex": 1,
+      "explanation": "Let the first part be d km. Time equation: d/60 + (180 - d)/80 = 2.5. Multiply by 240: 4d + 3(180 - d) = 600. 4d + 540 - 3d = 600, so d = 60 km."
+    },
+    {
+      "question": "John spends 1/4 of his monthly salary on food and 1/3 of the remaining salary on clothes. If he has $600 left, what is his monthly salary?",
+      "options": ["$800", "$960", "$1200", "$1440"],
+      "correctIndex": 2,
+      "explanation": "Fraction left after food = 3/4. Fraction spent on clothes = 1/3 of 3/4 = 1/4. Total fraction spent = 1/4 + 1/4 = 1/2. Fraction left = 1/2. Since 1/2 of salary = $600, the total salary is $1200."
+    },
+    {
+      "question": "A says to B: 'If you give me 10 of your marbles, I will have twice as many as you.' B replies: 'If you give me 10 of your marbles, we will have the same number.' How many marbles do they have in total?",
+      "options": ["90", "100", "110", "120"],
+      "correctIndex": 3,
+      "explanation": "From B's statement: A - 10 = B + 10  => A = B + 20. From A's statement: A + 10 = 2(B - 10) => A = 2B - 30. Equating both: B + 20 = 2B - 30 => B = 50. A = 70. Total = 120."
+    },
+    {
+      "question": "The sum of four consecutive even integers is 140. What is the largest of these four integers?",
+      "options": ["34", "36", "38", "40"],
+      "correctIndex": 2,
+      "explanation": "Let the integers be x, x+2, x+4, x+6. Sum = 4x + 12 = 140. 4x = 128, so x = 32. The largest integer is x + 6 = 38."
+    },
+    {
+      "question": "Pipe A can fill a tank in 4 hours, Pipe B can fill it in 6 hours, and Pipe C can empty it in 12 hours. If all three pipes are opened simultaneously, how long will it take to fill the empty tank?",
+      "options": ["2 hours", "3 hours", "4 hours", "5 hours"],
+      "correctIndex": 1,
+      "explanation": "Let t be the time in hours. Equation: t/4 + t/6 - t/12 = 1. Multiply by 12: 3t + 2t - t = 12. 4t = 12, so t = 3 hours."
+    },
+    {
+      "question": "A concert hall has 400 seats. Adult tickets cost $12 and child tickets cost $7. If the total revenue from a sold-out show is $3800, how many adult tickets were sold?",
+      "options": ["150", "180", "200", "250"],
+      "correctIndex": 2,
+      "explanation": "Let a be the number of adult tickets. 12a + 7(400 - a) = 3800. 12a + 2800 - 7a = 3800. 5a = 1000, so a = 200."
+    },
+    {
+      "question": "The interior angles of a pentagon are x°, (x + 10)°, (x + 20)°, (x + 30)°, and (x + 40)°. What is the size of the largest angle?",
+      "options": ["118°", "124°", "128°", "132°"],
+      "correctIndex": 2,
+      "explanation": "The sum of interior angles of a pentagon is (5-2) × 180° = 540°. Equation: 5x + 100 = 540. 5x = 440, so x = 88. The largest angle is x + 40 = 128°."
+    },
+    {
+      "question": "Two towns are 300 km apart. Car A leaves Town X towards Town Y at 80 km/h. At the same time, Car B leaves Town Y towards Town X at 70 km/h. How many hours will it take for them to meet?",
+      "options": ["1.5 hours", "2.0 hours", "2.5 hours", "3.0 hours"],
+      "correctIndex": 1,
+      "explanation": "Let t be the time. Combined speed = 80 + 70 = 150 km/h. Equation: 150t = 300, so t = 2.0 hours."
+    },
+    {
+      "question": "The average of four numbers x, (2x + 3), (3x - 5), and (4x + 2) is 15. What is the value of x?",
+      "options": ["4", "5", "6", "7"],
+      "correctIndex": 2,
+      "explanation": "Sum of the four numbers = x + 2x + 3 + 3x - 5 + 4x + 2 = 10x. Average = 10x / 4 = 15. 10x = 60, so x = 6."
+    },
+    {
+      "question": "A box contains 40 coins consisting of only 20-cent and 50-cent coins. The total value of the coins is $14.00. How many 50-cent coins are in the box?",
+      "options": ["15", "20", "24", "25"],
+      "correctIndex": 1,
+      "explanation": "Let f be the number of 50-cent coins. 0.50f + 0.20(40 - f) = 14. 0.50f + 8 - 0.20f = 14. 0.30f = 6, so f = 20."
+    },
+    {
+      "question": "The sum of the digits of a two-digit number is 11. If the digits are reversed, the new number is 27 less than the original number. What is the original number?",
+      "options": ["47", "56", "65", "74"],
+      "correctIndex": 3,
+      "explanation": "Let the tens digit be x and units be y. x + y = 11. Original = 10x + y, Reversed = 10y + x. (10x + y) - (10y + x) = 27 => 9x - 9y = 27 => x - y = 3. Adding the two equations: 2x = 14 => x = 7, y = 4. Original = 74."
+    },
+    {
+      "question": "A shopkeeper bought a gadget for $C. If he sells it for $80, he makes a loss of $x. If he sells it for $110, he makes a profit of $2x. What is the cost price C?",
+      "options": ["$85", "$90", "$95", "$100"],
+      "correctIndex": 1,
+      "explanation": "Loss = C - 80 = x. Profit = 110 - C = 2x. Substitute x: 110 - C = 2(C - 80). 110 - C = 2C - 160. 3C = 270, so C = $90."
+    },
+    {
+      "question": "A rectangular garden measures x m by (x + 4) m. A path 1 m wide is built inside the garden along all four edges. If the area of the path is 24 m², what is the value of x?",
+      "options": ["4", "5", "6", "7"],
+      "correctIndex": 1,
+      "explanation": "Total area = x(x + 4). Inner garden dimensions are (x - 2) and (x + 4 - 2) = (x + 2). Inner area = (x - 2)(x + 2) = x² - 4. Path area = (x² + 4x) - (x² - 4) = 4x + 4. 4x + 4 = 24 => 4x = 20 => x = 5."
+    },
+    {
+      "question": "Solution A is 20% acid and Solution B is 50% acid. How many millilitres of Solution A must be mixed with Solution B to obtain 300 ml of a 30% acid solution?",
+      "options": ["100 ml", "150 ml", "200 ml", "250 ml"],
+      "correctIndex": 2,
+      "explanation": "Let a be the volume of Solution A. 0.20a + 0.50(300 - a) = 0.30(300). 0.20a + 150 - 0.50a = 90. -0.30a = -60, so a = 200 ml."
+    },
+    {
+      "question": "Painter A can paint a house in 10 days, and Painter B can paint it in 15 days. They work together for x days, then A leaves. B takes 5 more days to finish the job. How many days did they work together?",
+      "options": ["2 days", "3 days", "4 days", "5 days"],
+      "correctIndex": 2,
+      "explanation": "Work done together + Work done by B alone = 1. x(1/10 + 1/15) + 5(1/15) = 1. x(5/30) + 1/3 = 1. x/6 = 2/3, so x = 4 days."
+    },
+    {
+      "question": "There are three siblings. A is twice as old as B, and C is 3 years older than A. If the sum of their ages 4 years from now will be 50, what is A's current age?",
+      "options": ["10 years", "12 years", "14 years", "16 years"],
+      "correctIndex": 2,
+      "explanation": "Let B = x, A = 2x, C = 2x + 3. Current sum = 5x + 3. In 4 years, each is 4 years older (total +12). 5x + 3 + 12 = 50. 5x + 15 = 50 => 5x = 35 => x = 7. A's age = 2(7) = 14 years."
+    },
+    {
+      "question": "An aeroplane flies a certain distance with a tailwind at 500 km/h and returns over the same distance against a headwind at 400 km/h. If the return journey takes 1 hour longer than the outward journey, what is the distance?",
+      "options": ["1500 km", "1800 km", "2000 km", "2400 km"],
+      "correctIndex": 2,
+      "explanation": "Let d be the distance. Time against - Time with = 1. d/400 - d/500 = 1. Multiply by 2000: 5d - 4d = 2000, so d = 2000 km."
+    },
+    {
+      "question": "A shirt costs $x and a pair of pants costs $20 more than the shirt. A customer buys 3 shirts and 2 pairs of pants and pays $180 after receiving a 10% storewide discount. What is the original price of one shirt?",
+      "options": ["$28", "$30", "$32", "$36"],
+      "correctIndex": 2,
+      "explanation": "Original total before discount = $180 / 0.90 = $200. Equation: 3x + 2(x + 20) = 200. 5x + 40 = 200. 5x = 160, so x = $32."
+    },
+    {
+      "question": "The n-th term of an arithmetic sequence is given by the expression 5n - 3. Which term in the sequence has a value of 142?",
+      "options": ["27th term", "28th term", "29th term", "30th term"],
+      "correctIndex": 2,
+      "explanation": "Set the expression equal to 142: 5n - 3 = 142. 5n = 145, so n = 29."
+    },
+    {
+      "question": "A teacher distributes pens to her students. If she gives 5 pens to each student, she has 4 pens left over. If she gives 7 pens to each student, she is short by 6 pens. How many pens does she have in total?",
+      "options": ["24", "29", "34", "39"],
+      "correctIndex": 1,
+      "explanation": "Let s be the number of students. Total pens = 5s + 4 and also 7s - 6. Equating them: 5s + 4 = 7s - 6. 2s = 10, so s = 5. Total pens = 5(5) + 4 = 29."
+    },
+    {
+      "question": "The length of a rectangle is 3 times its width. If the length is decreased by 4 cm and the width is increased by 2 cm, the new perimeter becomes 36 cm. What is the area of the original rectangle?",
+      "options": ["45 cm²", "60 cm²", "75 cm²", "90 cm²"],
+      "correctIndex": 2,
+      "explanation": "Let original width = x, length = 3x. New width = x + 2, new length = 3x - 4. New perimeter = 2(x + 2 + 3x - 4) = 36. 2(4x - 2) = 36 => 4x - 2 = 18 => 4x = 20 => x = 5. Original dimensions: 5 and 15. Area = 5 × 15 = 75 cm²."
+    }
+  ]
+}
