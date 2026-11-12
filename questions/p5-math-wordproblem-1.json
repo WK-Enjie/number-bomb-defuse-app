@@ -1,0 +1,152 @@
+```json
+{
+  "topic": "Mathematics: Word Problems (Fractions, Volume, Patterns & Unit Conversion)",
+  "level": "Primary 5 Mathematics",
+  "questions": [
+    {
+      "question": "There were an equal number of boys and girls in a room at first. After 1/4 of the boys and 3/5 of the girls left, the number of boys remaining became 14 more than the number of girls. How many students were there at first?",
+      "options": ["80", "96", "120", "60"],
+      "correctIndex": 0,
+      "explanation": "Let boys = 20 units and girls = 20 units. Boys left = 20 - 5 = 15 units. Girls left = 20 - 12 = 8 units. 15 units - 8 units = 7 units. 7 units = 14, so 1 unit = 2. Total students = 40 units = 80."
+    },
+    {
+      "question": "A student has an equal number of $1 coins and 20-cent coins. She spent an equal number of each type. She was left with $24. How many coins is she left with?",
+      "options": ["20", "40", "60", "80"],
+      "correctIndex": 1,
+      "explanation": "Let the number of $1 coins left be 1 unit and 20-cent coins left be 1 unit. Value of 1 unit of $1 coins = $1. Value of 1 unit of 20-cent coins = $0.20. Total value for 1 unit of each = $1.20. $24 / $1.20 = 20 units. Total coins left = 20 + 20 = 40."
+    },
+    {
+      "question": "Qian Qian and Mani each have the same total number of gold and silver coins. Qian Qian has 12 more gold coins than Mani. Each gold coin weighs 25 g and each silver coin weighs 17 g. How much heavier is Qian Qian's collection than Mani's?",
+      "options": ["48 g", "72 g", "96 g", "120 g"],
+      "correctIndex": 2,
+      "explanation": "Since the total number of coins is the same, Qian Qian has 12 more gold coins and 12 fewer silver coins. Extra mass from gold = 12 × 25 g = 300 g. Less mass from silver = 12 × 17 g = 204 g. Net difference = 300 g - 204 g = 96 g."
+    },
+    {
+      "question": "A container measuring 50 cm by 20 cm by 10 cm is 2/5 filled with water. After some water is added, the tank becomes 80% filled. Find the volume of water added in litres.",
+      "options": ["2", "3", "5", "4"],
+      "correctIndex": 3,
+      "explanation": "Total volume = 50 × 20 × 10 = 10000 cm³. Water added = 80% - 40% = 40% of 10000 = 4000 cm³ = 4 litres."
+    },
+    {
+      "question": "Tong Tong received some money from her mother. She saved 1/4 of it and spent 2/5 of it on food. She then spent the rest on stickers. What fraction of the total money was spent on stickers?",
+      "options": ["7/20", "3/20", "13/20", "1/4"],
+      "correctIndex": 0,
+      "explanation": "Stickers = 1 - 1/4 - 2/5 = 1 - 5/20 - 8/20 = 7/20."
+    },
+    {
+      "question": "Yi Rou bought a log cake. Her cousin secretly ate 1/5 of it. Her mother later ate 3/8 of the remainder, and Yi Rou ate the rest. What fraction of the whole cake did Yi Rou eat?",
+      "options": ["3/8", "1/2", "7/40", "3/5"],
+      "correctIndex": 1,
+      "explanation": "After cousin: remainder = 4/5. Mother ate (3/8) × (4/5) = 3/10. Yi Rou ate 4/5 - 3/10 = 8/10 - 3/10 = 5/10 = 1/2."
+    },
+    {
+      "question": "A student has an equal number of $2 coins and 50-cent coins. She spent an equal number of each type and was left with $30. How many coins is she left with?",
+      "options": ["12", "18", "24", "30"],
+      "correctIndex": 2,
+      "explanation": "Let the number of $2 coins left be 1 unit and 50-cent coins left be 1 unit. Value of 1 unit of $2 coins = $2. Value of 1 unit of 50-cent coins = $0.50. Total value for 1 unit of each = $2.50. $30 / $2.50 = 12 units. Total coins left = 12 + 12 = 24."
+    },
+    {
+      "question": "A box contains red and blue balls in the ratio 3 : 5. After 6 red balls are added, the ratio becomes 3 : 4. How many blue balls are there?",
+      "options": ["24", "32", "36", "40"],
+      "correctIndex": 3,
+      "explanation": "Original ratio Red : Blue = 3 : 5 = 12 : 20. New ratio Red : Blue = 3 : 4 = 15 : 20. The increase in Red is 15 units - 12 units = 3 units. 3 units = 6, so 1 unit = 2. Blue = 20 units = 20 × 2 = 40."
+    },
+    {
+      "question": "Tom had some marbles. He gave 1/3 of them to Ali and 1/4 of the remainder to Ben. What fraction of the marbles was Tom left with?",
+      "options": ["1/2", "1/3", "1/4", "2/3"],
+      "correctIndex": 0,
+      "explanation": "After giving 1/3 to Ali, remainder = 2/3. Gave 1/4 of 2/3 = 1/6 to Ben. Left = 2/3 - 1/6 = 4/6 - 1/6 = 1/2."
+    },
+    {
+      "question": "A tank is 3/4 filled with water. After removing 12 litres, it becomes 1/2 filled. What is the capacity of the tank?",
+      "options": ["24 litres", "48 litres", "60 litres", "96 litres"],
+      "correctIndex": 1,
+      "explanation": "Difference = 3/4 - 1/2 = 1/4 of capacity = 12 litres. Capacity = 12 × 4 = 48 litres."
+    },
+    {
+      "question": "Mrs Tan spent 2/5 of her money on a bag and 1/3 of the remainder on shoes. She had $120 left. How much money did she have at first?",
+      "options": ["$200", "$240", "$300", "$360"],
+      "correctIndex": 2,
+      "explanation": "After bag: remainder = 3/5. Spent 1/3 of 3/5 = 1/5 on shoes. Left = 3/5 - 1/5 = 2/5. 2/5 = $120, so 1/5 = $60. Total = $300."
+    },
+    {
+      "question": "John has 5 gold coins and 3 silver coins. Mary has 3 gold coins and 5 silver coins. Each gold coin weighs 20 g and each silver coin weighs 12 g. How much heavier is John's collection than Mary's?",
+      "options": ["8 g", "12 g", "20 g", "16 g"],
+      "correctIndex": 3,
+      "explanation": "John: 5(20) + 3(12) = 136 g. Mary: 3(20) + 5(12) = 120 g. Difference = 136 - 120 = 16 g."
+    },
+    {
+      "question": "Convert 3.5 m to cm.",
+      "options": ["350 cm", "35 cm", "3500 cm", "0.35 cm"],
+      "correctIndex": 0,
+      "explanation": "1 m = 100 cm. 3.5 × 100 = 350 cm."
+    },
+    {
+      "question": "A rectangular tank measuring 40 cm by 25 cm by 20 cm is completely empty. How many litres of water are needed to fill it?",
+      "options": ["10", "20", "30", "40"],
+      "correctIndex": 1,
+      "explanation": "Volume = 40 × 25 × 20 = 20000 cm³. Since 1000 cm³ = 1 litre, 20000 cm³ = 20 litres."
+    },
+    {
+      "question": "A movie is 2 hours 15 minutes long. How many seconds is the movie?",
+      "options": ["135", "810", "8100", "12900"],
+      "correctIndex": 2,
+      "explanation": "2 h 15 min = 135 min. 135 × 60 = 8100 seconds."
+    },
+    {
+      "question": "A car travels at 80 km/h for 45 minutes. How far does it travel?",
+      "options": ["36 km", "45 km", "80 km", "60 km"],
+      "correctIndex": 3,
+      "explanation": "45 min = 3/4 h. Distance = 80 × 3/4 = 60 km."
+    },
+    {
+      "question": "Find the next term in the pattern: 3, 5, 8, 10, 13, 15, 18, ...",
+      "options": ["20", "21", "19", "22"],
+      "correctIndex": 0,
+      "explanation": "The pattern alternates between adding 2 and adding 3: +2, +3, +2, +3, +2, +3. Next step is +2. 18 + 2 = 20."
+    },
+    {
+      "question": "Find the next term in the pattern: 2, 5, 11, 23, 47, ...",
+      "options": ["94", "95", "96", "48"],
+      "correctIndex": 1,
+      "explanation": "Each term is multiplied by 2, then 1 is added. 47 × 2 + 1 = 95."
+    },
+    {
+      "question": "Find the next term in the pattern: 1, 4, 9, 16, 25, ...",
+      "options": ["30", "35", "36", "49"],
+      "correctIndex": 2,
+      "explanation": "These are perfect square numbers: 1², 2², 3², 4², 5². Next is 6² = 36."
+    },
+    {
+      "question": "Find the next term in the pattern: 100, 95, 85, 70, 50, ...",
+      "options": ["20", "30", "35", "25"],
+      "correctIndex": 3,
+      "explanation": "The differences increase by 5 each time: -5, -10, -15, -20. Next difference is -25. 50 - 25 = 25."
+    },
+    {
+      "question": "A container measuring 30 cm by 20 cm by 15 cm is filled to 1/3 of its capacity. How many more cm³ of water are needed to fill it completely?",
+      "options": ["6000", "3000", "9000", "4500"],
+      "correctIndex": 0,
+      "explanation": "Total volume = 30 × 20 × 15 = 9000 cm³. Filled = 1/3 × 9000 = 3000 cm³. Needed = 9000 - 3000 = 6000 cm³."
+    },
+    {
+      "question": "A cyclist travels at 12 km/h for 2 hours, then at 18 km/h for 1 hour. What is his average speed for the whole journey?",
+      "options": ["12 km/h", "14 km/h", "15 km/h", "18 km/h"],
+      "correctIndex": 1,
+      "explanation": "Total distance = 12(2) + 18(1) = 42 km. Total time = 3 h. Average speed = 42 / 3 = 14 km/h."
+    },
+    {
+      "question": "A rectangular tank measuring 60 cm by 40 cm by 50 cm is 3/5 filled with water. What is the volume of water in the tank in litres?",
+      "options": ["72", "60", "80", "120"],
+      "correctIndex": 0,
+      "explanation": "Total volume = 60 × 40 × 50 = 120000 cm³. Volume of water = 3/5 × 120000 = 72000 cm³. Since 1000 cm³ = 1 litre, the volume is 72 litres."
+    },
+    {
+      "question": "A shop sells apples at $2 each and oranges at $3 each. Tom bought an equal number of apples and oranges, spending $60 in total. How many apples did he buy?",
+      "options": ["6", "10", "15", "12"],
+      "correctIndex": 3,
+      "explanation": "Let the number of apples be 1 unit and oranges be 1 unit. Cost of 1 unit of apples = $2. Cost of 1 unit of oranges = $3. Total cost for 1 unit of each = $5. $60 / $5 = 12 units. Number of apples = 12."
+    }
+  ]
+}
+```
