@@ -1,0 +1,179 @@
+{
+  "topic": "Physics: Kinematics, Displacement, Velocity & Acceleration",
+  "level": "Secondary 3 O-Level Physics",
+  "questions": [
+    {
+      "question": "Which of the following is a vector quantity?",
+      "options": ["Velocity", "Distance", "Time", "Mass"],
+      "correctIndex": 0,
+      "explanation": "Velocity has both magnitude and direction, making it a vector. Distance, time, and mass have magnitude only."
+    },
+    {
+      "question": "Which of the following best defines acceleration?",
+      "options": ["Rate of change of distance", "Rate of change of velocity", "Total change in speed", "Distance travelled per second"],
+      "correctIndex": 1,
+      "explanation": "Acceleration is the rate of change of velocity with respect to time."
+    },
+    {
+      "question": "Which of the following best describes displacement?",
+      "options": ["Total path length travelled", "Distance travelled per unit time", "Shortest straight-line distance from a reference point in a specified direction", "Rate of change of position"],
+      "correctIndex": 2,
+      "explanation": "Displacement is a vector quantity defined as the shortest straight-line distance from a reference point (like the starting position) in a specified direction."
+    },
+    {
+      "question": "A runner completes one full lap of a 400 m circular track. What is their displacement?",
+      "options": ["400 m", "200 m", "100 m", "0 m"],
+      "correctIndex": 3,
+      "explanation": "Since the runner returns to the exact reference point (the start), the shortest straight-line distance from the reference point is 0 m."
+    },
+    {
+      "question": "A car moves at a constant speed around a circular bend. Which statement is correct?",
+      "options": ["Velocity is changing", "Acceleration is zero", "Displacement is constant", "Speed is a vector"],
+      "correctIndex": 0,
+      "explanation": "Even though speed is constant, the direction of motion is continuously changing. Since velocity is a vector, the velocity is changing."
+    },
+    {
+      "question": "A student walks 3 m due East and then 4 m due North. What is the magnitude of their displacement?",
+      "options": ["7 m", "5 m", "1 m", "12 m"],
+      "correctIndex": 1,
+      "explanation": "Using Pythagoras' theorem, the shortest straight-line distance from the reference point = √(3² + 4²) = √(9 + 16) = √25 = 5 m."
+    },
+    {
+      "question": "Which physical quantity has the SI unit m/s²?",
+      "options": ["Velocity", "Displacement", "Acceleration", "Speed"],
+      "correctIndex": 2,
+      "explanation": "Acceleration is the change in velocity (m/s) per second (s), giving the unit m/s²."
+    },
+    {
+      "question": "Which of the following is a scalar quantity?",
+      "options": ["Displacement", "Velocity", "Acceleration", "Distance"],
+      "correctIndex": 3,
+      "explanation": "Distance has magnitude but no direction, making it a scalar. Displacement, velocity, and acceleration are vectors."
+    },
+    {
+      "question": "A hiker walks 5 m due North and then 12 m due East. What is the magnitude of their displacement?",
+      "options": ["13 m", "17 m", "7 m", "60 m"],
+      "correctIndex": 0,
+      "explanation": "Using Pythagoras' theorem, displacement from the reference point = √(5² + 12²) = √(25 + 144) = √169 = 13 m."
+    },
+    {
+      "question": "What is the main difference between speed and velocity?",
+      "options": ["Speed is measured in m/s²", "Velocity includes a specific direction", "Speed is a vector quantity", "Velocity is always positive"],
+      "correctIndex": 1,
+      "explanation": "Speed only has magnitude (scalar), while velocity has both magnitude and a specific direction (vector)."
+    },
+    {
+      "question": "An object moves in a circle at a constant speed. What is true about its acceleration?",
+      "options": ["It is zero", "It is constant and zero", "It is not zero", "It depends on the mass"],
+      "correctIndex": 2,
+      "explanation": "Because the direction of velocity is constantly changing, the velocity is changing. A changing velocity means acceleration is not zero."
+    },
+    {
+      "question": "An object moves 10 m forward and then 4 m backward. What is the total distance travelled?",
+      "options": ["6 m", "40 m", "4 m", "14 m"],
+      "correctIndex": 3,
+      "explanation": "Total distance is the sum of all path lengths travelled, regardless of direction from the reference point: 10 + 4 = 14 m."
+    },
+    {
+      "question": "An object moves 10 m forward and then 4 m backward. What is the magnitude of its displacement?",
+      "options": ["6 m", "14 m", "4 m", "40 m"],
+      "correctIndex": 0,
+      "explanation": "Displacement is the shortest straight-line distance from a reference point in a specified direction. 10 m forward minus 4 m backward leaves it 6 m from the start."
+    },
+    {
+      "question": "Velocity is defined as the rate of change of...",
+      "options": ["Distance", "Displacement", "Time", "Speed"],
+      "correctIndex": 1,
+      "explanation": "Velocity is the rate of change of displacement (distance from a reference point in a specified direction), whereas speed is the rate of change of distance."
+    },
+    {
+      "question": "A train decelerates uniformly from 20 m/s to rest in 5 seconds. What is its acceleration?",
+      "options": ["4 m/s²", "-20 m/s²", "-4 m/s²", "100 m/s²"],
+      "correctIndex": 2,
+      "explanation": "Acceleration = (final velocity - initial velocity) / time = (0 - 20) / 5 = -4 m/s²."
+    },
+    {
+      "question": "Which of the following pairs consists of two vector quantities?",
+      "options": ["Speed and distance", "Mass and time", "Distance and time", "Displacement and velocity"],
+      "correctIndex": 3,
+      "explanation": "Both displacement and velocity have magnitude and direction, making them both vector quantities."
+    },
+    {
+      "question": "A boy walks 6 m East and then 8 m West. What is his displacement?",
+      "options": ["2 m West", "14 m West", "2 m East", "14 m East"],
+      "correctIndex": 0,
+      "explanation": "Taking East as positive, displacement from the reference point in a specified direction = 6 - 8 = -2 m. The magnitude is 2 m, and the direction is West."
+    },
+    {
+      "question": "Why does an object's velocity change when moving along a circular path at constant speed?",
+      "options": ["Its mass changes", "Its direction changes", "Its speed increases", "Its acceleration is zero"],
+      "correctIndex": 1,
+      "explanation": "Velocity is a vector. Even if the magnitude (speed) is constant, a change in direction means the velocity vector changes."
+    },
+    {
+      "question": "A drone flies 3 m straight up and then 4 m straight down. What is the total distance travelled?",
+      "options": ["1 m", "7 m", "12 m", "5 m"],
+      "correctIndex": 2,
+      "explanation": "Total distance is the sum of all path lengths: 3 m + 4 m = 7 m."
+    },
+    {
+      "question": "A drone flies 3 m straight up and then 4 m straight down. What is its displacement?",
+      "options": ["7 m up", "1 m down", "1 m up", "7 m down"],
+      "correctIndex": 3,
+      "explanation": "Displacement is the shortest straight-line distance from a reference point in a specified direction. Taking up as positive: 3 - 4 = -1 m, which is 1 m down from the start."
+    },
+    {
+      "question": "What does a negative acceleration value indicate?",
+      "options": ["Velocity is decreasing", "The object is stationary", "Distance is negative", "Speed is increasing"],
+      "correctIndex": 0,
+      "explanation": "Negative acceleration (deceleration) means the acceleration vector acts opposite to the velocity vector, causing velocity to decrease."
+    },
+    {
+      "question": "Which statement correctly distinguishes mass and weight?",
+      "options": ["Both are vectors", "Mass is scalar, weight is vector", "Both are scalars", "Mass is vector, weight is scalar"],
+      "correctIndex": 1,
+      "explanation": "Mass has magnitude only (scalar). Weight is a force (mass × gravity) and has a direction downwards (vector)."
+    },
+    {
+      "question": "A person walks 4 m North, 3 m East, and then 4 m South. What is their displacement?",
+      "options": ["11 m", "5 m", "3 m East", "7 m North"],
+      "correctIndex": 2,
+      "explanation": "North and South movements cancel out (4 m North - 4 m South = 0). The shortest straight-line distance from the reference point in a specified direction is 3 m East."
+    },
+    {
+      "question": "A person walks 4 m North, 3 m East, and then 4 m South. What is their total distance travelled?",
+      "options": ["3 m", "5 m", "7 m", "11 m"],
+      "correctIndex": 3,
+      "explanation": "Total distance is the sum of all path lengths: 4 + 3 + 4 = 11 m."
+    },
+    {
+      "question": "A satellite orbits the Earth at a constant speed. Which statement about its motion is true?",
+      "options": ["Its velocity is constantly changing", "Its acceleration is zero", "Its displacement increases steadily", "It travels in a straight line"],
+      "correctIndex": 0,
+      "explanation": "In a circular orbit, the direction of motion is continuously changing, meaning the velocity vector is constantly changing."
+    },
+    {
+      "question": "If an object has an acceleration of exactly zero, what must be true?",
+      "options": [
+        "It must be moving",
+        "Its velocity is constant (including being at rest)",
+        "Its displacement is zero",
+        "No forces are acting on it"
+      ],
+      "correctIndex": 1,
+      "explanation": "Zero acceleration means there is no change in velocity. Therefore, the velocity remains constant. This includes the specific case where the constant velocity is zero (i.e., the object is at rest). Note: forces may still be acting on it, but the net force is zero."
+    },
+    {
+      "question": "A hiker walks 5 km East and then 5 km West. What is their displacement?",
+      "options": ["10 km", "5 km", "0 km", "25 km"],
+      "correctIndex": 2,
+      "explanation": "The hiker returns to the exact reference point, so the shortest straight-line distance from the start in a specified direction is 0 km."
+    },
+    {
+      "question": "Which of the following is a scalar quantity?",
+      "options": ["Force", "Displacement", "Acceleration", "Time"],
+      "correctIndex": 3,
+      "explanation": "Time has magnitude only and no direction, making it a scalar quantity. Force, displacement, and acceleration are vectors."
+    }
+  ]
+}

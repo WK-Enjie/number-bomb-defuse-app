@@ -1,0 +1,165 @@
+{
+  "topic": "Algebra: Factorisation & Solving Quadratic Equations (Set 2)",
+  "level": "Secondary 2/3 E-Maths",
+  "questions": [
+    {
+      "question": "Factorise completely: 10u^2v - 15uv^2",
+      "options": ["5uv(2u - 3v)", "5u(2uv - 3v^2)", "5v(2u^2 - 3uv)", "10uv(u - 1.5v)"],
+      "correctIndex": 0,
+      "explanation": "The highest common factor of 10u^2v and 15uv^2 is 5uv. Dividing both terms by 5uv gives 2u - 3v. The factorised form is 5uv(2u - 3v)."
+    },
+    {
+      "question": "Factorise completely: 18a^3b^2 - 24a^2b^3 + 12a^2b^2",
+      "options": ["6ab(3a^2b - 4ab^2 + 2ab)", "6a^2b^2(3a - 4b + 2)", "3a^2b^2(6a - 8b + 4)", "6a^2b(3ab - 4b^2 + 2b)"],
+      "correctIndex": 1,
+      "explanation": "The highest common factor of all three terms is 6a^2b^2. Dividing each term by 6a^2b^2 gives 3a - 4b + 2. The factorised form is 6a^2b^2(3a - 4b + 2)."
+    },
+    {
+      "question": "Factorise completely: 21x^2y^3 - 14x^3y^2",
+      "options": ["7xy(3xy^2 - 2x^2y)", "7x^2y(3y^2 - 2xy)", "7x^2y^2(3y - 2x)", "7x^3y^2(3y - 2)"],
+      "correctIndex": 2,
+      "explanation": "The highest common factor of 21x^2y^3 and 14x^3y^2 is 7x^2y^2. Dividing both terms by 7x^2y^2 gives 3y - 2x. The factorised form is 7x^2y^2(3y - 2x)."
+    },
+    {
+      "question": "Factorise completely: -12m^2n + 8mn^2 - 4mn",
+      "options": ["-4mn(3m + 2n - 1)", "4mn(-3m + 2n - 1)", "4mn(3m - 2n + 1)", "-4mn(3m - 2n + 1)"],
+      "correctIndex": 3,
+      "explanation": "The highest common factor is -4mn. Dividing each term by -4mn gives 3m - 2n + 1. The factorised form is -4mn(3m - 2n + 1)."
+    },
+    {
+      "question": "Factorise completely: 25p^3q^2 + 10p^2q^3 - 15p^2q^2",
+      "options": ["5p^2q^2(5p + 2q - 3)", "5pq(5p^2q + 2pq^2 - 3pq)", "5p^2q(5pq + 2q^2 - 3q)", "25p^2q^2(p + 0.4q - 0.6)"],
+      "correctIndex": 0,
+      "explanation": "The highest common factor of all three terms is 5p^2q^2. Dividing each term by 5p^2q^2 gives 5p + 2q - 3. The factorised form is 5p^2q^2(5p + 2q - 3)."
+    },
+    {
+      "question": "Factorise completely: 16r^2s^3 - 24r^3s^2 + 8r^2s",
+      "options": ["8rs(2rs^2 - 3r^2s + r)", "8r^2s(2s^2 - 3rs + 1)", "4r^2s(4s^2 - 6rs + 2)", "8r^2(2s^3 - 3rs^2 + s)"],
+      "correctIndex": 1,
+      "explanation": "The highest common factor of all three terms is 8r^2s. Dividing each term by 8r^2s gives 2s^2 - 3rs + 1. The factorised form is 8r^2s(2s^2 - 3rs + 1)."
+    },
+    {
+      "question": "Factorise completely: 9w^2z - 12wz^2 + 15wz",
+      "options": ["3w(3wz - 4z^2 + 5z)", "3z(3w^2 - 4wz + 5w)", "3wz(3w - 4z + 5)", "3wz(3w + 4z - 5)"],
+      "correctIndex": 2,
+      "explanation": "The highest common factor of all three terms is 3wz. Dividing each term by 3wz gives 3w - 4z + 5. The factorised form is 3wz(3w - 4z + 5)."
+    },
+    {
+      "question": "Factorise: v^2 + 8v + 15",
+      "options": ["(v + 1)(v + 15)", "(v + 3)(v + 5)", "(v - 3)(v - 5)", "(v + 2)(v + 7.5)"],
+      "correctIndex": 3,
+      "explanation": "We need two numbers that multiply to 15 and add to 8. These numbers are 3 and 5. The factorised form is (v + 3)(v + 5)."
+    },
+    {
+      "question": "Factorise: n^2 - 11n + 28",
+      "options": ["(n - 4)(n - 7)", "(n + 4)(n + 7)", "(n - 2)(n - 14)", "(n + 2)(n + 14)"],
+      "correctIndex": 0,
+      "explanation": "We need two numbers that multiply to 28 and add to -11. These numbers are -4 and -7. The factorised form is (n - 4)(n - 7)."
+    },
+    {
+      "question": "Factorise: k^2 + 2k - 24",
+      "options": ["(k - 2)(k + 12)", "(k + 2)(k - 12)", "(k - 4)(k + 6)", "(k + 4)(k - 6)"],
+      "correctIndex": 1,
+      "explanation": "We need two numbers that multiply to -24 and add to 2. These numbers are -4 and 6. The factorised form is (k - 4)(k + 6)."
+    },
+    {
+      "question": "Factorise: t^2 - 5t - 36",
+      "options": ["(t - 4)(t + 9)", "(t + 4)(t - 9)", "(t - 6)(t + 6)", "(t - 3)(t + 12)"],
+      "correctIndex": 2,
+      "explanation": "We need two numbers that multiply to -36 and add to -5. These numbers are 4 and -9. The factorised form is (t + 4)(t - 9)."
+    },
+    {
+      "question": "Factorise: 2w^2 + 9w + 4",
+      "options": ["(2w + 2)(w + 2)", "(2w + 4)(w + 1)", "(2w + 1)(w + 4)", "(2w - 1)(w - 4)"],
+      "correctIndex": 3,
+      "explanation": "We need two numbers that multiply to 2 × 4 = 8 and add to 9. These are 1 and 8. Splitting the middle term: 2w^2 + w + 8w + 4 = w(2w + 1) + 4(2w + 1) = (2w + 1)(w + 4)."
+    },
+    {
+      "question": "Factorise: 3y^2 - 10y - 8",
+      "options": ["(3y + 2)(y - 4)", "(3y - 2)(y + 4)", "(3y + 4)(y - 2)", "(3y - 4)(y + 2)"],
+      "correctIndex": 0,
+      "explanation": "We need two numbers that multiply to 3 × -8 = -24 and add to -10. These are 2 and -12. Splitting the middle term: 3y^2 + 2y - 12y - 8 = y(3y + 2) - 4(3y + 2) = (3y + 2)(y - 4)."
+    },
+    {
+      "question": "Factorise: 49a^2 - 36b^2",
+      "options": ["(49a - 36b)(a + b)", "(7a - 6b)(7a - 6b)", "(7a + 6b)(7a + 6b)", "(7a - 6b)(7a + 6b)"],
+      "correctIndex": 1,
+      "explanation": "This is a difference of two squares: (7a)^2 - (6b)^2. It factorises to (7a - 6b)(7a + 6b)."
+    },
+    {
+      "question": "Factorise: 100 - 81m^2",
+      "options": ["(100 - 81m)(1 + m)", "(10 - 9m)(10 - 9m)", "(10 - 9m)(10 + 9m)", "(10 + 9m)(10 + 9m)"],
+      "correctIndex": 2,
+      "explanation": "This is a difference of two squares: 10^2 - (9m)^2. It factorises to (10 - 9m)(10 + 9m)."
+    },
+    {
+      "question": "Factorise completely: ac + ad + bc + bd",
+      "options": ["(a + c)(b + d)", "(a + b)(c + d)", "(a + d)(b + c)", "a(c + d) + b(c + d)"],
+      "correctIndex": 3,
+      "explanation": "Group the terms: a(c + d) + b(c + d). Factor out the common bracket to get (a + b)(c + d)."
+    },
+    {
+      "question": "Factorise completely: 3px - 3py + 2qx - 2qy",
+      "options": ["(3p + 2q)(x - y)", "(3p - 2q)(x + y)", "(3p + 2q)(x + y)", "(3p - 2q)(x - y)"],
+      "correctIndex": 0,
+      "explanation": "Group the terms: 3p(x - y) + 2q(x - y). Factor out the common bracket to get (3p + 2q)(x - y)."
+    },
+    {
+      "question": "Factorise completely: 5mu - 5mv + 2nu - 2nv",
+      "options": ["(5m - 2n)(u + v)", "(5m + 2n)(u - v)", "(5m + 2n)(u + v)", "(5m - 2n)(u - v)"],
+      "correctIndex": 1,
+      "explanation": "Group the terms: 5m(u - v) + 2n(u - v). Factor out the common bracket to get (5m + 2n)(u - v)."
+    },
+    {
+      "question": "Factorise completely: 2ab - 4ac + 3b^2 - 6bc",
+      "options": ["(2a - 3b)(b + 2c)", "(2a + 3b)(b - 2c)", "(2a + 3b)(b + 2c)", "(2a - 3b)(b - 2c)"],
+      "correctIndex": 2,
+      "explanation": "Group the terms: 2a(b - 2c) + 3b(b - 2c). Factor out the common bracket to get (2a + 3b)(b - 2c)."
+    },
+    {
+      "question": "Factorise completely: x^2 - 3xy + 2xz - 6yz",
+      "options": ["(x + 3y)(x - 2z)", "(x - 3y)(x - 2z)", "(x + 3y)(x + 2z)", "(x - 3y)(x + 2z)"],
+      "correctIndex": 3,
+      "explanation": "Group the terms: x(x - 3y) + 2z(x - 3y). Factor out the common bracket to get (x - 3y)(x + 2z)."
+    },
+    {
+      "question": "Factorise completely: 6pq - 9pr + 4qs - 6rs",
+      "options": ["(3p + 2s)(2q - 3r)", "(3p - 2s)(2q + 3r)", "(3p + 2q)(2s - 3r)", "(3p - 2q)(2s + 3r)"],
+      "correctIndex": 0,
+      "explanation": "Group the terms: 3p(2q - 3r) + 2s(2q - 3r). Factor out the common bracket to get (3p + 2s)(2q - 3r)."
+    },
+    {
+      "question": "Solve m^2 - 9m + 14 = 0.",
+      "options": ["m = -2 or m = -7", "m = 2 or m = 7", "m = -2 or m = 7", "m = 2 or m = -7"],
+      "correctIndex": 1,
+      "explanation": "Factorise the equation: (m - 2)(m - 7) = 0. Setting each factor to zero gives m = 2 or m = 7."
+    },
+    {
+      "question": "Solve y^2 + 5y - 24 = 0.",
+      "options": ["y = 8 or y = -3", "y = -8 or y = -3", "y = -8 or y = 3", "y = 8 or y = 3"],
+      "correctIndex": 2,
+      "explanation": "Factorise the equation: (y + 8)(y - 3) = 0. Setting each factor to zero gives y = -8 or y = 3."
+    },
+    {
+      "question": "Solve 2p^2 + 5p - 3 = 0.",
+      "options": ["p = 3 or p = -1/2", "p = -3 or p = 1/2", "p = 3 or p = 1/2", "p = -3 or p = -1/2"],
+      "correctIndex": 3,
+      "explanation": "Factorise the equation: (2p - 1)(p + 3) = 0. Setting each factor to zero gives p = 1/2 or p = -3."
+    },
+    {
+      "question": "Solve 36 - 25k^2 = 0.",
+      "options": ["k = 6/5 or k = -6/5", "k = 36/25 or k = -36/25", "k = 5/6 or k = -5/6", "k = 6 or k = -6"],
+      "correctIndex": 0,
+      "explanation": "This is a difference of two squares: (6 - 5k)(6 + 5k) = 0. Setting each factor to zero gives k = 6/5 or k = -6/5."
+    },
+    {
+      "question": "Solve v(v - 6) = 16.",
+      "options": ["v = -8 or v = 2", "v = 8 or v = -2", "v = 8 or v = 2", "v = -8 or v = -2"],
+      "correctIndex": 1,
+      "explanation": "Expand and rearrange: v^2 - 6v - 16 = 0. Factorise: (v - 8)(v + 2) = 0. Setting each factor to zero gives v = 8 or v = -2."
+    },
+    {
+      "question": "Solve 4n^2 = 12n.",
+      "options": ["n = 3 only", "n = 12 or n = 0", "n = 0 or n = 3", "n = 0 only"],
+      "correctIndex": 2,
+      "explanation": "Rearrange to 4n^2 - 
