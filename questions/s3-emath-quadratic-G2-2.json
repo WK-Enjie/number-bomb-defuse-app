@@ -162,4 +162,13 @@
       "question": "Solve 4n^2 = 12n.",
       "options": ["n = 3 only", "n = 12 or n = 0", "n = 0 or n = 3", "n = 0 only"],
       "correctIndex": 2,
-      "explanation": "Rearrange to 4n^2 - 
+      "explanation": "Rearrange to 4n^2 - 12n = 0. Factorise: 4n(n - 3) = 0. Setting each factor to zero gives n = 0 or n = 3. Do not divide by n as you will lose the n = 0 solution."
+    },
+    {
+      "question": "Solve 5w^2 - 15w = 0.",
+      "options": ["w = 15 or w = 0", "w = 3 or w = 0", "w = -3 or w = 0", "w = 3 only"],
+      "correctIndex": 3,
+      "explanation": "Factorise the equation: 5w(w - 3) = 0. Setting each factor to zero gives w = 0 or w = 3."
+    }
+  ]
+}
