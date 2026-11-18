@@ -1,0 +1,150 @@
+{
+  "topic": "Physics: Kinematics — Acceleration, Distance Travelled & Free Fall",
+  "level": "Secondary 3 O-Level Physics",
+  "questions": [
+    {
+      "question": "A ball moving at 5 m/s to the right rebounds and moves at 10 m/s to the left. Taking right as positive, what is the magnitude of its change in velocity?",
+      "options": ["5 m/s", "10 m/s", "15 m/s", "20 m/s"],
+      "correctIndex": 2,
+      "explanation": "Change in velocity = final - initial = (-10) - (+5) = -15 m/s. The magnitude is 15 m/s because the direction reversed."
+    },
+    {
+      "question": "A ball moving at 5 m/s rebounds in the opposite direction at 10 m/s. What is its change in speed?",
+      "options": ["5 m/s", "10 m/s", "15 m/s", "0 m/s"],
+      "correctIndex": 0,
+      "explanation": "Speed is a scalar, so direction is ignored. Change in speed = 10 - 5 = 5 m/s. Note this differs from the change in velocity, which is 15 m/s."
+    },
+    {
+      "question": "A ball travelling at 5 m/s East rebounds at 10 m/s West. The contact lasts 0.5 s. What is the magnitude of its acceleration?",
+      "options": ["5 m/s²", "10 m/s²", "20 m/s²", "30 m/s²"],
+      "correctIndex": 3,
+      "explanation": "Taking East as positive, change in velocity = (-10) - (+5) = -15 m/s. Acceleration = -15 / 0.5 = -30 m/s², so the magnitude is 30 m/s²."
+    },
+    {
+      "question": "A car on a straight road accelerates uniformly from 8 m/s to 20 m/s in 4 s. What is its acceleration?",
+      "options": ["2 m/s²", "3 m/s²", "4 m/s²", "5 m/s²"],
+      "correctIndex": 1,
+      "explanation": "Acceleration = (v - u) / t = (20 - 8) / 4 = 12 / 4 = 3 m/s²."
+    },
+    {
+      "question": "A train slows uniformly from 25 m/s to 5 m/s in 4 s. What is the magnitude of its deceleration?",
+      "options": ["4 m/s²", "6.25 m/s²", "5 m/s²", "20 m/s²"],
+      "correctIndex": 2,
+      "explanation": "Acceleration = (5 - 25) / 4 = -5 m/s². The magnitude of the deceleration is 5 m/s²."
+    },
+    {
+      "question": "An object starts from rest and accelerates uniformly at 2.5 m/s² for 6 s. What is its final velocity?",
+      "options": ["15 m/s", "2.4 m/s", "9 m/s", "21 m/s"],
+      "correctIndex": 0,
+      "explanation": "Using v = u + at with u = 0: v = 0 + 2.5 × 6 = 15 m/s."
+    },
+    {
+      "question": "A stone is dropped from rest and falls freely for 3 s. What is its speed then? (Take g = 10 m/s²)",
+      "options": ["10 m/s", "30 m/s", "45 m/s", "90 m/s"],
+      "correctIndex": 1,
+      "explanation": "Using v = u + at with u = 0: v = 0 + 10 × 3 = 30 m/s."
+    },
+    {
+      "question": "A stone is dropped from rest. How far does it fall in the first 2 s? (Take g = 10 m/s²)",
+      "options": ["10 m", "40 m", "5 m", "20 m"],
+      "correctIndex": 3,
+      "explanation": "Using s = ut + 0.5at² with u = 0: s = 0.5 × 10 × 2² = 5 × 4 = 20 m."
+    },
+    {
+      "question": "An object falls freely from rest through a height of 45 m. How long does it take? (Take g = 10 m/s²)",
+      "options": ["4.5 s", "9 s", "3 s", "2.1 s"],
+      "correctIndex": 2,
+      "explanation": "45 = 0.5 × 10 × t², so 45 = 5t². t² = 9, giving t = 3 s."
+    },
+    {
+      "question": "An object falls freely from rest through 20 m. What is its speed just before landing? (Take g = 10 m/s²)",
+      "options": ["20 m/s", "400 m/s", "10 m/s", "200 m/s"],
+      "correctIndex": 0,
+      "explanation": "Using v² = u² + 2as with u = 0: v² = 2 × 10 × 20 = 400, so v = 20 m/s."
+    },
+    {
+      "question": "A stone is dropped from a cliff and lands 4 s later. What is the height of the cliff? (Take g = 10 m/s²)",
+      "options": ["40 m", "80 m", "160 m", "20 m"],
+      "correctIndex": 1,
+      "explanation": "Using s = ut + 0.5at² with u = 0: s = 0.5 × 10 × 4² = 5 × 16 = 80 m."
+    },
+    {
+      "question": "An object moves in a circle at a constant speed of 10 m/s. After half a revolution, what are its change in speed and the magnitude of its change in velocity?",
+      "options": ["20 m/s and 0", "0 and 0", "20 m/s and 20 m/s", "0 and 20 m/s"],
+      "correctIndex": 3,
+      "explanation": "Speed stays 10 m/s, so change in speed is 0. After half a revolution the direction reverses, so change in velocity = (-10) - (+10) = -20 m/s, magnitude 20 m/s."
+    },
+    {
+      "question": "A car accelerates uniformly from rest to 20 m/s in 8 s along a straight road. How far does it travel?",
+      "options": ["160 m", "20 m", "80 m", "40 m"],
+      "correctIndex": 2,
+      "explanation": "For uniform acceleration, average velocity = (0 + 20) / 2 = 10 m/s. Distance = 10 × 8 = 80 m."
+    },
+    {
+      "question": "A car accelerates uniformly from 10 m/s to 30 m/s in 5 s. How far does it travel in this time?",
+      "options": ["50 m", "100 m", "150 m", "200 m"],
+      "correctIndex": 1,
+      "explanation": "Average velocity = (10 + 30) / 2 = 20 m/s. Distance = 20 × 5 = 100 m."
+    },
+    {
+      "question": "A car travelling at 20 m/s brakes uniformly at 4 m/s² until it stops. What is its braking distance?",
+      "options": ["100 m", "20 m", "80 m", "50 m"],
+      "correctIndex": 3,
+      "explanation": "Using v² = u² + 2as: 0 = 20² + 2(-4)s, so 8s = 400 and s = 50 m."
+    },
+    {
+      "question": "A car brakes uniformly from 24 m/s to rest in 4 s. How far does it travel while braking?",
+      "options": ["48 m", "96 m", "24 m", "12 m"],
+      "correctIndex": 0,
+      "explanation": "Average velocity = (24 + 0) / 2 = 12 m/s. Distance = 12 × 4 = 48 m."
+    },
+    {
+      "question": "An object moving at 5 m/s accelerates uniformly at 2 m/s² for 3 s. How far does it travel?",
+      "options": ["15 m", "30 m", "24 m", "9 m"],
+      "correctIndex": 2,
+      "explanation": "Using s = ut + 0.5at²: s = 5 × 3 + 0.5 × 2 × 3² = 15 + 9 = 24 m."
+    },
+    {
+      "question": "A trolley moving at 10 m/s accelerates uniformly at 2 m/s² for 5 s. How far does it travel?",
+      "options": ["50 m", "75 m", "100 m", "25 m"],
+      "correctIndex": 1,
+      "explanation": "Using s = ut + 0.5at²: s = 10 × 5 + 0.5 × 2 × 5² = 50 + 25 = 75 m."
+    },
+    {
+      "question": "An object starts from rest and accelerates uniformly at 2 m/s² for 4 s. How far does it travel?",
+      "options": ["8 m", "32 m", "4 m", "16 m"],
+      "correctIndex": 3,
+      "explanation": "Using s = ut + 0.5at² with u = 0: s = 0.5 × 2 × 4² = 16 m."
+    },
+    {
+      "question": "A ball is thrown vertically upwards at 20 m/s. What maximum height does it reach? (Take g = 10 m/s²)",
+      "options": ["40 m", "10 m", "20 m", "200 m"],
+      "correctIndex": 2,
+      "explanation": "At the highest point v = 0. Using v² = u² + 2as with a = -10: 0 = 400 - 20s, so s = 20 m."
+    },
+    {
+      "question": "A ball is thrown vertically upwards at 30 m/s. How long does it take to reach its highest point? (Take g = 10 m/s²)",
+      "options": ["3 s", "6 s", "30 s", "1.5 s"],
+      "correctIndex": 0,
+      "explanation": "At the highest point v = 0. Using v = u + at with a = -10: 0 = 30 - 10t, so t = 3 s."
+    },
+    {
+      "question": "Taking right as positive, an object's velocity changes from -5 m/s to +15 m/s in 4 s. What is its acceleration?",
+      "options": ["2.5 m/s²", "5 m/s²", "-5 m/s²", "10 m/s²"],
+      "correctIndex": 1,
+      "explanation": "Acceleration = (15 - (-5)) / 4 = 20 / 4 = 5 m/s². The change in velocity is 20 m/s, not 10 m/s, because the direction reversed."
+    },
+    {
+      "question": "An object moves at a steady 10 m/s for 4 s, then decelerates uniformly to rest in the next 6 s. What total distance does it cover?",
+      "options": ["40 m", "60 m", "100 m", "70 m"],
+      "correctIndex": 3,
+      "explanation": "Stage 1: 10 × 4 = 40 m. Stage 2: average velocity = (10 + 0)/2 = 5 m/s, so 5 × 6 = 30 m. Total = 40 + 30 = 70 m."
+    },
+    {
+      "question": "A cyclist travelling at 12 m/s decelerates uniformly to rest over a distance of 36 m. What is the magnitude of the deceleration?",
+      "options": ["2 m/s²", "4 m/s²", "6 m/s²", "12 m/s²"],
+      "correctIndex": 0,
+      "explanation": "Using v² = u² + 2as: 0 = 12² + 2a(36), so 72a = -144 and a = -2 m/s². The magnitude is 2 m/s²."
+    }
+  ]
+}
